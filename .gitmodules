@@ -1,0 +1,3 @@
+[submodule "CherryFramework"]
+	path = CherryFramework
+	url = https://github.com/CherryFramework/CherryFramework.git

@@ -1,0 +1,93 @@
+/* #Main Menu */
+.main-navigation .menu > li > a,
+.main-navigation .menu > li > .menu-link-wrapper > a {
+	color: $regular_accent_color_2;
+}
+.main-navigation .menu > li > a:hover,
+.main-navigation .menu > li.menu-hover > a,
+.main-navigation .menu > li.current_page_item > a,
+.main-navigation .menu > li.current_page_ancestor > a,
+.main-navigation .menu > li.current-menu-item > a,
+.main-navigation .menu > li.current-menu-ancestor > a {
+	color: $regular_accent_color_1;
+}
+.main-navigation .menu > li > .menu-link-wrapper > a:hover,
+.main-navigation .menu > li.menu-hover > .menu-link-wrapper > a,
+.main-navigation .menu > li.current_page_item > .menu-link-wrapper > a,
+.main-navigation .menu > li.current_page_ancestor > .menu-link-wrapper > a,
+.main-navigation .menu > li.current-menu-item > .menu-link-wrapper > a,
+.main-navigation .menu > li.current-menu-ancestor > .menu-link-wrapper > a {
+	color: $regular_accent_color_1;
+}
+.main-navigation .sub-menu {
+	background: $regular_accent_color_3;
+}
+.main-navigation ul ul a {
+	color: $regular_text_color;
+}
+.main-navigation .sub-menu > li > a:hover,
+.main-navigation .sub-menu > li.menu-hover > a,
+.main-navigation .sub-menu > li.current_page_item > a,
+.main-navigation .sub-menu > li.current_page_ancestor > a,
+.main-navigation .sub-menu > li.current-menu-item > a,
+.main-navigation .sub-menu > li.current-menu-ancestor > a {
+	color: $regular_accent_color_1;
+}
+.main-navigation .sub-menu > li > .menu-link-wrapper > a:hover,
+.main-navigation .sub-menu > li.menu-hover > .menu-link-wrapper > a,
+.main-navigation .sub-menu > li.current_page_item > .menu-link-wrapper > a,
+.main-navigation .sub-menu > li.current_page_ancestor > .menu-link-wrapper > a,
+.main-navigation .sub-menu > li.current-menu-item > .menu-link-wrapper > a,
+.main-navigation .sub-menu > li.current-menu-ancestor > .menu-link-wrapper > a {
+	color: $regular_accent_color_1;
+}
+.menu-item__desc {
+	color: $regular_text_color;
+}
+
+/* #Inverted Main Menu */
+.invert .main-navigation .menu > li > a,
+.invert .main-navigation .menu > li > .menu-link-wrapper > a,
+.invert .main-navigation .menu > li::after {
+	color: $invert_accent_color_1;
+}
+.invert .main-navigation .menu > li > a:hover,
+.invert .main-navigation .menu > li.menu-hover > a,
+.invert .main-navigation .menu > li.current_page_item > a,
+.invert .main-navigation .menu > li.current_page_ancestor > a,
+.invert .main-navigation .menu > li.current-menu-item > a,
+.invert .main-navigation .menu > li.current-menu-ancestor > a {
+	color: $invert_accent_color_1;
+}
+.invert .main-navigation .menu > li > .menu-link-wrapper > a:hover,
+.invert .main-navigation .menu > li.menu-hover > .menu-link-wrapper > a,
+.invert .main-navigation .menu > li.current_page_item > .menu-link-wrapper > a,
+.invert .main-navigation .menu > li.current_page_ancestor > .menu-link-wrapper > a,
+.invert .main-navigation .menu > li.current-menu-item > .menu-link-wrapper > a,
+.invert .main-navigation .menu > li.current-menu-ancestor > .menu-link-wrapper > a {
+	color: $invert_accent_color_1;
+}
+.invert .main-navigation .sub-menu > li > a:hover,
+.invert .main-navigation .sub-menu > li::after,
+.invert .main-navigation .sub-menu > li.menu-hover > a,
+.invert .main-navigation .sub-menu > li.menu-hover > .menu-link-wrapper > a,
+.invert .main-navigation .sub-menu > li.current_page_item > a,
+.invert .main-navigation .sub-menu > li.current_page_item > .menu-link-wrapper > a,
+.invert .main-navigation .sub-menu > li.current_page_ancestor > a,
+.invert .main-navigation .sub-menu > li.current_page_ancestor > .menu-link-wrapper > a,
+.invert .main-navigation .sub-menu > li.current-menu-item > a,
+.invert .main-navigation .sub-menu > li.current-menu-item > .menu-link-wrapper > a,
+.invert .main-navigation .sub-menu > li.current-menu-ancestor > a,
+.invert .main-navigation .sub-menu > li.current-menu-ancestor > .menu-link-wrapper > a {
+	color: $regular_accent_color_1;
+}
+
+/* #Footer Menu */
+.footer-menu__items li.current-menu-item a,
+.footer-menu__items li.current_page_item a {
+	color: $regular_text_color;
+}
+
+.menu-toggle[aria-controls="main-menu"] {
+	background: @darken( $regular_accent_color_3, 15% );
+}

@@ -1,0 +1,12 @@
+<wpml-config>
+	<admin-texts>
+		<key name="theme_mods_cherry">
+			<key name="top_panel_text" />
+			<key name="more_button_text" />
+			<key name="blog_sticky_label" />
+			<key name="blog_read_more_text" />
+			<key name="related_posts_block_title" />
+			<key name="footer_copyright" />
+		</key>
+	</admin-texts>
+</wpml-config>
