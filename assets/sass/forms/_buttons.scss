@@ -8,7 +8,10 @@ input[type='submit'] {
 // General styles
 .btn {
 	text-decoration: none;
-
+	color: #fff;
+	font-family: Raleway;
+	font-size: 15px;
+	font-weight: 600;
 	@include btn;
 	@include border-radius;
 	&:hover {

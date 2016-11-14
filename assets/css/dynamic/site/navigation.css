@@ -22,6 +22,9 @@ a.page-numbers:hover,
 }
 
 /* #Breadcrumbs */
+.breadcrumbs {
+	background-color: $regular_accent_color_3;
+}
 .breadcrumbs__item {
 	font-style: $breadcrumbs_font_style;
 	font-weight: $breadcrumbs_font_weight;

@@ -44,6 +44,9 @@ add_filter( 'widget_tag_cloud_args', 'cherry_customize_tag_cloud' );
 // Changed excerpt more string.
 add_filter( 'excerpt_more', 'cherry_excerpt_more' );
 
+// Add svg-mime suppot.
+add_filter( 'upload_mimes', 'cherry_add_svg_to_upload_mimes', 10, 1 );
+
 
 /**
  * Append description into nav items
@@ -361,4 +364,17 @@ function cherry_excerpt_more( $more ) {
 	}
 
 	return ' &hellip;';
+}
+
+/**
+ * Add svg-mime suppot
+ *
+ * @param  array $upload_mimes Mimes array.
+ * @return array
+ */
+function cherry_add_svg_to_upload_mimes( $upload_mimes ) {
+	$upload_mimes['svg'] = 'image/svg+xml';
+	$upload_mimes['svgz'] = 'image/svg+xml';
+
+	return $upload_mimes;
 }

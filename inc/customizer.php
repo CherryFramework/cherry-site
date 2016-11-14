@@ -67,8 +67,9 @@ function cherry_get_customizer_options() {
 				'default' => 'text',
 				'field'   => 'radio',
 				'choices' => array(
-					'image' => esc_html__( 'Image', 'cherry' ),
-					'text'  => esc_html__( 'Text', 'cherry' ),
+					'image'      => esc_html__( 'Image', 'cherry' ),
+					'text'       => esc_html__( 'Text', 'cherry' ),
+					'image_text' => esc_html__( 'Image&Text', 'cherry' ),
 				),
 				'type' => 'control',
 			),
@@ -1805,6 +1806,14 @@ function cherry_is_not_transparent_header_layout_type( $control ) {
  */
 function cherry_is_setting( $control, $setting, $value ) {
 
+	if ( is_array( $value ) ) {
+		foreach ( $value as $key => $val ) {
+			if ( $val == $control->manager->get_setting( $setting )->value() ) {
+				return true;
+			}
+		}
+	}
+
 	if ( $value == $control->manager->get_setting( $setting )->value() ) {
 		return true;
 	}
@@ -1838,7 +1847,7 @@ function cherry_is_not_setting( $control, $setting, $value ) {
  * @return bool
  */
 function cherry_is_header_logo_image( $control ) {
-	return cherry_is_setting( $control, 'header_logo_type', 'image' );
+	return cherry_is_setting( $control, 'header_logo_type', array( 'image', 'image_text' ) );
 }
 
 /**
@@ -1848,8 +1857,9 @@ function cherry_is_header_logo_image( $control ) {
  * @return bool
  */
 function cherry_is_header_logo_text( $control ) {
-	return cherry_is_setting( $control, 'header_logo_type', 'text' );
+	return cherry_is_setting( $control, 'header_logo_type', array( 'text', 'image_text' ) );
 }
+
 
 /**
  * Return true if sticky label type set to text or text with icon.

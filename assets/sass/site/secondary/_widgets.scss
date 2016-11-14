@@ -3,7 +3,7 @@
 		font-size: 18px;
 		line-height: 1.2;
 		margin: 0 0 1em 0;
-
+		text-align: left;
 		@include media-breakpoint-up(lg) {
 			font-size: 25px;
 		}
@@ -17,10 +17,10 @@
 	}
 	.sidebar &,
 	.footer-area & {
-		margin-top: 1.5em;
+		margin: 1.5em 0 1.5em 0;
 
 		@include media-breakpoint-up(md) {
-			margin-top: 3em;
+			margin: 3em 0 3em 0;
 		}
 	}
 	&:last-child {
@@ -35,4 +35,6 @@
 	select {
 		max-width: 100%;
 	}
+
+
 }

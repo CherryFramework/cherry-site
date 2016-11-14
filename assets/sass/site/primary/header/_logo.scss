@@ -1,9 +1,18 @@
 .site-logo {
 	margin: 0;
 	&__link {
+		display: flex;
+		align-items: center;
 		text-decoration: none;
 		&:focus {
 			outline: none;
+		}
+		.site-link__img{
+			flex: 0 1 auto;
+			margin-right: 10px;
+		}
+		span{
+			flex: 0 1 auto;
 		}
 	}
 }

@@ -12,7 +12,6 @@
 		}
 		@include media-breakpoint-up(md) {
 			flex-direction: row;
-
 			flex-wrap: wrap;
 			justify-content: space-between;
 		}
@@ -56,10 +55,10 @@
 		}
 	}
 	&__search {
-		display: flex;
 		min-width: 180px;
+		.search-form__submit{
 
-		justify-content: space-between;
+		}
 		@include media-breakpoint-up(lg) {
 			order: 1;
 		}

@@ -3,6 +3,7 @@
 		margin-bottom: 0;
 		margin-left: 0;
 		padding: 0;
+		text-align: left;
 	}
 	> ul {
 		> li {
@@ -13,7 +14,7 @@
 	}
 	li {
 		position: relative;
-		margin-left: 1em;
+		margin-left: 0;
 		list-style: none;
 		margin-top: .25em;
 		> ul {
@@ -37,6 +38,7 @@
 			content: 'fiber_manual_record';
 
 			@include material-icon();
+			display: none;
 		}
 	}
 }

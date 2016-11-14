@@ -202,7 +202,7 @@ function cherry_header_logo() {
  */
 function cherry_get_site_title_by_type( $type ) {
 
-	if ( ! in_array( $type, array( 'text', 'image' ) ) ) {
+	if ( ! in_array( $type, array( 'text', 'image', 'image_text' ) ) ) {
 		$type = 'text';
 	}
 
@@ -210,6 +210,10 @@ function cherry_get_site_title_by_type( $type ) {
 
 	if ( 'text' === $type ) {
 		return $logo;
+	}
+
+	if ( 'image_text' !== $type ) {
+		$logo = '';
 	}
 
 	$logo_url = get_theme_mod( 'header_logo_url', cherry_theme()->customizer->get_default( 'header_logo_url' ) );
@@ -237,10 +241,10 @@ function cherry_get_site_title_by_type( $type ) {
 	}
 
 	$format_image = apply_filters( 'cherry_header_logo_image_format',
-		'<img src="%1$s" alt="%2$s" class="site-link__img" %3$s%4$s>'
+		'<img src="%1$s" alt="%2$s" class="site-link__img" %3$s%4$s><span>%5$s</span>'
 	);
 
-	return sprintf( $format_image, esc_url( $logo_url ), esc_attr( $logo ), $retina_logo, $atts );
+	return sprintf( $format_image, esc_url( $logo_url ), esc_attr( $logo ), $retina_logo, $atts, $logo );
 }
 
 /**
@@ -320,7 +324,7 @@ function cherry_site_breadcrumbs() {
 	$breadcrumbs_front_visibillity = get_theme_mod( 'breadcrumbs_front_visibillity', cherry_theme()->customizer->get_default( 'breadcrumbs_front_visibillity' ) );
 
 	$breadcrumbs_settings = apply_filters( 'cherry_breadcrumbs_settings', array(
-		'wrapper_format'    => '<div class="container"><div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div><div class="clear"></div></div>',
+		'wrapper_format'    => '<div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div>',
 		'page_title_format' => '<h5 class="page-title">%s</h5>',
 		'show_title'        => $breadcrumbs_page_title,
 		'path_type'         => $breadcrumbs_path_type,

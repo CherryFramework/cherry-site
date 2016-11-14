@@ -56,13 +56,14 @@
 	line-height: 1;
 	display: inline-block;
 	max-width: 100%;
-	padding: $button__indents;
+	padding: 20px 30px;
 	cursor: pointer;
 	text-align: center;
 	vertical-align: top;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	border: $button__border;
+	border-radius: 6px;
+	background-color: #dddcdc;
 	box-shadow: $button__box-shadow;
 }
 
