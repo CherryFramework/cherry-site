@@ -41,6 +41,14 @@ function cherry_register_required_plugins() {
 			'name' => esc_html__( 'Cherry Testimonials', 'cherry' ),
 			'slug' => 'cherry-testi',
 		),
+		array(
+			'name' => esc_html__( 'Cherry Team Members', 'cherry' ),
+			'slug' => 'cherry-team-members',
+		),
+		array(
+			'name' => esc_html__( 'TM Timeline', 'cherry' ),
+			'slug' => 'tm-timeline',
+		),
 	);
 
 	/*
