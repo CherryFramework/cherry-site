@@ -8,7 +8,7 @@
 }
 
 .site-header.transparent .header-container {
-	background: @alpha($header_bg_color, 90%);
+	background: @alpha($header_bg_color, 0%);
 }
 
 /* ##Logo */
@@ -22,6 +22,13 @@
 	color: $regular_accent_color_2;
 }
 .site-logo__link:hover {
+	color: $regular_accent_color_1;
+}
+
+.site-header.transparent .site-logo__link {
+	color: #fff;
+}
+.site-header.transparent .site-logo__link:hover {
 	color: $regular_accent_color_1;
 }
 

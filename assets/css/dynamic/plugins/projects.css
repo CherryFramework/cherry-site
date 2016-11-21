@@ -1,0 +1,52 @@
+/* #Cherry projects Plugin */
+ul.projects-filters-list li.active span{
+	color: $regular_accent_color_1;
+}
+
+ul.order-filters > li span.current{
+	color: $regular_accent_color_1;
+}
+ul.projects-filters-list li span:hover{
+	color: $regular_accent_color_1;
+}
+
+ul.order-filters > li ul{
+	background-color: $regular_accent_color_1;
+}
+
+.projects-ajax-button-wrapper .projects-ajax-button span{
+	background-color: $regular_accent_color_1;
+}
+
+.cherry-spinner-double-bounce .cherry-double-bounce1, .cherry-spinner-double-bounce .cherry-double-bounce2{
+	background-color: $regular_accent_color_1;
+}
+
+.projects-item-instance .hover-content{
+	background-color: @alpha( $regular_accent_color_1, 80 );
+}
+
+.projects-item-instance div.hover-content h3 a{
+	color: #fff;
+}
+
+.projects-item-instance a.simple-button:hover{
+	color: $regular_accent_color_1;
+	background-color: #fff;
+}
+
+.projects-item-instance a.simple-button:hover{
+	background-color: #fff;
+}
+
+.projects-item-instance div.hover-content h3 a:hover{
+	color: $regular_accent_color_2;
+}
+
+.cherry-projects-single-post .featured-image a .cover, .cherry-projects-single-post .additional-image a .cover{
+	box-shadow: inset 0px 0px 30px @alpha( $regular_accent_color_1, 60 );
+}
+
+.projects-filters{
+	padding: 0 1em;
+}

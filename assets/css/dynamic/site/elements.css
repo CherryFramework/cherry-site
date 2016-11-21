@@ -14,3 +14,15 @@ code {
 	color: @darken( $regular_text_color, 15% );
 	background: $invert_text_color;
 }
+
+.home-section-2{
+	background-color: $regular_accent_color_1;
+}
+
+.home-section-4{
+	background-color: $regular_accent_color_3;
+}
+
+.plugins-section-1{
+	background-position: 0 50%;
+}

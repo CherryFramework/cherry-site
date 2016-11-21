@@ -44,8 +44,17 @@ add_filter( 'widget_tag_cloud_args', 'cherry_customize_tag_cloud' );
 // Changed excerpt more string.
 add_filter( 'excerpt_more', 'cherry_excerpt_more' );
 
-// Add svg-mime suppot.
-add_filter( 'upload_mimes', 'cherry_add_svg_to_upload_mimes', 10, 1 );
+// cherry projects permalink button text
+add_filter( 'cherry-projects-permalink-text', 'cherry_projects_permalink_button_text' );
+
+// cherry site shortcodes avaliable-styles
+add_filter( 'cherry-site-shortcodes-avaliable-styles', 'cherry_site_shortcodes_avaliable_styles' );
+
+add_filter( 'upload_mimes', 'cherry_site_mime_types');
+
+add_filter( 'tm_testimonials_item_classes', 'tm_testimonials_item_classes');
+
+add_filter( 'tm_the_testimonials_default_args', 'tm_the_testimonials_default_args');
 
 
 /**
@@ -366,15 +375,38 @@ function cherry_excerpt_more( $more ) {
 	return ' &hellip;';
 }
 
-/**
- * Add svg-mime suppot
- *
- * @param  array $upload_mimes Mimes array.
- * @return array
- */
-function cherry_add_svg_to_upload_mimes( $upload_mimes ) {
-	$upload_mimes['svg'] = 'image/svg+xml';
-	$upload_mimes['svgz'] = 'image/svg+xml';
 
-	return $upload_mimes;
+function cherry_projects_permalink_button_text( $text ) {
+	$text = esc_html__( 'Details', 'cherry' );
+
+	return $text;
 }
+
+function cherry_site_shortcodes_avaliable_styles( $styles ) {
+	unset( $styles['grid'] );
+	//unset( $styles['element'] );
+
+	return $styles;
+}
+
+function cherry_site_mime_types( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+
+	return $mimes;
+}
+
+function tm_testimonials_item_classes( $classes ) {
+	$classes[] = 'col-xs-12';
+	$classes[] = 'col-md-6';
+	$classes[] = 'col-lg-4';
+
+	return $classes;
+}
+
+function tm_the_testimonials_default_args( $args ) {
+	$args['container'] = '<div class="tm-testi__list row">%s</div>';
+
+	return $args;
+}
+
+

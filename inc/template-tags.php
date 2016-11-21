@@ -324,7 +324,7 @@ function cherry_site_breadcrumbs() {
 	$breadcrumbs_front_visibillity = get_theme_mod( 'breadcrumbs_front_visibillity', cherry_theme()->customizer->get_default( 'breadcrumbs_front_visibillity' ) );
 
 	$breadcrumbs_settings = apply_filters( 'cherry_breadcrumbs_settings', array(
-		'wrapper_format'    => '<div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div>',
+		'wrapper_format'    => '<div class="container"><div class="breadcrumbs__title">%1$s</div><div class="breadcrumbs__items">%2$s</div></div>',
 		'page_title_format' => '<h5 class="page-title">%s</h5>',
 		'show_title'        => $breadcrumbs_page_title,
 		'path_type'         => $breadcrumbs_path_type,

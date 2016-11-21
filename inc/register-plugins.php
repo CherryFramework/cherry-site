@@ -33,6 +33,14 @@ function cherry_register_required_plugins() {
 			'name' => esc_html__( 'Cherry Sidebars', 'cherry' ),
 			'slug' => 'cherry-sidebars',
 		),
+		array(
+			'name' => esc_html__( 'Cherry Projects', 'cherry' ),
+			'slug' => 'cherry-projects',
+		),
+		array(
+			'name' => esc_html__( 'Cherry Testimonials', 'cherry' ),
+			'slug' => 'cherry-testi',
+		),
 	);
 
 	/*

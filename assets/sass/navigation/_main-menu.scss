@@ -21,6 +21,7 @@
 		position: relative;
 		display: block;
 		text-decoration: none;
+		@include transition( all 0.4s ease );
 	}
 	@include media-breakpoint-down(sm) {
 		ul {

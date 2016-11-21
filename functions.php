@@ -54,6 +54,8 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 		 * @since 1.0.0
 		 */
 		public function __construct() {
+			define( 'CHERRY_SITE_PLUGINS_DEBUG', true );
+
 			// Set the constants needed by the theme.
 			add_action( 'after_setup_theme', array( $this, 'constants' ), -1 );
 

@@ -464,6 +464,26 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 		 */
 		public function get_slider_loop( $posts_query ) {
 			/**
+			 * Icon layer settings.
+			 *
+			 * @link https://github.com/bqworks/slider-pro/blob/master/docs/modules.md
+			 * @var  array
+			 */
+			$icon_settings = apply_filters( 'cherry_smart_slider_icon_settings', array(
+				'width'           => "100%",
+				'horizontal'      => '0%',
+				'vertical'        => '25%',
+				'show_transition' => 'up',
+				'show_duration'   => 500,
+				'show_delay'      => 500,
+				'hide_transition' => 'down',
+				'hide_duration'   => 500,
+				'hide_delay'      => 700,
+			), $this->instance );
+
+			$icon_attr = $this->generate_layer_attrline( $icon_settings );
+
+			/**
 			 * Title layer settings.
 			 *
 			 * @link https://github.com/bqworks/slider-pro/blob/master/docs/modules.md
@@ -472,11 +492,11 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 			$title_settings = apply_filters( 'cherry_smart_slider_title_settings', array(
 				'width'           => "100%",
 				'horizontal'      => '0%',
-				'vertical'        => '25%',
-				'show_transition' => 'left',
+				'vertical'        => '40%',
+				'show_transition' => 'up',
 				'show_duration'   => 500,
-				'show_delay'      => 500,
-				'hide_transition' => 'left',
+				'show_delay'      => 700,
+				'hide_transition' => 'down',
 				'hide_duration'   => 500,
 				'hide_delay'      => 700,
 			), $this->instance );
@@ -490,13 +510,13 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 			 * @var  array
 			 */
 			$content_settings = apply_filters( 'cherry_smart_slider_content_settings', array(
-				'width'           => '90%',
-				'horizontal'      => '5%',
-				'vertical'        => '51%',
-				'show_transition' => 'left',
+				'width'           => '50%',
+				'horizontal'      => '25%',
+				'vertical'        => '55%',
+				'show_transition' => 'up',
 				'show_duration'   => 500,
-				'show_delay'      => 800,
-				'hide_transition' => 'left',
+				'show_delay'      => 900,
+				'hide_transition' => 'down',
 				'hide_duration'   => 500,
 				'hide_delay'      => 400,
 			), $this->instance );
@@ -513,10 +533,10 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 				'width'           => '90%',
 				'horizontal'      => '5%',
 				'vertical'        => '58%',
-				'show_transition' => 'left',
+				'show_transition' => 'up',
 				'show_duration'   => 500,
 				'show_delay'      => 1100,
-				'hide_transition' => 'left',
+				'hide_transition' => 'down',
 				'hide_duration'   => 500,
 				'hide_delay'      => 100,
 			), $this->instance );
@@ -532,11 +552,16 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 						'html'    => '<a href="%2$s" %3$s>%4$s</a>',
 					) );
 
-					$content = $this->utility->attributes->get_content( array(
+					/*$content = $this->utility->attributes->get_content( array(
 						'visible' => $this->instance['content'],
 						'length'  => (int) $this->instance['trim_words'],
 						'html'    => '%2$s',
-					) );
+					) );*/
+
+					ob_start();
+					the_content( '' );
+					$content = ob_get_contents();
+					ob_end_clean();
 
 					$button = $this->utility->attributes->get_button( array(
 						'visible' => $this->instance['more_button'],
@@ -551,6 +576,7 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 						'class'       => 'sp-image',
 						'html'        => '<img %2$s src="%3$s" alt="%4$s" %5$s>',
 					) );
+					$html .= '<div class="sp-icon sp-layer"' . $icon_attr . '><div class="icon"></div></div>';
 					$html .= '<h2 class="sp-title sp-layer"' . $title_attr . '>' . $title . '</h2>';
 					$html .= '<div class="sp-content sp-layer"' . $content_attr . '>' . $content . '</div>';
 					$html .= '<div class="sp-more sp-layer"' . $more_attr . '>' . $button . '</div>';

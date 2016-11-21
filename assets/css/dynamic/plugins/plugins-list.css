@@ -1,0 +1,20 @@
+.cherry-plugins-list.home-page .plugins-list-item__downloads span{
+	color: $regular_accent_color_1;
+}
+
+.cherry-plugins-list.home-page .plugins-list-item__ver span{
+	color: $regular_accent_color_1;
+}
+
+.plugin-page .plugins-list-item{
+	background-color: $regular_accent_color_3;
+}
+
+.cherry-plugins-list.plugin-page .plugins-list-item__ver{
+	color: $regular_accent_color_3;
+	background-color: $regular_accent_color_1;
+}
+
+.cherry-plugins-list.plugin-page .plugins-list-item__download_block .plugins-list-item__downloads span{
+	color: $regular_accent_color_1;
+}

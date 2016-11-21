@@ -16,4 +16,5 @@ function cherry_register_image_sizes() {
 	add_image_size( 'cherry-thumb-xl', 1920, 1080, true );
 	add_image_size( 'cherry-author-avatar', 512, 512, true );
 	add_image_size( 'cherry-thumb-560-350', 560, 350, true );
+	add_image_size( 'cherry-projects-showcases', 1200, 1200, array( 'left', 'top' ) );
 }

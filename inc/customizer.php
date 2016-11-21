@@ -2077,6 +2077,8 @@ function cherry_get_dynamic_css_options() {
 			CHERRY_THEME_DIR . '/assets/css/dynamic/widgets/smart-slider.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/widgets/instagram.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/widgets/subscribe.css',
+			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/projects.css',
+			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/plugins-list.css',
 		),
 		'options' => array(
 			'header_logo_font_style',
