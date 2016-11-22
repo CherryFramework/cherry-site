@@ -4740,6 +4740,7 @@ object {
     flex: 0 1 auto; }
 
 .plugins-list-item {
+<<<<<<< HEAD
   margin-bottom: 30px; }
   .plugins-list-item .inner {
     display: flex;
@@ -4775,3 +4776,66 @@ object {
     overflow: hidden; }
   .tm-testi__item cite {
     display: block; }
+=======
+  margin-bottom: 30px;
+}
+.plugins-list-item .inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  position: relative;
+}
+.plugins-list-item__thumb {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  min-width: 100%;
+  width: 100%;
+}
+.plugins-list-item__thumb img {
+  width: 100%;
+}
+.plugins-list-item__info {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  min-width: 100%;
+}
+.plugins-list-item__title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.plugins-list-item__ver {
+  font-weight: 600;
+}
+.plugins-list-item__link {
+  padding: 10px 20px;
+}
+.plugins-list-item__downloads {
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.team-item__inner {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.team-item__inner .team-listing_name,
+.team-item__inner .team-listing_position {
+  text-transform: uppercase;
+}
+
+.team-item__inner .team-listing_name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+>>>>>>> 0874cc550daa5a6afc27b31438a83ba4ec2d8b4a

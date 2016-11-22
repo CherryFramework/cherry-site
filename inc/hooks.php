@@ -56,6 +56,12 @@ add_filter( 'tm_testimonials_item_classes', 'tm_testimonials_item_classes');
 
 add_filter( 'tm_the_testimonials_default_args', 'tm_the_testimonials_default_args');
 
+// Register a new tmpl-file for `[cherry_team ]` shortcode.
+add_filter( 'cherry_team_templates_list', 'cherry_add_team_template' );
+
+// Trimmed a post content in `[tm-timeline]` shortcode.
+add_filter( 'tm_timeline_format_content', 'cherry_timeline_format_content' );
+
 
 /**
  * Append description into nav items
@@ -409,4 +415,17 @@ function tm_the_testimonials_default_args( $args ) {
 	return $args;
 }
 
+function cherry_add_team_template( $templates ) {
+	$templates['boxed'] = 'boxed.tmpl';
 
+	return $templates;
+}
+
+function cherry_timeline_format_content( $content ) {
+	$content = strip_shortcodes( $content );
+	$content = apply_filters( 'the_content', $content );
+	$content = str_replace( ']]>', ']]&gt;', $content );
+	$content = wp_trim_words( $content, 20, '&hellip;' );
+
+	return $content;
+}
