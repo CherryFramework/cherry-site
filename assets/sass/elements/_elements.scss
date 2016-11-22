@@ -63,6 +63,7 @@ hr {
 
 .cherry-section{
 	padding-top: 20px;
+
 	padding-bottom: 20px;
 		@include media-breakpoint-up(sm) {
 			padding-top: 25px;
@@ -85,12 +86,34 @@ hr {
 			padding: 20px 0;
 		}
 
+		&.home-section-6{
+			padding: 100px 0;
+			position: relative;
+			background-position: 0% 50%;
+				&:before{
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					display: block;
+					content: '';
+				}
+		}
+
 		&.plugins-section-1{
 			padding: 100px 0;
 		}
 
 		&.plugins-section-2{
 			padding-bottom: 0;
+		}
+
+		&.home-section-7-1{
+			display: flex;
+			> *{
+				flex: 0 1 auto
+			}
 		}
 }
 
