@@ -109,12 +109,16 @@ hr {
 			padding-bottom: 0;
 		}
 
-		&.home-section-7-1{
-			display: flex;
-			> *{
-				flex: 0 1 auto
-			}
-		}
+
+}
+
+.home-col-7{
+	display: flex;
+	align-items: center;
+	> *{
+		flex: 0 1 auto;
+		margin: 10px;
+	}
 }
 
 /*--------------------------------------------------------------

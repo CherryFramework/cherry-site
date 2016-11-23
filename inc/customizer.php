@@ -28,7 +28,7 @@ function cherry_get_customizer_options() {
 				'title'    => esc_html__( 'Show tagline after logo', 'cherry' ),
 				'section'  => 'title_tagline',
 				'priority' => 60,
-				'default'  => true,
+				'default'  => false,
 				'field'    => 'checkbox',
 				'type'     => 'control',
 			),
@@ -64,7 +64,7 @@ function cherry_get_customizer_options() {
 			'header_logo_type' => array(
 				'title'   => esc_html__( 'Logo Type', 'cherry' ),
 				'section' => 'logo_favicon',
-				'default' => 'text',
+				'default' => 'image_text',
 				'field'   => 'radio',
 				'choices' => array(
 					'image'      => esc_html__( 'Image', 'cherry' ),
@@ -77,7 +77,7 @@ function cherry_get_customizer_options() {
 				'title'           => esc_html__( 'Logo Upload', 'cherry' ),
 				'description'     => esc_html__( 'Upload logo image', 'cherry' ),
 				'section'         => 'logo_favicon',
-				'default'         => '%s/assets/images/logo.png',
+				'default'         => '%s/assets/images/single-logo.png',
 				'field'           => 'image',
 				'type'            => 'control',
 				'active_callback' => 'cherry_is_header_logo_image',
@@ -86,6 +86,7 @@ function cherry_get_customizer_options() {
 				'title'           => esc_html__( 'Retina Logo Upload', 'cherry' ),
 				'description'     => esc_html__( 'Upload logo for retina-ready devices', 'cherry' ),
 				'section'         => 'logo_favicon',
+				'default'         => '%s/assets/images/single-logo-retina.png',
 				'field'           => 'image',
 				'type'            => 'control',
 				'active_callback' => 'cherry_is_header_logo_image',
@@ -93,7 +94,7 @@ function cherry_get_customizer_options() {
 			'header_logo_font_family' => array(
 				'title'           => esc_html__( 'Font Family', 'cherry' ),
 				'section'         => 'logo_favicon',
-				'default'         => 'Montserrat, sans-serif',
+				'default'         => 'Raleway, sans-serif',
 				'field'           => 'fonts',
 				'type'            => 'control',
 				'active_callback' => 'cherry_is_header_logo_text',
@@ -110,7 +111,7 @@ function cherry_get_customizer_options() {
 			'header_logo_font_weight' => array(
 				'title'           => esc_html__( 'Font Weight', 'cherry' ),
 				'section'         => 'logo_favicon',
-				'default'         => '700',
+				'default'         => '800',
 				'field'           => 'select',
 				'choices'         => cherry_get_font_weight(),
 				'type'            => 'control',
@@ -189,7 +190,7 @@ function cherry_get_customizer_options() {
 			'header_social_links' => array(
 				'title'   => esc_html__( 'Show social links in header', 'cherry' ),
 				'section' => 'social_links',
-				'default' => true,
+				'default' => false,
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
@@ -225,7 +226,7 @@ function cherry_get_customizer_options() {
 			'header_container_type' => array(
 				'title'   => esc_html__( 'Header type', 'cherry' ),
 				'section' => 'page_layout',
-				'default' => 'fullwidth',
+				'default' => 'boxed',
 				'field'   => 'select',
 				'choices' => array(
 					'boxed'     => esc_html__( 'Boxed', 'cherry' ),
@@ -236,7 +237,7 @@ function cherry_get_customizer_options() {
 			'content_container_type' => array(
 				'title'   => esc_html__( 'Content type', 'cherry' ),
 				'section' => 'page_layout',
-				'default' => 'fullwidth',
+				'default' => 'boxed',
 				'field'   => 'select',
 				'choices' => array(
 					'boxed'     => esc_html__( 'Boxed', 'cherry' ),
@@ -247,7 +248,7 @@ function cherry_get_customizer_options() {
 			'footer_container_type' => array(
 				'title'   => esc_html__( 'Footer type', 'cherry' ),
 				'section' => 'page_layout',
-				'default' => 'fullwidth',
+				'default' => 'boxed',
 				'field'   => 'select',
 				'choices' => array(
 					'boxed'     => esc_html__( 'Boxed', 'cherry' ),
@@ -298,7 +299,7 @@ function cherry_get_customizer_options() {
 			'regular_accent_color_1' => array(
 				'title'   => esc_html__( 'Accent color (1)', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#117bb8',
+				'default' => '#f62e46',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -312,70 +313,70 @@ function cherry_get_customizer_options() {
 			'regular_accent_color_3' => array(
 				'title'   => esc_html__( 'Accent color (3)', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#eef4fa',
+				'default' => '#f0f0f0',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_text_color' => array(
 				'title'   => esc_html__( 'Text color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#656565',
+				'default' => '#777777',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_link_color' => array(
 				'title'   => esc_html__( 'Link color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#288ce4',
+				'default' => '#f62e46',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_link_hover_color' => array(
 				'title'   => esc_html__( 'Link hover color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#2f2f42',
+				'default' => '#333333',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_h1_color' => array(
 				'title'   => esc_html__( 'H1 color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#303043',
+				'default' => '#333333',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_h2_color' => array(
 				'title'   => esc_html__( 'H2 color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#303043',
+				'default' => '#333333',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_h3_color' => array(
 				'title'   => esc_html__( 'H3 color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#303043',
+				'default' => '#333333',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_h4_color' => array(
 				'title'   => esc_html__( 'H4 color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#303043',
+				'default' => '#333333',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_h5_color' => array(
 				'title'   => esc_html__( 'H5 color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#303043',
+				'default' => '#333333',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'regular_h6_color' => array(
 				'title'   => esc_html__( 'H6 color', 'cherry' ),
 				'section' => 'regular_scheme',
-				'default' => '#303043',
+				'default' => '#333333',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -425,7 +426,7 @@ function cherry_get_customizer_options() {
 			'invert_link_hover_color' => array(
 				'title'   => esc_html__( 'Link hover color', 'cherry' ),
 				'section' => 'invert_scheme',
-				'default' => '#303043',
+				'default' => '#f62e46',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -490,7 +491,7 @@ function cherry_get_customizer_options() {
 			'body_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'body_typography',
-				'default' => 'Open Sans, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -526,7 +527,7 @@ function cherry_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'cherry' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'cherry' ),
 				'section'     => 'body_typography',
-				'default'     => '1.5',
+				'default'     => '1.7',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -574,7 +575,7 @@ function cherry_get_customizer_options() {
 			'h1_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'h1_typography',
-				'default' => 'Montserrat, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -589,7 +590,7 @@ function cherry_get_customizer_options() {
 			'h1_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cherry' ),
 				'section' => 'h1_typography',
-				'default' => '700',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => cherry_get_font_weight(),
 				'type'    => 'control',
@@ -597,7 +598,7 @@ function cherry_get_customizer_options() {
 			'h1_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cherry' ),
 				'section'     => 'h1_typography',
-				'default'     => '80',
+				'default'     => '40',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -658,7 +659,7 @@ function cherry_get_customizer_options() {
 			'h2_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'h2_typography',
-				'default' => 'Montserrat, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -673,7 +674,7 @@ function cherry_get_customizer_options() {
 			'h2_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cherry' ),
 				'section' => 'h2_typography',
-				'default' => '700',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => cherry_get_font_weight(),
 				'type'    => 'control',
@@ -681,7 +682,7 @@ function cherry_get_customizer_options() {
 			'h2_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cherry' ),
 				'section'     => 'h2_typography',
-				'default'     => '60',
+				'default'     => '35',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -742,7 +743,7 @@ function cherry_get_customizer_options() {
 			'h3_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'h3_typography',
-				'default' => 'Montserrat, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -757,7 +758,7 @@ function cherry_get_customizer_options() {
 			'h3_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cherry' ),
 				'section' => 'h3_typography',
-				'default' => '700',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => cherry_get_font_weight(),
 				'type'    => 'control',
@@ -765,7 +766,7 @@ function cherry_get_customizer_options() {
 			'h3_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cherry' ),
 				'section'     => 'h3_typography',
-				'default'     => '40',
+				'default'     => '30',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -826,7 +827,7 @@ function cherry_get_customizer_options() {
 			'h4_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'h4_typography',
-				'default' => 'Montserrat, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -841,7 +842,7 @@ function cherry_get_customizer_options() {
 			'h4_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cherry' ),
 				'section' => 'h4_typography',
-				'default' => '700',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => cherry_get_font_weight(),
 				'type'    => 'control',
@@ -849,7 +850,7 @@ function cherry_get_customizer_options() {
 			'h4_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cherry' ),
 				'section'     => 'h4_typography',
-				'default'     => '30',
+				'default'     => '25',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -910,7 +911,7 @@ function cherry_get_customizer_options() {
 			'h5_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'h5_typography',
-				'default' => 'Montserrat, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -925,7 +926,7 @@ function cherry_get_customizer_options() {
 			'h5_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cherry' ),
 				'section' => 'h5_typography',
-				'default' => '700',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => cherry_get_font_weight(),
 				'type'    => 'control',
@@ -994,7 +995,7 @@ function cherry_get_customizer_options() {
 			'h6_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'h6_typography',
-				'default' => 'Montserrat, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -1009,7 +1010,7 @@ function cherry_get_customizer_options() {
 			'h6_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cherry' ),
 				'section' => 'h6_typography',
-				'default' => '700',
+				'default' => '600',
 				'field'   => 'select',
 				'choices' => cherry_get_font_weight(),
 				'type'    => 'control',
@@ -1017,7 +1018,7 @@ function cherry_get_customizer_options() {
 			'h6_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cherry' ),
 				'section'     => 'h6_typography',
-				'default'     => '16',
+				'default'     => '15',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -1078,7 +1079,7 @@ function cherry_get_customizer_options() {
 			'breadcrumbs_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cherry' ),
 				'section' => 'breadcrumbs_typography',
-				'default' => 'Montserrat, sans-serif',
+				'default' => 'Raleway, sans-serif',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -1101,7 +1102,7 @@ function cherry_get_customizer_options() {
 			'breadcrumbs_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cherry' ),
 				'section'     => 'breadcrumbs_typography',
-				'default'     => '14',
+				'default'     => '12',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 6,
@@ -1178,7 +1179,7 @@ function cherry_get_customizer_options() {
 				'title'           => esc_html__( 'Background Color', 'cherry' ),
 				'section'         => 'header_styles',
 				'field'           => 'hex_color',
-				'default'         => '#efefef',
+				'default'         => '#ffffff',
 				'type'            => 'control',
 				'active_callback' => 'cherry_is_not_transparent_header_layout_type',
 			),
@@ -1247,14 +1248,14 @@ function cherry_get_customizer_options() {
 			'top_panel_search' => array(
 				'title'   => esc_html__( 'Enable search', 'cherry' ),
 				'section' => 'header_top_panel',
-				'default' => true,
+				'default' => false,
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
 			'top_panel_bg' => array(
 				'title'   => esc_html__( 'Background color', 'cherry' ),
 				'section' => 'header_top_panel',
-				'default' => '#eef4fa',
+				'default' => '#fff',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -1446,7 +1447,7 @@ function cherry_get_customizer_options() {
 			'footer_layout_type' => array(
 				'title'   => esc_html__( 'Layout', 'cherry' ),
 				'section' => 'footer_options',
-				'default' => 'default',
+				'default' => 'centered',
 				'field'   => 'select',
 				'choices' => array(
 					'default'  => esc_html__( 'Style 1', 'cherry' ),
@@ -1458,14 +1459,14 @@ function cherry_get_customizer_options() {
 			'footer_widgets_bg' => array(
 				'title'   => esc_html__( 'Footer Widgets Area color', 'cherry' ),
 				'section' => 'footer_options',
-				'default' => '#298ffc',
+				'default' => '#303043',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
 			'footer_bg' => array(
 				'title'   => esc_html__( 'Footer Background color', 'cherry' ),
 				'section' => 'footer_options',
-				'default' => '#303043',
+				'default' => '#fff',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -2283,7 +2284,7 @@ function cherry_get_default_top_panel_text() {
  * @return string
  */
 function cherry_get_default_footer_copyright() {
-	return esc_html__( 'Copyright %%year%% Cherry. All rights reserved.', 'cherry' );
+	return esc_html__( 'Cherry Framework %%year%%. <a href=\"#\">Privacy Policy</a>', 'cherry' );
 }
 
 /**

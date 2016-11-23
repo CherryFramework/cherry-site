@@ -15,7 +15,6 @@
 	&__flex {
 		display: flex;
 		flex-direction: column;
-
 		flex-wrap: nowrap;
 		-ms-flex-pack: justify;
 		justify-content: space-between;
@@ -39,7 +38,6 @@
 		}
 		.site-info__mid-box {
 			text-align: center;
-
 			order: 2;
 			flex: 0 1 auto;
 			align-self: center;
@@ -49,6 +47,48 @@
 		}
 	}
 }
+.social-list{
+	&--footer{
+		background: #f0f;
+		.social-list__items{
+			.menu-item{
+				a{
+					position: relative;
+					overflow: hidden;
+					&:before{
+						width: 80px;
+						height: 80px;
+						font-size: 25px;
+						line-height: 80px;
+						border-radius: 0;
+						position: relative;
+						z-index: 2;
+					}
+					&:after{
+						width: 80px;
+						height: 80px;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						z-index: 1;
+						transition: all 300ms ease;
+						content: '';
+					}
+					&:hover{
+						&:before{
+							background-color: transparent;
+						}
+						&:after{
+							top: 0;
+							//transition: all 300ms ease;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 
 @import "footer/layout-default";
 @import "footer/layout-centered";
