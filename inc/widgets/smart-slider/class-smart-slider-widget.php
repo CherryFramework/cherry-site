@@ -512,7 +512,7 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 			$content_settings = apply_filters( 'cherry_smart_slider_content_settings', array(
 				'width'           => '50%',
 				'horizontal'      => '25%',
-				'vertical'        => '55%',
+				'vertical'        => '50%',
 				'show_transition' => 'up',
 				'show_duration'   => 500,
 				'show_delay'      => 900,

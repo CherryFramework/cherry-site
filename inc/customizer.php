@@ -197,7 +197,7 @@ function cherry_get_customizer_options() {
 			'footer_social_links' => array(
 				'title'   => esc_html__( 'Show social links in footer', 'cherry' ),
 				'section' => 'social_links',
-				'default' => true,
+				'default' => false,
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
@@ -2080,6 +2080,7 @@ function cherry_get_dynamic_css_options() {
 			CHERRY_THEME_DIR . '/assets/css/dynamic/widgets/subscribe.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/projects.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/plugins-list.css',
+			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/timeline.css',
 		),
 		'options' => array(
 			'header_logo_font_style',

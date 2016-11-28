@@ -63,7 +63,6 @@ hr {
 
 .cherry-section{
 	padding-top: 20px;
-
 	padding-bottom: 20px;
 		@include media-breakpoint-up(sm) {
 			padding-top: 25px;
@@ -84,21 +83,17 @@ hr {
 
 		&.home-section-2-1{
 			padding: 20px 0;
+			p{
+				margin-left: 25px;
+				margin-right: 25px;
+			}
 		}
 
 		&.home-section-6{
 			padding: 100px 0;
 			position: relative;
 			background-position: 0% 50%;
-				&:before{
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
-					display: block;
-					content: '';
-				}
+
 		}
 
 		&.plugins-section-1{
@@ -109,17 +104,95 @@ hr {
 			padding-bottom: 0;
 		}
 
+		&.features-section{
+			padding-top: 0px;
+			padding-bottom: 20px;
+			@include media-breakpoint-up(md) {
+				padding-top: 20px;
+			}
+			@include media-breakpoint-up(lg) {
+				padding-top: 30px;
+			}
+			@include media-breakpoint-up(xl) {
+				padding-top: 40px;
+			}
+		}
+		&.features-section-2{
+			padding: 50px 0;
+			background-position: 50% 30%;
+			@include media-breakpoint-up(md) {
+				padding: 100px 0;
+			}
+			@include media-breakpoint-up(lg) {
+				padding: 150px 0;
+			}
+		}
+		&.about-section-1{
+			text-align: center;
+			&:before{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: block;
+				content: '';
+			}
+			@include media-breakpoint-up(md) {
+				text-align: center;
+				padding: 100px 0;
+			}
+			@include media-breakpoint-up(lg) {
+				text-align: left;
+				padding: 150px 0;
+			}
+		}
+}
 
+.section-overlay{
+	position: relative;
+	&:before{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		display: block;
+		content: '';
+	}
 }
 
 .home-col-7{
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
 	> *{
 		flex: 0 1 auto;
 		margin: 10px;
 	}
 }
+
+.features-col-1{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	> *{
+		flex: 0 1 auto;
+		margin: 10px;
+	}
+}
+
+.feature-col-1{
+	display: flex;
+	align-items: center;
+	flex-flow: column nowrap;
+	justify-content: center;
+	> *{
+		flex: 0 1 auto;
+		text-align: center;
+	}
+}
+
 
 /*--------------------------------------------------------------
 ## Lists

@@ -62,7 +62,6 @@ add_filter( 'cherry_team_templates_list', 'cherry_add_team_template' );
 // Trimmed a post content in `[tm-timeline]` shortcode.
 add_filter( 'tm_timeline_format_content', 'cherry_timeline_format_content' );
 
-
 /**
  * Append description into nav items
  *
