@@ -1,8 +1,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: cherry\n"
-"POT-Creation-Date: 2016-08-31 21:41+0300\n"
+"Project-Id-Version: __tm\n"
+"POT-Creation-Date: 2016-11-28 19:55+0200\n"
 "PO-Revision-Date: 2016-02-15 11:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: TemplateMonster\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.8.11\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -38,6 +38,54 @@ msgid ""
 "can help."
 msgstr ""
 
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:346
+msgid "Home"
+msgstr ""
+
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:352
+msgid "Browse:"
+msgstr ""
+
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:354
+msgid "404 Not Found"
+msgstr ""
+
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:355
+msgid "Archives"
+msgstr ""
+
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:356
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr ""
+
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:357
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:358
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: cherry-framework/modules/cherry-breadcrumbs/cherry-breadcrumbs.php:359
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: cherry-framework/modules/cherry-customizer/cherry-customizer.php:269
+msgid "Untitled Panel"
+msgstr ""
+
+#: cherry-framework/modules/cherry-customizer/cherry-customizer.php:305
+msgid "Untitled Section"
+msgstr ""
+
+#: cherry-framework/modules/cherry-customizer/cherry-customizer.php:338
+msgid "Untitled Control"
+msgstr ""
+
 #: comments.php:33
 #, php-format
 msgctxt "comments title"
@@ -62,20 +110,20 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: config/menus.php:13 functions.php:499
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:251
+#: config/menus.php:12 functions.php:532
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:279
 msgid "Top"
 msgstr ""
 
-#: config/menus.php:14
+#: config/menus.php:13
 msgid "Main"
 msgstr ""
 
-#: config/menus.php:15 inc/customizer.php:1392
+#: config/menus.php:14 inc/customizer.php:1392
 msgid "Footer"
 msgstr ""
 
-#: config/menus.php:16
+#: config/menus.php:15
 msgid "Social"
 msgstr ""
 
@@ -111,46 +159,54 @@ msgstr ""
 msgid "Footer Area"
 msgstr ""
 
-#: functions.php:360 functions.php:374
+#: functions.php:373 functions.php:387
 msgid "Set thumbnail"
 msgstr ""
 
-#: functions.php:361
+#: functions.php:374
 msgid "Category thumbnail"
 msgstr ""
 
-#: functions.php:375
+#: functions.php:388
 msgid "Tag thumbnail"
 msgstr ""
 
-#: functions.php:381
-msgid "Layout Options"
+#: functions.php:394
+msgid "Page Options"
 msgstr ""
 
-#: functions.php:389 functions.php:423 inc/customizer.php:1139
-#: inc/customizer.php:1424 inc/customizer.php:1466 inc/customizer.php:1662
-msgid "Layout"
+#: functions.php:402
+msgid "Layout options"
 msgstr ""
 
-#: functions.php:394 inc/customizer.php:1916 inc/customizer.php:1957
-#: inc/customizer.php:1987
+#: functions.php:403
+msgid "You can select your sidebar position (or no sidebar at this page)"
+msgstr ""
+
+#: functions.php:408 inc/customizer.php:1934 inc/customizer.php:1975
+#: inc/customizer.php:2005
 msgid "Inherit"
 msgstr ""
 
-#: functions.php:398 inc/customizer.php:1324
+#: functions.php:412 inc/customizer.php:1324
 msgid "Sidebar on left side"
 msgstr ""
 
-#: functions.php:402 inc/customizer.php:1325
+#: functions.php:416 inc/customizer.php:1325
 msgid "Sidebar on right side"
 msgstr ""
 
-#: functions.php:406
+#: functions.php:420
 msgid "No sidebar"
 msgstr ""
 
-#: functions.php:415
+#: functions.php:429
 msgid "Header Layout Type"
+msgstr ""
+
+#: functions.php:437 inc/customizer.php:1139 inc/customizer.php:1424
+#: inc/customizer.php:1466 inc/customizer.php:1662
+msgid "Layout"
 msgstr ""
 
 #: header.php:25
@@ -862,12 +918,12 @@ msgid "Invert text colorscheme"
 msgstr ""
 
 #: inc/customizer.php:1155
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:156
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:176
 msgid "Background Color"
 msgstr ""
 
 #: inc/customizer.php:1163
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:99
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:119
 msgid "Background Image"
 msgstr ""
 
@@ -892,22 +948,22 @@ msgid "Tile Vertically"
 msgstr ""
 
 #: inc/customizer.php:1184
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:116
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:133
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:136
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:153
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer.php:1189 inc/customizer.php:1990
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:254
+#: inc/customizer.php:1189 inc/customizer.php:2008
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:282
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:1190 inc/customizer.php:1988
+#: inc/customizer.php:1190 inc/customizer.php:2006
 msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:1191 inc/customizer.php:1991
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:253
+#: inc/customizer.php:1191 inc/customizer.php:2009
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:281
 msgid "Right"
 msgstr ""
 
@@ -1195,6 +1251,10 @@ msgstr ""
 msgid "Related posts block title"
 msgstr ""
 
+#: inc/customizer.php:1650
+msgid "Related Posts"
+msgstr ""
+
 #: inc/customizer.php:1655
 msgid "Number of post"
 msgstr ""
@@ -1223,8 +1283,8 @@ msgstr ""
 msgid "Show post image"
 msgstr ""
 
-#: inc/customizer.php:1695 inc/widgets/carousel/class-carousel-widget.php:90
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:99
+#: inc/customizer.php:1695 inc/widgets/carousel/class-carousel-widget.php:117
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:127
 msgid "Display content"
 msgstr ""
 
@@ -1260,99 +1320,100 @@ msgstr ""
 msgid "Show post comment count"
 msgstr ""
 
-#: inc/customizer.php:1902
+#: inc/customizer.php:1919
 msgid "Minimal"
 msgstr ""
 
-#: inc/customizer.php:1903
+#: inc/customizer.php:1920
 msgid "Centered"
 msgstr ""
 
-#: inc/customizer.php:1904
+#: inc/customizer.php:1921
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:1905
+#: inc/customizer.php:1922
 msgid "Transparent"
 msgstr ""
 
-#: inc/customizer.php:1940
+#: inc/customizer.php:1958
 msgid "Body Background Color"
 msgstr ""
 
-#: inc/customizer.php:1954
+#: inc/customizer.php:1972
 msgid "Normal"
 msgstr ""
 
-#: inc/customizer.php:1955
+#: inc/customizer.php:1973
 msgid "Italic"
 msgstr ""
 
-#: inc/customizer.php:1956
+#: inc/customizer.php:1974
 msgid "Oblique"
 msgstr ""
 
-#: inc/customizer.php:1969
+#: inc/customizer.php:1987
 msgid "Latin"
 msgstr ""
 
-#: inc/customizer.php:1970
+#: inc/customizer.php:1988
 msgid "Greek"
 msgstr ""
 
-#: inc/customizer.php:1971
+#: inc/customizer.php:1989
 msgid "Greek Extended"
 msgstr ""
 
-#: inc/customizer.php:1972
+#: inc/customizer.php:1990
 msgid "Vietnamese"
 msgstr ""
 
-#: inc/customizer.php:1973
+#: inc/customizer.php:1991
 msgid "Cyrillic Extended"
 msgstr ""
 
-#: inc/customizer.php:1974
+#: inc/customizer.php:1992
 msgid "Latin Extended"
 msgstr ""
 
-#: inc/customizer.php:1975
+#: inc/customizer.php:1993
 msgid "Cyrillic"
 msgstr ""
 
-#: inc/customizer.php:1989
+#: inc/customizer.php:2007
 msgid "Justify"
 msgstr ""
 
-#: inc/customizer.php:2235
-#, php-format
-msgid ""
-"<div class=\"info-block\">%s 25 East 12th Street 16st Floor New York, NY "
-"12222, United States</div><div class=\"info-block\"> %s 800-2345-6789</div>"
+#: inc/customizer.php:2254
+msgid "25 East 12th Street 16st Floor New York, NY 12222, United States"
 msgstr ""
 
-#: inc/customizer.php:2248
-#, php-format
-msgid "Copyright %%year%% Cherry. All rights reserved."
+#: inc/customizer.php:2255
+msgid "800-2345-6789"
 msgstr ""
 
-#: inc/hooks.php:253
+#: inc/customizer.php:2266
+#, php-format
+msgid "Copyright %%year%% __Tm. All rights reserved."
+msgstr ""
+
+#: inc/hooks.php:245
 msgid "Submit Comment"
 msgstr ""
 
-#: inc/hooks.php:255
+#: inc/hooks.php:247
 msgid "Your name"
 msgstr ""
 
-#: inc/hooks.php:257
+#: inc/hooks.php:249
 msgid "Your e-mail"
 msgstr ""
 
-#: inc/hooks.php:259
+#: inc/hooks.php:251
 msgid "Your website"
 msgstr ""
 
-#: inc/hooks.php:261
+#: inc/hooks.php:253
 msgid "Comments *"
 msgstr ""
 
@@ -1368,15 +1429,15 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/template-menu.php:25
+#: inc/template-menu.php:37
 msgid "Set main menu"
 msgstr ""
 
-#: inc/template-menu.php:50
+#: inc/template-menu.php:62
 msgid "Set footer menu"
 msgstr ""
 
-#: inc/template-menu.php:119
+#: inc/template-menu.php:124
 msgid "Set social menu"
 msgstr ""
 
@@ -1404,12 +1465,11 @@ msgstr ""
 msgid "Share on "
 msgstr ""
 
-#: inc/template-related-posts.php:134
+#: inc/template-related-posts.php:133 template-parts/comment.php:7
 msgid "Posted by"
 msgstr ""
 
-#: inc/template-related-posts.php:137
-#: inc/widgets/carousel/views/carousel-view.php:17
+#: inc/template-related-posts.php:136 inc/widgets/carousel/views/item.php:18
 #: template-parts/content-audio.php:36 template-parts/content-gallery.php:40
 #: template-parts/content-image.php:41 template-parts/content-link.php:54
 #: template-parts/content-quote.php:40 template-parts/content-search.php:20
@@ -1419,731 +1479,731 @@ msgstr ""
 msgid "Posted by "
 msgstr ""
 
-#: inc/template-related-posts.php:152
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:242
+#: inc/template-related-posts.php:151
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:264
 #, php-format
 msgid "%s comment"
 msgid_plural "%s comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:17
+#: inc/widgets/about-author/class-about-author-widget.php:27
 msgid "Display an information about selected user."
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:19
-#: inc/widgets/about-author/class-about-author-widget.php:23
+#: inc/widgets/about-author/class-about-author-widget.php:29
+#: inc/widgets/about-author/class-about-author-widget.php:33
 msgid "About Author"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:24
-#: inc/widgets/carousel/class-carousel-widget.php:34
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:35
-#: inc/widgets/instagram/class-instagram-widget.php:35
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:35
+#: inc/widgets/about-author/class-about-author-widget.php:34
+#: inc/widgets/carousel/class-carousel-widget.php:53
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:48
+#: inc/widgets/instagram/class-instagram-widget.php:44
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:63
 msgid "Title"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:32
+#: inc/widgets/about-author/class-about-author-widget.php:42
 msgid "Select user to show"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:40
+#: inc/widgets/about-author/class-about-author-widget.php:50
 msgid "Author avatar size (set 0 to hide avatar, applied only for Gravatar)"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:47
+#: inc/widgets/about-author/class-about-author-widget.php:57
 msgid "Select image"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:48
+#: inc/widgets/about-author/class-about-author-widget.php:58
 msgid "Custom avatar image (override default user avatar)"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:53
+#: inc/widgets/about-author/class-about-author-widget.php:63
 msgid "Link (leave empty to hide)"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:57
+#: inc/widgets/about-author/class-about-author-widget.php:67
 msgid "Read More"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:58
+#: inc/widgets/about-author/class-about-author-widget.php:68
 msgid "Link label"
 msgstr ""
 
-#: inc/widgets/about-author/class-about-author-widget.php:77
+#: inc/widgets/about-author/class-about-author-widget.php:87
 msgid "Select a user"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:17
+#: inc/widgets/about/class-about-widget.php:26
 msgid "Display an information about your site."
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:19
-msgid "About Cherry"
+#: inc/widgets/about/class-about-widget.php:28
+msgid "About __Tm"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:24
-#: inc/widgets/banner/class-banner-widget.php:24
-#: inc/widgets/contact-information/class-contact-information-widget.php:25
+#: inc/widgets/about/class-about-widget.php:33
+#: inc/widgets/banner/class-banner-widget.php:32
+#: inc/widgets/contact-information/class-contact-information-widget.php:33
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:30
-#: inc/widgets/banner/class-banner-widget.php:30
+#: inc/widgets/about/class-about-widget.php:39
+#: inc/widgets/banner/class-banner-widget.php:38
 msgid "Upload"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:32
+#: inc/widgets/about/class-about-widget.php:41
 msgid "Logo:"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:40
+#: inc/widgets/about/class-about-widget.php:49
 msgid "Enable Social Buttons"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:49
+#: inc/widgets/about/class-about-widget.php:58
 msgid "Enable Tagline"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:54
+#: inc/widgets/about/class-about-widget.php:63
 msgid "Text or HTML"
 msgstr ""
 
-#: inc/widgets/about/class-about-widget.php:56
+#: inc/widgets/about/class-about-widget.php:65
 msgid "Content:"
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:17
+#: inc/widgets/banner/class-banner-widget.php:25
 msgid "Display a banner in your sidebar."
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:19
+#: inc/widgets/banner/class-banner-widget.php:27
 msgid "Banner"
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:32
+#: inc/widgets/banner/class-banner-widget.php:40
 msgid "Source:"
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:36
+#: inc/widgets/banner/class-banner-widget.php:44
 msgid "Type a banner`s link"
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:38
+#: inc/widgets/banner/class-banner-widget.php:46
 msgid "Link:"
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:43
+#: inc/widgets/banner/class-banner-widget.php:51
 msgid "A new window or tab"
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:44
+#: inc/widgets/banner/class-banner-widget.php:52
 msgid "The same frame as it was clicked"
 msgstr ""
 
-#: inc/widgets/banner/class-banner-widget.php:47
+#: inc/widgets/banner/class-banner-widget.php:55
 msgid "Opens in:"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:26
+#: inc/widgets/carousel/class-carousel-widget.php:45
 msgid "Display a list of your posts on your site."
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:28
+#: inc/widgets/carousel/class-carousel-widget.php:47
 msgid "Carousel"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:41
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:42
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:134
-#: inc/widgets/image-grid/class-image-grid-widget.php:44
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:42
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:59
+#: inc/widgets/carousel/class-carousel-widget.php:60
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:55
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:147
+#: inc/widgets/image-grid/class-image-grid-widget.php:57
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:70
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:71
 msgid "Category"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:45
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:46
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:135
-#: inc/widgets/image-grid/class-image-grid-widget.php:48
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:46
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:63
+#: inc/widgets/carousel/class-carousel-widget.php:64
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:59
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:148
+#: inc/widgets/image-grid/class-image-grid-widget.php:61
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:74
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:75
 msgid "Tag"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:49
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:54
-#: inc/widgets/image-grid/class-image-grid-widget.php:52
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:50
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:67
+#: inc/widgets/carousel/class-carousel-widget.php:68
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:67
+#: inc/widgets/image-grid/class-image-grid-widget.php:65
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:78
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:79
 msgid "Choose taxonomy type"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:57
-#: inc/widgets/carousel/class-carousel-widget.php:59
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:62
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:64
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:62
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:64
+#: inc/widgets/carousel/class-carousel-widget.php:80
+#: inc/widgets/carousel/class-carousel-widget.php:82
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:75
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:77
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:90
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:92
 msgid "Select category"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:68
-#: inc/widgets/carousel/class-carousel-widget.php:70
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:73
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:75
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:77
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:79
+#: inc/widgets/carousel/class-carousel-widget.php:95
+#: inc/widgets/carousel/class-carousel-widget.php:97
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:86
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:88
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:105
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:107
 msgid "Select tags"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:78
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:87
+#: inc/widgets/carousel/class-carousel-widget.php:105
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:115
 msgid "Posts count"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:84
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:93
+#: inc/widgets/carousel/class-carousel-widget.php:111
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:121
 msgid "Display title"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:96
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:105
+#: inc/widgets/carousel/class-carousel-widget.php:123
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:133
 msgid "Display more button"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:98
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:107
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:183
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:240
+#: inc/widgets/carousel/class-carousel-widget.php:125
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:135
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:211
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:268
 msgid "On"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:99
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:108
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:184
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:241
+#: inc/widgets/carousel/class-carousel-widget.php:126
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:136
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:212
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:269
 msgid "Off"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:106
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:115
+#: inc/widgets/carousel/class-carousel-widget.php:133
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:143
 msgid "Read more"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:107
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:116
+#: inc/widgets/carousel/class-carousel-widget.php:134
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:144
 msgid "More button text"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:116
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:125
+#: inc/widgets/carousel/class-carousel-widget.php:143
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:153
 msgid "Content words trimmed count"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:123
+#: inc/widgets/carousel/class-carousel-widget.php:150
 msgid "Number of slides per view"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:130
+#: inc/widgets/carousel/class-carousel-widget.php:157
 msgid "Number slides per group"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:137
+#: inc/widgets/carousel/class-carousel-widget.php:164
 msgid "Multi Row Slides Layout"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:144
+#: inc/widgets/carousel/class-carousel-widget.php:171
 msgid "Width of the space between slides(px)"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:151
+#: inc/widgets/carousel/class-carousel-widget.php:178
 msgid "Duration of transition between slides (ms)"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:157
+#: inc/widgets/carousel/class-carousel-widget.php:184
 msgid "Slider navigation"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:163
+#: inc/widgets/carousel/class-carousel-widget.php:190
 msgid "Slider pagination"
 msgstr ""
 
-#: inc/widgets/carousel/class-carousel-widget.php:269
-msgid "Posts not found"
-msgstr ""
-
-#: inc/widgets/carousel/class-carousel-widget.php:320
+#: inc/widgets/carousel/class-carousel-widget.php:217
 msgid "View file not found"
 msgstr ""
 
-#: inc/widgets/contact-information/class-contact-information-widget.php:17
+#: inc/widgets/carousel/class-carousel-widget.php:276
+msgid "Posts not found"
+msgstr ""
+
+#: inc/widgets/contact-information/class-contact-information-widget.php:25
 msgid "Display an contact-information."
 msgstr ""
 
-#: inc/widgets/contact-information/class-contact-information-widget.php:19
+#: inc/widgets/contact-information/class-contact-information-widget.php:27
 msgid "Contact Information"
 msgstr ""
 
-#: inc/widgets/contact-information/class-contact-information-widget.php:29
+#: inc/widgets/contact-information/class-contact-information-widget.php:37
 msgid "Add Contact Information"
 msgstr ""
 
-#: inc/widgets/contact-information/class-contact-information-widget.php:37
+#: inc/widgets/contact-information/class-contact-information-widget.php:45
 msgid "Choose icon"
 msgstr ""
 
-#: inc/widgets/contact-information/class-contact-information-widget.php:50
-#: inc/widgets/contact-information/class-contact-information-widget.php:51
+#: inc/widgets/contact-information/class-contact-information-widget.php:58
+#: inc/widgets/contact-information/class-contact-information-widget.php:59
 msgid "Value"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:26
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:34
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:39
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:47
 msgid "Custom Posts"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:27
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:40
 msgid "Display custom posts your site."
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:50
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:63
 msgid "Post Format"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:84
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:86
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:97
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:99
 msgid "Select post format"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:94
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:107
 msgid "Posts count ( Set 0 to show all. )"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:102
-#: inc/widgets/image-grid/class-image-grid-widget.php:96
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:115
+#: inc/widgets/image-grid/class-image-grid-widget.php:109
 msgid "Offset post"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:110
-#: inc/widgets/image-grid/class-image-grid-widget.php:104
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:123
+#: inc/widgets/image-grid/class-image-grid-widget.php:117
 msgid "Title words length ( Set 0 to hide title. )"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:118
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:131
 msgid "Excerpt words length ( Set 0 to hide excerpt. )"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:131
-#: inc/widgets/instagram/class-instagram-widget.php:65
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:144
+#: inc/widgets/instagram/class-instagram-widget.php:74
 msgid "Date"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:132
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:145
 msgid "Author"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:133
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:146
 msgid "Comment count"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:136
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:149
 msgid "More Button"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:138
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:151
 msgid "Display post meta data"
 msgstr ""
 
-#: inc/widgets/custom-posts/class-custom-posts-widget.php:143
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:156
 msgid "Post read more button label"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:28
+#: inc/widgets/image-grid/class-image-grid-widget.php:41
 msgid "Image Grid"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:29
+#: inc/widgets/image-grid/class-image-grid-widget.php:42
 msgid "This widget displays images from post."
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:37
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:52
+#: inc/widgets/image-grid/class-image-grid-widget.php:50
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:64
 msgid "Widget title"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:60
+#: inc/widgets/image-grid/class-image-grid-widget.php:73
 msgid "Select categories to show"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:69
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:84
+#: inc/widgets/image-grid/class-image-grid-widget.php:82
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:110
 msgid "Select tags to show"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:76
+#: inc/widgets/image-grid/class-image-grid-widget.php:89
 msgid "Publish Date"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:77
+#: inc/widgets/image-grid/class-image-grid-widget.php:90
 msgid "Post Title"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:78
+#: inc/widgets/image-grid/class-image-grid-widget.php:91
 msgid "Comment Count"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:80
+#: inc/widgets/image-grid/class-image-grid-widget.php:93
 msgid "Post sorted"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:88
+#: inc/widgets/image-grid/class-image-grid-widget.php:101
 msgid "Posts number"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:112
+#: inc/widgets/image-grid/class-image-grid-widget.php:125
 msgid "Columns number"
 msgstr ""
 
-#: inc/widgets/image-grid/class-image-grid-widget.php:120
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:133
+#: inc/widgets/image-grid/class-image-grid-widget.php:133
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:159
 msgid "Items padding ( size in pixels )"
 msgstr ""
 
-#: inc/widgets/instagram/class-instagram-widget.php:28
+#: inc/widgets/instagram/class-instagram-widget.php:37
 msgid "Display a list of photos from Instagram network."
 msgstr ""
 
-#: inc/widgets/instagram/class-instagram-widget.php:30
-#: inc/widgets/instagram/class-instagram-widget.php:34
+#: inc/widgets/instagram/class-instagram-widget.php:39
+#: inc/widgets/instagram/class-instagram-widget.php:43
 msgid "Instagram"
 msgstr ""
 
-#: inc/widgets/instagram/class-instagram-widget.php:40
+#: inc/widgets/instagram/class-instagram-widget.php:49
 msgid "Hashtag (enter without `#` symbol)"
 msgstr ""
 
-#: inc/widgets/instagram/class-instagram-widget.php:48
+#: inc/widgets/instagram/class-instagram-widget.php:57
 msgid "Number of photos"
 msgstr ""
 
-#: inc/widgets/instagram/class-instagram-widget.php:56
+#: inc/widgets/instagram/class-instagram-widget.php:65
 msgid "Caption"
 msgstr ""
 
-#: inc/widgets/instagram/class-instagram-widget.php:89
+#: inc/widgets/instagram/class-instagram-widget.php:98
 msgid "Please, enter #hashtag."
 msgstr ""
 
-#: inc/widgets/instagram/class-instagram-widget.php:135
+#: inc/widgets/instagram/class-instagram-widget.php:144
 msgid "No photos. Maybe you entered a invalid hashtag."
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:27
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:55
 msgid "Display smart slider on your site."
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:29
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:57
 msgid "Smart Slider"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:131
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:159
 msgid "Slider"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:132
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:160
 msgid "Gallery"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:134
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:162
 msgid "Mode"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:139
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:167
 #, php-format
 msgid "Slider width (less than 100% for `Gallery` mode)"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:144
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:172
 msgid "Slider height"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:151
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:179
 msgid "Horizontal"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:152
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:180
 msgid "Vertical"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:154
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:182
 msgid "Slider orientation"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:161
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:189
 msgid "Slide distance(px)"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:169
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:197
 msgid "Slide duration(ms)"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:175
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:203
 msgid "Use fade effect?  (only for `Slider` mode)"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:181
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:209
 msgid "Use navigation?"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:193
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:221
 msgid "Indicates whether the arrows will fade in only on hover"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:200
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:228
 msgid "Use pagination?"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:206
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:234
 msgid "Use autoplay?"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:214
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:242
 msgid "Autoplay delay(ms)"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:220
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:248
 msgid "Display fullScreen button?"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:226
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:254
 msgid "Indicates if the slides will be shuffled"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:232
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:260
 msgid "Use infinite scrolling?"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:238
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:266
 msgid "Display thumbnails?"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:252
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:280
 msgid "Bottom"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:256
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:284
 msgid "Sets the position of the thumbnail scroller"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:263
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:291
 msgid "Display thumbnails arrows?"
 msgstr ""
 
-#: inc/widgets/smart-slider/class-smart-slider-widget.php:325
+#: inc/widgets/smart-slider/class-smart-slider-widget.php:353
 msgid "Posts for slider not found"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:30
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:50
 msgid "Display subscribe form and follow links."
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:32
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:52
 msgid "Subscribe and Follow"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:40
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:60
 msgid "Enable Subscribe Box"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:45
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:59
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:65
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:79
 msgid "Subscribe"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:46
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:66
 msgid "Subscribe Title"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:50
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:70
 msgid "Subscribe text message"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:54
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:74
 msgid "Enter your email"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:55
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:75
 msgid "Subscribe input placeholder"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:60
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:80
 msgid "Subscribe submit label"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:64
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:84
 msgid "You successfully subscribed"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:65
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:85
 msgid "Subscribe success"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:73
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:93
 msgid "Enable Follow Box"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:78
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:98
 msgid "Follow"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:79
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:99
 msgid "Follow Title"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:83
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:103
 msgid "Follow text message"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:92
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:112
 msgid "Enable Custom Background"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:100
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:120
 msgid "Choose Image"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:111
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:131
 msgid "Use \"Invert scheme\" for text color"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:119
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:139
 msgid "Top Left"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:120
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:140
 msgid "Top Center"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:121
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:141
 msgid "Top Right"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:122
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:142
 msgid "Middle Left"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:123
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:143
 msgid "Middle Center"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:124
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:144
 msgid "Middle Right"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:125
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:145
 msgid "Bottom Left"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:126
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:146
 msgid "Bottom Center"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:127
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:147
 msgid "Bottom Right"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:136
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:156
 msgid "Repeat"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:137
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:157
 msgid "Repeat X"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:138
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:158
 msgid "Repeat Y"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:139
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:159
 msgid "No repeat"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:145
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:165
 msgid "Background Size"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:148
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:168
 msgid "Cover"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:149
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:169
 msgid "Contain"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:150
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:170
 msgid "Auto"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:165
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:185
 msgid "Security validation failed"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:166
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:186
 msgid "Please, provide valid mail"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:167
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:187
 msgid "Please, set up MailChimp API key and List ID"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:168
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:188
 msgid "Internal error. Please, try again later"
 msgstr ""
 
-#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:230
+#: inc/widgets/subscribe-follow/class-subscribe-follow-widget.php:252
 msgid "Please set up MailChimp API key and List ID"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:43
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:55
 msgid "Taxonomy Tiles"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:44
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:56
 msgid "This widget displays images from taxonomy."
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:75
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:94
 msgid "Select category to show"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:93
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:119
 msgid "Description words length ( Set 0 to hide description. )"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:101
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:127
 msgid "Show post count"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:109
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:135
 msgid "Grid"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:113
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:139
 msgid "Tiles"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:116
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:142
 msgid "Choose Layout Type"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:124
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:150
 msgid "Columns number ( layout type grid )"
 msgstr ""
 
-#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:216
+#: inc/widgets/taxonomy-tiles/class-taxonomy-tiles-widget.php:264
 #, php-format
 msgid "%s post"
 msgid_plural "%s posts"
@@ -2165,11 +2225,6 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: template-parts/comment.php:6
-#, php-format
-msgid "<span class=\"posted-by\">Posted by</span> %s"
-msgstr ""
-
 #: template-parts/content-author-bio.php:17
 #, php-format
 msgid "Written by %s"
@@ -2180,9 +2235,11 @@ msgid "Nothing Found"
 msgstr ""
 
 #: template-parts/content-none.php:18
-#, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Get started here"
+msgstr ""
+
+#: template-parts/content-none.php:18
+msgid "Ready to publish your first post?"
 msgstr ""
 
 #: template-parts/content-none.php:22
@@ -2210,4 +2267,12 @@ msgstr ""
 #: template-parts/content-page.php:41
 #, php-format
 msgid "Edit %s"
+msgstr ""
+
+#: template-parts/content-pagination.php:8
+msgid "Previous"
+msgstr ""
+
+#: template-parts/content-pagination.php:9
+msgid "Next"
 msgstr ""

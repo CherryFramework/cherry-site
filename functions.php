@@ -89,6 +89,8 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 			// Enqueue public assets.
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ), 10 );
 
+			// Overrides the load textdomain function for the 'cherry-framework' domain.
+			add_filter( 'override_load_textdomain', array( $this, 'override_load_textdomain' ), 5, 3 );
 		}
 
 		/**
@@ -609,6 +611,36 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
+		}
+
+		/**
+		 * Overrides the load textdomain functionality when 'cherry-framework' is the domain in use.
+		 *
+		 * @since  1.0.0
+		 * @link   https://gist.github.com/justintadlock/7a605c29ae26c80878d0
+		 * @param  bool   $override
+		 * @param  string $domain
+		 * @param  string $mofile
+		 * @return bool
+		 */
+		public function override_load_textdomain( $override, $domain, $mofile ) {
+
+			// Check if the domain is our framework domain.
+			if ( 'cherry-framework' === $domain ) {
+
+				global $l10n;
+
+				// If the theme's textdomain is loaded, assign the theme's translations
+				// to the framework's textdomain.
+				if ( isset( $l10n['__tm'] ) ) {
+					$l10n[ $domain ] = $l10n['__tm'];
+				}
+
+				// Always override.  We only want the theme to handle translations.
+				$override = true;
+			}
+
+			return $override;
 		}
 
 		/**

@@ -1,0 +1,16 @@
+/* #TM timeline Plugin */
+.team-item__inner .team-listing_name a:hover{
+	color: $regular_accent_color_2;
+}
+
+a.team-socials_link{
+	color: $regular_accent_color_3;
+}
+
+a.team-socials_link:hover{
+	color: $regular_accent_color_2;
+}
+
+.team-listing_socials{
+	background-color: @alpha( $regular_accent_color_1, 50 );
+}

@@ -1,1 +1,12 @@
 /* #TM timeline Plugin */
+.tm_timeline-layout-vertical .tm_timeline__event__dot{
+	background-color: $regular_accent_color_1;
+}
+
+.tm_timeline__event__date{
+	color: $invert_accent_color_1;
+}
+
+.tm_timeline__event__date span{
+	background-color: $regular_accent_color_1;
+}

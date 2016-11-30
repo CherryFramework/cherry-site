@@ -31,6 +31,10 @@ code {
 	background-position: 0 50%;
 }
 
+.about-section-3{
+	background-color: $regular_accent_color_1;
+}
+
 .section-overlay:before {
 	background: @alpha( $regular_accent_color_2, 75 );
 	background: linear-gradient(to bottom, @alpha( $regular_accent_color_2, 75 ) 0%, @alpha( $regular_accent_color_2, 20 ) 100%);

@@ -1,0 +1,36 @@
+.tm_timeline{
+	&__tense{
+	}
+	&__event{
+		margin-bottom: 75px;
+		&__dot{
+			width: 12px;
+			height: 12px;
+			border-radius: 0;
+		}
+		&__date{
+			margin-bottom: 20px;
+			font-size: 12px;
+			letter-spacing: 1px;
+			span{
+				padding: 5px 10px;
+				background-color: #eee;
+			}
+		}
+	}
+	&.tm_timeline-layout-vertical-chessOrder{
+		.tm_timeline__tense{
+			width: 2px
+		}
+		.tm_timeline__event-odd{
+			.tm_timeline__event__dot{
+				transform: rotate(45deg) translate(-1px, 7px);
+			}
+		}
+		.tm_timeline__event-even{
+			.tm_timeline__event__dot{
+				transform: rotate(45deg) translate(7px, -2px);
+			}
+		}
+	}
+}

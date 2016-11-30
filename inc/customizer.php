@@ -317,6 +317,20 @@ function cherry_get_customizer_options() {
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
+			'regular_accent_color_4' => array(
+				'title'   => esc_html__( 'Accent color (4)', 'cherry' ),
+				'section' => 'regular_scheme',
+				'default' => '#2a445d',
+				'field'   => 'hex_color',
+				'type'    => 'control',
+			),
+			'regular_accent_color_5' => array(
+				'title'   => esc_html__( 'Accent color (5)', 'cherry' ),
+				'section' => 'regular_scheme',
+				'default' => '#17c5cc',
+				'field'   => 'hex_color',
+				'type'    => 'control',
+			),
 			'regular_text_color' => array(
 				'title'   => esc_html__( 'Text color', 'cherry' ),
 				'section' => 'regular_scheme',
@@ -1364,12 +1378,14 @@ function cherry_get_customizer_options() {
 				'section' => 'mailchimp',
 				'field'   => 'text',
 				'type'    => 'control',
+				'default' => '0fabd7822dcc3cb8547dcf9109750d92-us10',
 			),
 			'mailchimp_list_id' => array(
 				'title'   => esc_html__( 'MailChimp list ID', 'cherry' ),
 				'section' => 'mailchimp',
 				'field'   => 'text',
 				'type'    => 'control',
+				'default' => '2a6603b219',
 			),
 
 			/** `Ads Management` panel */
@@ -2081,6 +2097,7 @@ function cherry_get_dynamic_css_options() {
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/projects.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/plugins-list.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/timeline.css',
+			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/team.css',
 		),
 		'options' => array(
 			'header_logo_font_style',
@@ -2155,6 +2172,8 @@ function cherry_get_dynamic_css_options() {
 			'regular_accent_color_1',
 			'regular_accent_color_2',
 			'regular_accent_color_3',
+			'regular_accent_color_4',
+			'regular_accent_color_5',
 			'regular_text_color',
 			'regular_link_color',
 			'regular_link_hover_color',
@@ -2271,11 +2290,7 @@ function cherry_get_fonts_options() {
  * @return string
  */
 function cherry_get_default_top_panel_text() {
-	return sprintf(
-		'<div class="info-block"><i class="material-icons">place</i> %s</div><div class="info-block"><i class="material-icons">call</i> %s</div>',
-		esc_html__( '25 East 12th Street 16st Floor New York, NY 12222, United States', 'cherry' ),
-		esc_html__( '800-2345-6789', 'cherry' )
-	);
+	return '';
 }
 
 /**
@@ -2285,7 +2300,7 @@ function cherry_get_default_top_panel_text() {
  * @return string
  */
 function cherry_get_default_footer_copyright() {
-	return esc_html__( 'Cherry Framework %%year%%. <a href=\"#\">Privacy Policy</a>', 'cherry' );
+	return esc_html__( 'Copyright %%year%% CherryFramework Team', 'cherry' );
 }
 
 /**
