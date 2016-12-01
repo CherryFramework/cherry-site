@@ -55,8 +55,8 @@ function cherry_header_container_class( $classes = array() ) {
  * @return void
  */
 function cherry_content_class( $classes = array() ) {
-	$classes[] = 'site-content';
-	echo cherry_get_container_classes( $classes, 'content' );
+
+	echo 'site-content';
 }
 
 /**

@@ -14,8 +14,16 @@
 .hentry {
 	position: relative;
 	margin-top: 3em;
-
+	padding-top: 3em;
+	border-top: 1px solid;
 	@include card;
+	&:first-child {
+		.posts-list & {
+			margin-top: 0;
+			padding-top: 0;
+			border: none;
+		}
+	}
 	&:last-child {
 		.posts-list & {
 			margin-bottom: 3em;
@@ -49,6 +57,8 @@
 		}
 	}
 	&-meta {
+		font-size: 12px;
+		margin-bottom: 1em;
 		.entry-summary + &,
 		.entry-content + & {
 			margin-top: 1em;
@@ -58,7 +68,6 @@
 	&-content {
 		.posts-list & {
 			display: none;
-
 			@include media-breakpoint-up(md) {
 				display: block;
 			}
@@ -74,7 +83,7 @@
 		position: relative;
 		margin-top: 1em;
 		.btn {
-			float: right;
+			float: left;
 		}
 	}
 }
@@ -150,6 +159,7 @@
 	}
 	&__date,
 	&__comments,
+	&__author,
 	&__tags {
 		.material-icons,
 		.fa {
@@ -165,6 +175,7 @@
 		}
 	}
 	&__date,
+	&__author,
 	&__comments {
 		margin-right: 15px;
 		.single & {

@@ -1,3 +1,8 @@
+/* #Post */
+.hentry {
+	border-color: $regular_accent_color_3
+}
+
 /* #Entry Meta */
 .post__cats a,
 .sticky__label {
@@ -12,10 +17,18 @@
 .post__tags .material-icons,
 .entry-meta .fa,
 .post__tags .fa {
-	color: @alpha( $regular_accent_color_1, 30 );
+	color: @darken( $regular_text_color, 10% );
 }
+
+.entry-meta a {
+	color: $regular_text_color;
+}
+
+.entry-meta a:hover {
+	color: $regular_accent_color_1;
+}
+
 .posted-by,
-.posted-by__author,
 .post-featured-content {
 	color: $regular_accent_color_2;
 }

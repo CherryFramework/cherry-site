@@ -41,16 +41,7 @@
 		</figure><!-- .post-thumbnail -->
 
 		<header class="entry-header">
-			<?php $author_visible = cherry_is_meta_visible( 'blog_post_author', 'loop' ) ? 'true' : 'false'; ?>
 
-			<?php $utility->meta_data->get_author( array(
-					'visible' => $author_visible,
-					'class'   => 'posted-by__author',
-					'prefix'  => esc_html__( 'Posted by ', 'cherry' ),
-					'html'    => '<span class="posted-by">%1$s<a href="%2$s" %3$s %4$s rel="author">%5$s%6$s</a></span>',
-					'echo'    => true,
-				) );
-			?>
 			<?php
 				$title_html = ( is_single() ) ? '<h1 %1$s>%4$s</h1>' : '<h2 %1$s><a href="%2$s" rel="bookmark">%4$s</a></h2>';
 
@@ -60,21 +51,7 @@
 					'echo'  => true,
 				) );
 			?>
-		</header><!-- .entry-header -->
-
-		<div class="entry-content">
-			<?php $blog_content = get_theme_mod( 'blog_posts_content', cherry_theme()->customizer->get_default( 'blog_posts_content' ) );
-				$length = ( 'full' === $blog_content ) ? -1 : 55;
-
-				$utility->attributes->get_content( array(
-					'length'       => $length,
-					'content_type' => 'post_excerpt',
-					'echo'         => true,
-				) );
-			?>
-		</div><!-- .entry-content -->
-
-		<?php if ( 'post' === get_post_type() ) : ?>
+			<?php if ( 'post' === get_post_type() ) : ?>
 
 			<div class="entry-meta">
 				<span class="post__date">
@@ -83,7 +60,7 @@
 						$utility->meta_data->get_date( array(
 							'visible' => $date_visible,
 							'class'   => 'post__date-link',
-							'icon'    => '<i class="material-icons">event</i>',
+							'icon'    => '<i class="material-icons">date_range</i>',
 							'echo'    => true,
 						) );
 					?>
@@ -94,7 +71,7 @@
 						$utility->meta_data->get_comment_count( array(
 							'visible' => $comment_visible,
 							'class'   => 'post__comments-link',
-							'icon'    => '<i class="material-icons">mode_comment</i>',
+							'icon'    => '<i class="material-icons">comment</i>',
 							'echo'    => true,
 						) );
 					?>
@@ -111,15 +88,38 @@
 						'echo'      => true,
 					) );
 				?>
+
+				<?php $author_visible = cherry_is_meta_visible( 'blog_post_author', 'loop' ) ? 'true' : 'false'; ?>
+
+				<?php $utility->meta_data->get_author( array(
+						'visible' => $author_visible,
+						'class'   => 'posted-by__author',
+						//'prefix'  => esc_html__( 'Posted by ', 'cherry' ),
+						'icon'      => '<i class="material-icons">mood</i>',
+						'html'    => '<span class="post__author">%1$s<a href="%2$s" %3$s %4$s rel="author">%5$s%6$s</a></span>',
+						'echo'    => true,
+					) );
+				?>
 			</div><!-- .entry-meta -->
 
 		<?php endif; ?>
 
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<?php $blog_content = get_theme_mod( 'blog_posts_content', cherry_theme()->customizer->get_default( 'blog_posts_content' ) );
+				$length = ( 'full' === $blog_content ) ? -1 : 55;
+
+				$utility->attributes->get_content( array(
+					'length'       => $length,
+					'content_type' => 'post_excerpt',
+					'echo'         => true,
+				) );
+			?>
+		</div><!-- .entry-content -->
 	</div><!-- .post-list__item-content -->
 
 	<footer class="entry-footer">
-		<?php cherry_share_buttons( 'loop' ); ?>
-
 		<?php $utility->attributes->get_button( array(
 				'class' => 'btn btn-primary',
 				'text'  => get_theme_mod( 'blog_read_more_text', cherry_theme()->customizer->get_default( 'blog_read_more_text' ) ),
@@ -128,6 +128,7 @@
 				'echo'  => true,
 			) );
 		?>
+		<?php cherry_share_buttons( 'loop' ); ?>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

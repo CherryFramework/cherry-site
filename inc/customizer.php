@@ -259,7 +259,7 @@ function cherry_get_customizer_options() {
 			'container_width' => array(
 				'title'       => esc_html__( 'Container width (px)', 'cherry' ),
 				'section'     => 'page_layout',
-				'default'     => 1200,
+				'default'     => 1300,
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 960,
@@ -1437,7 +1437,7 @@ function cherry_get_customizer_options() {
 				'title'   => esc_html__( 'Logo upload', 'cherry' ),
 				'section' => 'footer_options',
 				'field'   => 'image',
-				'default' => '%s/assets/images/footer-logo.png',
+				'default' => '',
 				'type'    => 'control',
 			),
 			'footer_copyright' => array(

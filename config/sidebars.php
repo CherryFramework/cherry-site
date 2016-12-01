@@ -30,7 +30,7 @@ function cherry_register_sidebars() {
 			'before_wrapper' => '<section id="%1$s" %2$s>',
 			'after_wrapper'  => '</section>',
 			'is_global'      => false,
-			'conditional'    => array( 'is_home', 'is_front_page' ),
+			'conditional'    => array( 'is_front_page' ),
 		),
 		'before-content-area' => array(
 			'name'           => esc_html__( 'Before Content Area', 'cherry' ),
