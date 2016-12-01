@@ -30,6 +30,10 @@ function cherry_register_required_plugins() {
 			'slug' => 'contact-form-7',
 		),
 		array(
+			'name' => esc_html__( 'DW Question & Answer', 'cherry' ),
+			'slug' => 'dw-question-answer',
+		),
+		array(
 			'name' => esc_html__( 'Cherry Sidebars', 'cherry' ),
 			'slug' => 'cherry-sidebars',
 		),

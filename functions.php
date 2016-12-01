@@ -352,6 +352,7 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 			 * Extensions.
 			 */
 			require_once trailingslashit( CHERRY_THEME_EXT ) . 'woocommerce.php';
+			require_once trailingslashit( CHERRY_THEME_EXT ) . 'dw-question-answer.php';
 		}
 
 		/**
