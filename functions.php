@@ -629,8 +629,8 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 			) );
 
 			wp_localize_script( 'cherry-theme-script', 'cherry', array(
-				'ajaxurl'             => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'labels'              => $labels,
+				'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
+				'labels'  => $labels,
 			) );
 
 			// Threaded Comments.
