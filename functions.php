@@ -595,8 +595,8 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 			) );
 
 			wp_localize_script( 'cherry-theme-script', 'cherry', array(
-				'ajaxurl'             => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'labels'              => $labels,
+				'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
+				'labels'  => $labels,
 			) );
 
 			// Threaded Comments.
@@ -624,8 +624,8 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 
 				// If the theme's textdomain is loaded, assign the theme's translations
 				// to the framework's textdomain.
-				if ( isset( $l10n['__tm'] ) ) {
-					$l10n[ $domain ] = $l10n['__tm'];
+				if ( isset( $l10n['cherry'] ) ) {
+					$l10n[ $domain ] = $l10n['cherry'];
 				}
 
 				// Always override.  We only want the theme to handle translations.
