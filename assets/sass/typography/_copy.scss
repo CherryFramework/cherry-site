@@ -42,6 +42,11 @@ code, kbd, tt, var {
 code {
 	padding: 2px 5px;
 	border: 1px solid $color__background-hr;
+
+	pre & {
+		background-color: transparent;
+		border-color: transparent;
+	}
 }
 
 abbr, acronym {

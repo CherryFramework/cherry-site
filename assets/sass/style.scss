@@ -141,3 +141,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "plugins/testi";
 @import "plugins/team";
 @import "plugins/timeline";
+
+
+.docs-wrapper {
+    // position: relative;
+    // padding-left: 25%;
+
+    .toc {
+        // position: static;
+        width: 25%;
+        display: inline-block;
+        // top: 0;
+        // left: 0;
+    }
+}
