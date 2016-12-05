@@ -12,14 +12,16 @@
 ### Hentry (WordPress native CSS-class for post/page article)
 --------------------------------------------------------------*/
 .hentry {
-	position: relative;
 	margin-top: 3em;
-	padding-top: 3em;
-	border-top: 1px solid;
+	position: relative;
 	@include card;
+	.posts-list & {
+		padding-top: 3em;
+		border-top: 1px solid;
+	}
 	&:first-child {
 		.posts-list & {
-			margin-top: 0;
+			margin-top: 3em;
 			padding-top: 0;
 			border: none;
 		}
@@ -93,6 +95,7 @@
 --------------------------------------------------------------*/
 .post {
 	&-thumbnail {
+		margin-bottom: 1.5em;
 		&__link {
 			&.post-thumbnail--small {
 				display: block;
@@ -139,17 +142,13 @@
 				z-index: 99;
 				top: 10px;
 				left: 10px;
-
-				@include media-breakpoint-up(lg) {
-					top: 30px;
-				}
 			}
 		}
 		.post-format-wrap & {
 			position: absolute;
 			z-index: 99;
-			top: 10px;
-			left: 10px;
+			top: 20px;
+			left: 20px;
 
 			@include media-breakpoint-up(lg) {
 				top: 30px;
@@ -191,11 +190,6 @@
 			@include media-breakpoint-up(sm) {
 				float: left;
 			}
-		}
-	}
-	&ed-by__author {
-		&:hover {
-			text-decoration: underline;
 		}
 	}
 }

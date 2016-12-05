@@ -25,13 +25,6 @@
 	color: $regular_accent_color_1;
 }
 
-.site-header.transparent .site-logo__link {
-	color: #fff;
-}
-.site-header.transparent .site-logo__link:hover {
-	color: $regular_accent_color_1;
-}
-
 /* ##Top Panel */
 .top-panel {
 	background-color: $top_panel_bg;

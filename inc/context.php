@@ -48,18 +48,6 @@ function cherry_header_container_class( $classes = array() ) {
 }
 
 /**
- * Prints site content CSS classes.
- *
- * @since  1.0.0
- * @param  array $classes Additional classes.
- * @return void
- */
-function cherry_content_class( $classes = array() ) {
-
-	echo 'site-content';
-}
-
-/**
  * Prints site footer CSS classes.
  *
  * @since  1.0.0

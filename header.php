@@ -33,4 +33,4 @@
 		</div><!-- .header-container -->
 	</header><!-- #masthead -->
 
-	<div id="content" <?php cherry_content_class(); ?>>
+	<div id="content" class="site-content">

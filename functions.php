@@ -593,18 +593,9 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 				'totop_button' => esc_html__( 'Top', 'cherry' ),
 			) );
 
-			$more_button_options = apply_filters( 'cherry_theme_more_button_options', array(
-				'more_button_type'             => get_theme_mod( 'more_button_type', cherry_theme()->customizer->get_default( 'more_button_type' ) ),
-				'more_button_text'             => get_theme_mod( 'more_button_text', cherry_theme()->customizer->get_default( 'more_button_text' ) ),
-				'more_button_icon'             => get_theme_mod( 'more_button_icon', cherry_theme()->customizer->get_default( 'more_button_icon' ) ),
-				'more_button_image_url'        => get_theme_mod( 'more_button_image_url', cherry_theme()->customizer->get_default( 'more_button_image_url' ) ),
-				'retina_more_button_image_url' => get_theme_mod( 'retina_more_button_image_url', cherry_theme()->customizer->get_default( 'retina_more_button_image_url' ) ),
-			) );
-
 			wp_localize_script( 'cherry-theme-script', 'cherry', array(
 				'ajaxurl'             => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'labels'              => $labels,
-				'more_button_options' => $more_button_options,
 			) );
 
 			// Threaded Comments.

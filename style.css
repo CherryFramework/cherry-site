@@ -1848,7 +1848,7 @@ a {
       position: relative;
       z-index: 998;
       order: 2;
-      margin: 3px 0 16px 3px;
+      margin: 0;
       border-width: 0;
       border-radius: 4px; } }
   .menu-toggle[aria-controls="main-menu"] .menu-toggle__icon {
@@ -2655,7 +2655,7 @@ html.mobile-menu-active {
 .site-header.minimal .site-branding {
   padding: 0;
   order: 1;
-  flex: 0 1 100%;
+  flex: 0 1 auto;
   text-align: center; }
   @media (min-width: 768px) {
     .site-header.minimal .site-branding {
@@ -2701,65 +2701,72 @@ html.mobile-menu-active {
     .header-container__flex {
       flex-wrap: nowrap; } }
 
-.site-header.transparent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; }
-  .site-header.transparent .site-branding {
-    padding: 12px 0;
-    order: 1;
-    flex: 0 1 100%;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .site-header.transparent .site-branding {
-        order: 0;
-        flex: 0 1 auto;
-        text-align: left; } }
-  .site-header.transparent .social-list {
-    padding: 0 0 15px;
-    order: 0;
-    flex: 0 1 100%;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .site-header.transparent .social-list {
-        order: 2;
-        flex: 0 1 auto;
-        text-align: left; } }
-  .site-header.transparent .main-navigation {
-    order: 2;
-    flex: 0 1 100%;
-    align-self: flex-end; }
-    @media (min-width: 768px) {
-      .site-header.transparent .main-navigation {
-        order: 1;
-        flex: 0 1 50%; } }
+@media (min-width: 992px) {
+  .site-header.transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; } }
+
+.site-header.transparent .site-branding {
+  padding: 12px 0;
+  order: 1;
+  flex: 0 1 100%;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .site-header.transparent .site-branding {
+      order: 0;
+      flex: 0 1 auto;
+      text-align: left; } }
+
+.site-header.transparent .social-list {
+  padding: 0 0 15px;
+  order: 0;
+  flex: 0 1 100%;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .site-header.transparent .social-list {
+      order: 2;
+      flex: 0 1 auto;
+      text-align: left; } }
+
+.site-header.transparent .main-navigation {
+  order: 2;
+  flex: 0 1 100%;
+  align-self: flex-end; }
+  @media (min-width: 768px) {
+    .site-header.transparent .main-navigation {
+      order: 1;
+      flex: 0 1 50%; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .site-header.transparent .main-navigation {
     order: 3;
     flex: 0 1 100%; } }
-  .site-header.transparent .header-container__flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    align-content: stretch;
-    -ms-flex-align: start;
-    align-items: flex-start; }
-    @media (min-width: 992px) {
-      .site-header.transparent .header-container__flex {
-        flex-wrap: nowrap; } }
 
-.header-layout-transparent {
+.site-header.transparent .header-container__flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-content: stretch;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  @media (min-width: 992px) {
+    .site-header.transparent .header-container__flex {
+      flex-wrap: nowrap; } }
+
+.header-layout-transparent .site {
   position: relative; }
-  .header-layout-transparent.top-panel-invisible .hentry:first-child,
-  .header-layout-transparent.top-panel-invisible .sidebar .widget:first-child {
-    margin-top: 0; }
-  .header-layout-transparent.top-panel-invisible .card-columns {
-    padding-top: 0; }
+
+.header-layout-transparent.top-panel-invisible .hentry:first-child,
+.header-layout-transparent.top-panel-invisible .sidebar .widget:first-child {
+  margin-top: 0; }
+
+.header-layout-transparent.top-panel-invisible .card-columns {
+  padding-top: 0; }
 
 .site-header.mobile .site-branding {
   padding: 0 0 15px;
@@ -2902,12 +2909,13 @@ html.mobile-menu-active {
 ### Hentry (WordPress native CSS-class for post/page article)
 --------------------------------------------------------------*/
 .hentry {
-  position: relative;
   margin-top: 3em;
-  padding-top: 3em;
-  border-top: 1px solid; }
+  position: relative; }
+  .posts-list .hentry {
+    padding-top: 3em;
+    border-top: 1px solid; }
   .posts-list .hentry:first-child {
-    margin-top: 0;
+    margin-top: 3em;
     padding-top: 0;
     border: none; }
   .posts-list .hentry:last-child {
@@ -2957,28 +2965,28 @@ html.mobile-menu-active {
 /*--------------------------------------------------------------
 ### Post attributes (thumbnail, meta)
 --------------------------------------------------------------*/
-.post-thumbnail__link.post-thumbnail--small {
-  display: block;
-  margin-bottom: 15px;
-  text-align: center; }
-  @media (min-width: 992px) {
-    .post-thumbnail__link.post-thumbnail--small {
-      float: left;
-      margin-right: 30px;
-      text-align: left; } }
-
-.post-thumbnail__img {
-  display: inline-block;
-  vertical-align: top; }
-  .entry-header + .post-thumbnail > .post-thumbnail__img {
-    margin-top: 25px; }
-
-.posts-list .post-thumbnail--fullwidth {
-  display: block;
-  margin-bottom: 1em; }
-  @media (min-width: 992px) {
-    .posts-list .post-thumbnail--fullwidth {
-      margin-bottom: 1.5em; } }
+.post-thumbnail {
+  margin-bottom: 1.5em; }
+  .post-thumbnail__link.post-thumbnail--small {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center; }
+    @media (min-width: 992px) {
+      .post-thumbnail__link.post-thumbnail--small {
+        float: left;
+        margin-right: 30px;
+        text-align: left; } }
+  .post-thumbnail__img {
+    display: inline-block;
+    vertical-align: top; }
+    .entry-header + .post-thumbnail > .post-thumbnail__img {
+      margin-top: 25px; }
+  .posts-list .post-thumbnail--fullwidth {
+    display: block;
+    margin-bottom: 1em; }
+    @media (min-width: 992px) {
+      .posts-list .post-thumbnail--fullwidth {
+        margin-bottom: 1.5em; } }
 
 .post__cats a {
   line-height: 22px;
@@ -2993,15 +3001,12 @@ html.mobile-menu-active {
   z-index: 99;
   top: 10px;
   left: 10px; }
-  @media (min-width: 992px) {
-    .has-post-thumbnail .post-thumbnail--fullwidth + .post__cats {
-      top: 30px; } }
 
 .post-format-wrap .post__cats {
   position: absolute;
   z-index: 99;
-  top: 10px;
-  left: 10px; }
+  top: 20px;
+  left: 20px; }
   @media (min-width: 992px) {
     .post-format-wrap .post__cats {
       top: 30px;
@@ -3038,9 +3043,6 @@ html.mobile-menu-active {
     @media (min-width: 544px) {
       .single-post .post__tags {
         float: left; } }
-
-.posted-by__author:hover {
-  text-decoration: underline; }
 
 /*--------------------------------------------------------------
 ### Read More button

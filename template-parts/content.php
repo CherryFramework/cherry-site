@@ -93,9 +93,8 @@
 
 				<?php $utility->meta_data->get_author( array(
 						'visible' => $author_visible,
-						'class'   => 'posted-by__author',
-						//'prefix'  => esc_html__( 'Posted by ', 'cherry' ),
-						'icon'      => '<i class="material-icons">mood</i>',
+						'class'   => '',
+						'icon'     => '<i class="material-icons">mood</i>',
 						'html'    => '<span class="post__author">%1$s<a href="%2$s" %3$s %4$s rel="author">%5$s%6$s</a></span>',
 						'echo'    => true,
 					) );

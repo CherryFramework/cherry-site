@@ -333,45 +333,6 @@
 				subMenu,
 				index = -1;
 
-			if ( hasprop.call( window, 'cherry' ) &&
-				 hasprop.call( window.cherry, 'more_button_options' ) &&
-				 hasprop.call( window.cherry.more_button_options, 'more_button_type' ) ) {
-				switch( window.cherry.more_button_options.more_button_type ) {
-					case 'image':
-						imgurl = window.cherry.more_button_options.more_button_image_url;
-						if ( window.cherry.more_button_options.retina_more_button_image_url ) {
-							srcset = ' srcset="' + window.cherry.more_button_options.retina_more_button_image_url + ' 2x"';
-						}
-						moreMenuContent = '<img src="' + imgurl + '"' + srcset + ' alt="' + moreMenuContent + '">';
-						hasimg = true;
-					break;
-					case 'icon':
-						moreMenuContent = '<i class="fa ' + window.cherry.more_button_options.more_button_icon + '"></i>';
-						hasicon = true;
-					break;
-					case 'text':
-					default:
-						moreMenuContent = window.cherry.more_button_options.more_button_text || moreMenuContent;
-						hasimg = false;
-						hasicon = false;
-					break;
-				}
-			}
-
-			$mainNavigation.superGuacamole( {
-				threshold: 768, // Minimal menu width, when this plugin activates
-				minChildren: 3, // Minimal visible children count
-				childrenFilter: '.menu-item', // Child elements selector
-				menuTitle: moreMenuContent, // Menu title
-				menuUrl: '#',
-				templates: {
-					menu: '<li id="%5$s" class="%1$s' + ( hasimg ? ' super-guacamole__menu-with-image' : '' ) +
-						  ( hasicon ? ' super-guacamole__menu-with-icon' : '' ) + '"><a href="%2$s">%3$s</a><ul class="sub-menu">%4$s</ul></li>',
-					child_wrap: '<ul class="%1$s">%2$s</ul>',
-					child: '<li id="%5$s" class="%1$s"><a href="%2$s">%3$s</a><ul class="sub-menu">%4$s</ul></li>'
-				}
-			} );
-
 			function hideSubMenu( menuItem, $event ) {
 				var subMenus = menuItem.find('.sub-menu');
 

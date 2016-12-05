@@ -1,6 +1,6 @@
 /* #Post */
-.hentry {
-	border-color: $regular_accent_color_3
+.posts-list .hentry {
+	border-color: $regular_accent_color_3;
 }
 
 /* #Entry Meta */
@@ -53,8 +53,13 @@
 .post-author__holder {
 	background-color: $regular_link_color;
 }
+
+.post-author__title a {
+	color: $regular_accent_color_3;
+}
+
 .post-author__title a:hover {
-	color: $invert_link_hover_color;
+	color: $regular_accent_color_3;
 }
 
 /* #Comment Reply Link */

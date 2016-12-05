@@ -1295,57 +1295,6 @@ function cherry_get_customizer_options() {
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
-			'more_button_type' => array(
-				'title'   => esc_html__( 'More Menu Button Type', 'cherry' ),
-				'section' => 'header_main_menu',
-				'default' => 'text',
-				'field'   => 'radio',
-				'choices' => array(
-					'image' => esc_html__( 'Image', 'cherry' ),
-					'icon' => esc_html__( 'Icon', 'cherry' ),
-					'text'  => esc_html__( 'Text', 'cherry' ),
-				),
-				'type' => 'control',
-			),
-			'more_button_text' => array(
-				'title'           => esc_html__( 'More Menu Button Text', 'cherry' ),
-				'section'         => 'header_main_menu',
-				'default'         => esc_html__( '...', 'cherry' ),
-				'field'           => 'input',
-				'type'            => 'control',
-				'active_callback' => 'cherry_is_more_button_type_text',
-			),
-			'more_button_icon' => array(
-				'title'           => esc_html__( 'More Menu Button Icon', 'cherry' ),
-				'section'         => 'header_main_menu',
-				'field'           => 'iconpicker',
-				'type'            => 'control',
-				'active_callback' => 'cherry_is_more_button_type_icon',
-				'icon_data'       => array(
-					'icon_set'    => 'moreButtonFontAwesome',
-					'icon_css'    => CHERRY_THEME_URI . '/assets/css/font-awesome.min.css',
-					'icon_base'   => 'fa',
-					'icon_prefix' => 'fa-',
-					'icons'       => cherry_get_icons_set(),
-				),
-			),
-			'more_button_image_url' => array(
-				'title'           => esc_html__( 'More Button Image Upload', 'cherry' ),
-				'description'     => esc_html__( 'Upload More Button image', 'cherry' ),
-				'section'         => 'header_main_menu',
-				'default'         => '',
-				'field'           => 'image',
-				'type'            => 'control',
-				'active_callback' => 'cherry_is_more_button_type_image',
-			),
-			'retina_more_button_image_url' => array(
-				'title'           => esc_html__( 'Retina More Button Image Upload', 'cherry' ),
-				'description'     => esc_html__( 'Upload More Button image for retina-ready devices', 'cherry' ),
-				'section'         => 'header_main_menu',
-				'field'           => 'image',
-				'type'            => 'control',
-				'active_callback' => 'cherry_is_more_button_type_image',
-			),
 
 			/** `Sidebar` section */
 			'sidebar_settings' => array(

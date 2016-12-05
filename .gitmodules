@@ -1,6 +1,3 @@
-[submodule "CherryFramework"]
-	path = CherryFramework
-	url = https://github.com/CherryFramework/CherryFramework.git
 [submodule "cherry-framework"]
 	path = cherry-framework
 	url = https://github.com/CherryFramework/cherry-framework.git

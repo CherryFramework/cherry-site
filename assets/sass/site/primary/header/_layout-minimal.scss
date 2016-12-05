@@ -2,7 +2,7 @@
 	.site-branding {
 		padding: 0;
 		order: 1;
-		flex: 0 1 100%;
+		flex: 0 1 auto;
 		text-align: center;
 		@include media-breakpoint-up(md) {
 			order: 0;
@@ -12,7 +12,6 @@
 	}
 	.social-list {
 		padding: 0 0 15px;
-
 		order: 0;
 		flex: 0 1 100%;
 		text-align: center;
