@@ -12,6 +12,18 @@
 	<?php $utility = cherry_utility()->utility; ?>
 
 	<header class="entry-header">
+		<?php cherry_ads_post_before_content(); ?>
+
+		<figure class="post-thumbnail">
+			<?php $utility->media->get_image( array(
+					'size'        => 'cherry-thumb-l',
+					'html'        => '<img class="post-thumbnail__img wp-post-image" src="%3$s" alt="%4$s">',
+					'placeholder' => false,
+					'echo'        => true,
+				) );
+			?>
+		</figure><!-- .post-thumbnail -->
+
 		<?php $cats_visible = cherry_is_meta_visible( 'single_post_categories', 'single' ) ? 'true' : 'false'; ?>
 
 		<?php $utility->meta_data->get_terms( array(
@@ -21,13 +33,6 @@
 				'before'  => '<div class="post__cats">',
 				'after'   => '</div>',
 				'echo'    => true,
-			) );
-		?>
-
-		<?php $utility->attributes->get_title( array(
-				'class' => 'entry-title',
-				'html'  => '<h1 %1$s>%4$s</h1>',
-				'echo'  => true,
 			) );
 		?>
 
@@ -71,19 +76,15 @@
 
 	</header><!-- .entry-header -->
 
-	<?php cherry_ads_post_before_content(); ?>
 
-	<figure class="post-thumbnail">
-		<?php $utility->media->get_image( array(
-				'size'        => 'cherry-thumb-l',
-				'html'        => '<img class="post-thumbnail__img wp-post-image" src="%3$s" alt="%4$s">',
-				'placeholder' => false,
-				'echo'        => true,
-			) );
-		?>
-	</figure><!-- .post-thumbnail -->
 
 	<div class="entry-content">
+		<?php $utility->attributes->get_title( array(
+				'class' => 'entry-title',
+				'html'  => '<h1 %1$s>%4$s</h1>',
+				'echo'  => true,
+			) );
+		?>
 		<?php the_content(); ?>
 		<?php wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links__title">' . esc_html__( 'Pages:', 'cherry' ) . '</span>',

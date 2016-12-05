@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="header-container__flex">
+<div class="header-container__flex invert">
 	<?php cherry_social_list( 'header' ); ?>
 	<div class="site-branding">
 		<?php cherry_header_logo() ?>

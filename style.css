@@ -1804,7 +1804,7 @@ a {
 @media (min-width: 768px) {
   .main-navigation .menu > li::after {
     /* Marker position (level 1) */
-    top: 1.25em;
+    top: 1.5em;
     right: 0; } }
 
 @media (max-width: 991px) {
@@ -3012,6 +3012,9 @@ html.mobile-menu-active {
       top: 30px;
       left: 30px; } }
 
+.single-post .post__cats {
+  margin-bottom: 20px; }
+
 .post__date .material-icons,
 .post__date .fa, .post__comments .material-icons,
 .post__comments .fa, .post__author .material-icons,
@@ -3440,6 +3443,9 @@ html.mobile-menu-active {
     .sidebar .widget,
     .footer-area .widget {
       margin: 3em 0 3em 0; } }
+
+.sidebar .widget:first-child {
+  margin-top: 0; }
 
 .widget-area .widget:last-child {
   margin-bottom: 1em; }
@@ -4735,3 +4741,9 @@ object {
 
 .tm_timeline.tm_timeline-layout-vertical-chessOrder .tm_timeline__event-even .tm_timeline__event__dot {
   transform: rotate(45deg) translate(7px, -2px); }
+
+.dwqa-search {
+  margin-bottom: 2em; }
+
+.dwqa-question-filter {
+  margin-bottom: 2em; }

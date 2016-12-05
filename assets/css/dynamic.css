@@ -103,3 +103,8 @@ a:hover { color: $regular_link_hover_color; }
 		max-width: $container_width{px};
 	}
 }
+
+.site-content_wrap{
+	padding-top: $content_padding_top{px};
+	padding-bottom: $content_padding_bottom{px};
+}

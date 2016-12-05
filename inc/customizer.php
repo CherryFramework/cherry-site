@@ -280,6 +280,30 @@ function cherry_get_customizer_options() {
 				'sanitize_callback' => 'sanitize_text_field',
 				'type'              => 'control',
 			),
+			'content_padding_top' => array(
+				'title'       => esc_html__( 'Content padding top (px)', 'cherry' ),
+				'section'     => 'page_layout',
+				'default'     => 30,
+				'field'       => 'number',
+				'input_attrs' => array(
+					'min'  => 0,
+					'max'  => cherry_get_content_padding_max_value(),
+					'step' => 1,
+				),
+				'type' => 'control',
+			),
+			'content_padding_bottom' => array(
+				'title'       => esc_html__( 'Content padding bottom (px)', 'cherry' ),
+				'section'     => 'page_layout',
+				'default'     => 30,
+				'field'       => 'number',
+				'input_attrs' => array(
+					'min'  => 0,
+					'max'  => cherry_get_content_padding_max_value(),
+					'step' => 1,
+				),
+				'type' => 'control',
+			),
 
 			/** `Color Scheme` panel */
 			'color_scheme' => array(
@@ -2047,6 +2071,7 @@ function cherry_get_dynamic_css_options() {
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/plugins-list.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/timeline.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/team.css',
+			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/question.css',
 		),
 		'options' => array(
 			'header_logo_font_style',
@@ -2155,6 +2180,8 @@ function cherry_get_dynamic_css_options() {
 			'top_panel_bg',
 
 			'container_width',
+			'content_padding_top',
+			'content_padding_bottom',
 
 			'footer_widgets_bg',
 			'footer_bg',
@@ -2251,6 +2278,17 @@ function cherry_get_default_top_panel_text() {
 function cherry_get_default_footer_copyright() {
 	return esc_html__( 'Copyright %%year%% CherryFramework Team', 'cherry' );
 }
+
+/**
+ * Get default content padding max value.
+ *
+ * @since  1.0.0
+ * @return string
+ */
+function cherry_get_content_padding_max_value() {
+	return apply_filters( 'cherry_content_padding_max_value', 200 );
+}
+
 
 /**
  * Get icons set

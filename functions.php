@@ -484,6 +484,40 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 							),
 						)
 					),
+					'cherry_content_paddings' => array(
+						'type'          => 'switcher',
+						'title'         => esc_html__( 'Use inherit content paddings?', 'cherry' ),
+						'description'   => esc_html__( 'If you want using inherit content paddings select Yes option', 'cherry' ),
+						'value'         => true,
+						'toggle'        => array(
+							'true_toggle'  => esc_html__( 'Yes', 'cherry' ),
+							'false_toggle' => esc_html__( 'No', 'cherry' ),
+							'true_slave'   => '',
+							'false_slave'  => 'cherry_content_paddings_false_toggle',
+						),
+					),
+					'cherry_content_padding_top' => array(
+						'type'          => 'slider',
+						'title'         => esc_html__( 'Content top padding', 'cherry' ),
+						'description'   => esc_html__( 'Content top padding global settings redefining.', 'cherry' ),
+						'display_input' => false,
+						'max_value'     => cherry_get_content_padding_max_value(),
+						'min_value'     => 0,
+						'value'         => 0,
+						'step_value'    => 1,
+						'master'        => 'cherry_content_paddings_false_toggle',
+					),
+					'cherry_content_padding_bottom' => array(
+						'type'          => 'slider',
+						'title'         => esc_html__( 'Content bottom padding', 'cherry' ),
+						'description'   => esc_html__( 'Content bottom padding global settings redefining.', 'cherry' ),
+						'display_input' => false,
+						'max_value'     =>cherry_get_content_padding_max_value(),
+						'min_value'     => 0,
+						'value'         => 0,
+						'step_value'    => 1,
+						'master'        => 'cherry_content_paddings_false_toggle',
+					),
 				),
 			) );
 			$this->get_core()->init_module( 'cherry-post-meta', array(
@@ -624,8 +658,8 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 
 				// If the theme's textdomain is loaded, assign the theme's translations
 				// to the framework's textdomain.
-				if ( isset( $l10n['__tm'] ) ) {
-					$l10n[ $domain ] = $l10n['__tm'];
+				if ( isset( $l10n['cherry'] ) ) {
+					$l10n[ $domain ] = $l10n['cherry'];
 				}
 
 				// Always override.  We only want the theme to handle translations.

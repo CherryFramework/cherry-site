@@ -33,6 +33,16 @@ add_filter( 'theme_mod_footer_container_type', 'cherry_set_post_meta_value' );
 add_filter( 'theme_mod_header_layout_type', 'cherry_set_post_meta_value' );
 
 /**
+ * Container top padding
+ */
+add_filter( 'theme_mod_content_padding_top', 'cherry_set_container_paddings_value' );
+
+/**
+ * Container bottom padding
+ */
+add_filter( 'theme_mod_content_padding_bottom', 'cherry_set_container_paddings_value' );
+
+/**
  * Set post specific meta value
  *
  * @param  string $value Default meta-value.
@@ -40,18 +50,7 @@ add_filter( 'theme_mod_header_layout_type', 'cherry_set_post_meta_value' );
  */
 function cherry_set_post_meta_value( $value ) {
 
-	if ( wp_is_mobile() ) {
-		return 'mobile';
-	}
-
-	$queried_obj = apply_filters( 'cherry_queried_object_id', false );
-
-	if ( ! $queried_obj && ! cherry_maybe_need_rewrite_mod() ) {
-		return $value;
-	}
-
-	$queried_obj = is_home() ? get_option( 'page_for_posts' ) : false;
-	$queried_obj = ! $queried_obj ? get_the_id() : $queried_obj;
+	$queried_obj = cherry_get_queried_obj();
 
 	if ( ! $queried_obj ) {
 		return $value;
@@ -63,6 +62,35 @@ function cherry_set_post_meta_value( $value ) {
 	if ( ! $meta_value || 'inherit' === $meta_value ) {
 		return $value;
 	}
+
+	return $meta_value;
+}
+
+/**
+ * Redefined container paddings meta value.
+ *
+ * @param  string $value Default meta-value.
+ * @return string
+ */
+function cherry_set_container_paddings_value( $value ) {
+	$queried_obj = cherry_get_queried_obj();
+
+	if ( ! $queried_obj ) {
+		return $value;
+	}
+
+	$use_inherit_paddings = get_post_meta( $queried_obj, 'cherry_content_paddings', true );
+
+	if ( ! $use_inherit_paddings ) {
+		return $value;
+	}
+
+	if ( filter_var( $use_inherit_paddings, FILTER_VALIDATE_BOOLEAN ) ) {
+		return $value;
+	}
+
+	$meta_key   = 'cherry_' . str_replace( 'theme_mod_', '', current_filter() );
+	$meta_value = get_post_meta( $queried_obj, $meta_key, true );
 
 	return $meta_value;
 }
@@ -87,6 +115,24 @@ function cherry_maybe_need_rewrite_mod() {
 	}
 
 	return true;
+}
+
+/**
+ * Get queried object.
+ *
+ * @return string|boolean
+ */
+function cherry_get_queried_obj() {
+	$queried_obj = apply_filters( 'cherry_queried_object_id', false );
+
+	if ( ! $queried_obj && ! cherry_maybe_need_rewrite_mod() ) {
+		return false;
+	}
+
+	$queried_obj = is_home() ? get_option( 'page_for_posts' ) : false;
+	$queried_obj = ! $queried_obj ? get_the_id() : $queried_obj;
+
+	return $queried_obj;
 }
 
 /**
