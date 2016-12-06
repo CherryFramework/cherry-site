@@ -51,7 +51,7 @@ class Cherry_Site_DW_Breadcrumbs extends Cherry_Breadcrumbs {
 
 		if ( $terms ) {
 			$main_term = apply_filters( 'cherry_dw_qa_breadcrumb_main_term', $terms[0], $terms );
-			$this->term_ancestors( $main_term->term_id, $tax );
+			$this->term_ancestors( $main_term->term_id, 'dwqa-question_category' );
 			$this->_add_item( 'link_format', $main_term->name, get_term_link( $main_term ) );
 		}
 

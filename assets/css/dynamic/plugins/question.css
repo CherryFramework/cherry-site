@@ -1,1 +1,32 @@
 /* #DW Question Answer Plugin */
+
+.dwqa-question-item .dwqa-status.dwqa-status-resolved {
+	background-color: $regular_accent_color_5;
+}
+
+.dwqa-question-item .dwqa-status.dwqa-status-open {
+	background-color: $regular_accent_color_4;
+}
+
+.dwqa-question-item .dwqa-status.dwqa-status-closed {
+	background-color: $regular_accent_color_2;
+}
+
+.dwqa-label {
+	background-color: $regular_accent_color_2;
+}
+
+input.dwqa-question-submit {
+	border-color: $regular_accent_color_1;
+	background-color: $regular_accent_color_1;
+}
+
+input.dwqa-question-submit:hover {
+	background-color: @darken( $regular_accent_color_1, 10% );
+}
+
+input.dwqa-btn {
+	color: $regular_accent_color_3;
+	border-color: $regular_accent_color_1;
+	background-color: $regular_accent_color_1;
+}

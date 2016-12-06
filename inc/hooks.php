@@ -267,8 +267,6 @@ function cherry_modify_comment_form( $args ) {
 
 	$args['fields']['url'] = '<p class="comment-form-url"><input id="url" class="comment-form__field" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' placeholder="' . esc_html__( 'Your website', 'cherry' ) . '" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>';
 
-	$args['comment_field'] = '<p class="comment-form-comment"><textarea id="comment" class="comment-form__field" name="comment" placeholder="' . esc_html__( 'Comments *', 'cherry' ) . '" cols="45" rows="8" aria-required="true" required="required"></textarea></p>';
-
 	return $args;
 }
 

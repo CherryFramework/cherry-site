@@ -1,6 +1,6 @@
 /* #Widgets (defaults) */
 .widget li {
-	color: $regular_link_color;
+	color: $regular_text_color;
 }
 .invert .widget li {
 	color: $invert_link_color;

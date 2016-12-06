@@ -2909,7 +2909,6 @@ html.mobile-menu-active {
 ### Hentry (WordPress native CSS-class for post/page article)
 --------------------------------------------------------------*/
 .hentry {
-  margin-top: 3em;
   position: relative; }
   .posts-list .hentry {
     padding-top: 3em;
@@ -4744,6 +4743,63 @@ object {
 
 .dwqa-search {
   margin-bottom: 2em; }
+  .dwqa-search input {
+    border-radius: 6px; }
+
+.dwqa-questions-list {
+  border: none; }
+  .dwqa-questions-list .dwqa-question-item .dwqa-question-stats span {
+    border-radius: 6px; }
+
+.dwqa-container input, .dwqa-container select {
+  border-radius: 6px; }
 
 .dwqa-question-filter {
-  margin-bottom: 2em; }
+  display: flex;
+  margin-bottom: 1em; }
+
+.dwqa-question-filter-items {
+  flex: 1 1 auto;
+  padding: 3px 0; }
+
+.dwqa-question-filter-sort-by {
+  flex: 0 1 auto; }
+  .dwqa-question-filter-sort-by .dwqa-sort-by {
+    padding: 5px;
+    border-radius: 6px; }
+
+.dwqa-question-item {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e0e0e8;
+  margin-bottom: 0.5em;
+  border-radius: 6px; }
+
+.dwqa-questions-footer .dwqa-ask-question a {
+  padding: 15px 20px; }
+
+.dwqa-single-question .dwqa-question-item {
+  border: none; }
+
+.dwqa-single-question .dwqa-question-status {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px; }
+  .dwqa-single-question .dwqa-question-status select {
+    margin-left: 10px; }
+
+.dwqa-comments .dwqa-comments-list {
+  padding: 0 20px; }
+
+.dwqa-comments .dwqa-comment {
+  padding: 20px 0; }
+
+.dwqa-latest-questions .question-title {
+  margin-right: 5px; }
+
+.dwqa-answers .wp-editor-tabs, .dwqa-content-edit-form .wp-editor-tabs {
+  float: left; }
+  .dwqa-answers .wp-editor-tabs button, .dwqa-content-edit-form .wp-editor-tabs button {
+    border-radius: 0; }
+    .dwqa-answers .wp-editor-tabs button:first-child, .dwqa-content-edit-form .wp-editor-tabs button:first-child {
+      margin-left: 0; }
