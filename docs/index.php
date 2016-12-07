@@ -34,6 +34,60 @@
 <li><a href="#adding-inline-styles">Adding inline styles</a></li>
 </ul>
 </li>
+<li><a href="#cherry-js-core">Cherry JS Core</a><ul>
+<li><a href="#general-description_1">General description</a></li>
+<li><a href="#main-js-object-structure-description">Main JS object structure description</a><ul>
+<li><a href="#expressions">Expressions</a></li>
+<li><a href="#utilities">Utilities</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#cherry-template-manager">Cherry Template Manager</a><ul>
+<li><a href="#general-description_2">General Description</a></li>
+<li><a href="#files-structure">Files structure</a></li>
+<li><a href="#module-arguments_2">Module arguments</a></li>
+<li><a href="#module-methods">Module methods</a><ul>
+<li><a href="#parsed_template">parsed_template</a><ul>
+<li><a href="#callback-variables-filters">Callback &amp; variables filters</a></li>
+</ul>
+</li>
+<li><a href="#get_template_by_name">get_template_by_name</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#cherry-widget-factory">Cherry Widget Factory</a><ul>
+<li><a href="#general-description_3">General Description</a></li>
+<li><a href="#cherry_abstract_widget">Cherry_Abstract_Widget</a><ul>
+<li><a href="#__construct">__construct()</a></li>
+<li><a href="#widget_start">widget_start</a></li>
+<li><a href="#widget_end">widget_end</a></li>
+<li><a href="#setup_widget_data">setup_widget_data</a></li>
+<li><a href="#reset_widget_data">reset_widget_data</a></li>
+</ul>
+</li>
+<li><a href="#module-arguments_3">Module arguments</a></li>
+<li><a href="#available-hooks_1">Available Hooks</a><ul>
+<li><a href="#actions_1">Actions</a></li>
+</ul>
+</li>
+<li><a href="#filters_1">Filters</a></li>
+</ul>
+</li>
+<li><a href="#cherry-toolkit">Cherry Toolkit</a><ul>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#get_arg">get_arg</a></li>
+<li><a href="#get_class_instance">get_class_instance</a></li>
+<li><a href="#render_view">render_view</a></li>
+<li><a href="#remove_empty">remove_empty</a></li>
+<li><a href="#remove_empty_check">remove_empty_check</a></li>
+<li><a href="#join">join</a></li>
+<li><a href="#leave_right_keys-remove_right_keys">leave_right_keys, remove_right_keys</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="docs-wrapper__item">
@@ -316,7 +370,9 @@ $options_ajax_handler = get_core()-&gt;init_module(
 <li><code>message</code> - message text</li>
 </ul>
 <p>Example:</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/edd522ef9767b20c12cd06dfe6672a73f632ad42/attachments/13205831.png" /></p>
+<!-- ![Example](http://products.git.devoffice.com/cherry/docs-markdown/raw/edd522ef9767b20c12cd06dfe6672a73f632ad42/attachments/13205831.png) -->
+
+
 </div>
 <div class="docs-wrapper__item">
 <h2 id="cherry-dynamic-css">Cherry Dynamic CSS</h2>
@@ -410,4 +466,243 @@ $options_ajax_handler = get_core()-&gt;init_module(
     )
 );
 </code></pre>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="cherry-js-core">Cherry JS Core</h2>
+<h3 id="general-description_1">General description</h3>
+<p>The module is used for:</p>
+<ol>
+<li>General organization of JS-scripts structure </li>
+<li>JS-utilities realization </li>
+<li>Formation of the general <code>CherryJsCore</code> object for JS-project. The object is located in the global scope and contains data about project scripts and other issues </li>
+<li>For PHP and JS interaction realization</li>
+</ol>
+<p>The module is divided to PHP and JS parts. PHP-file is singletone-calss which creates a single instance per project. PHP is mainly used for PHP and JS interaction realization via data localization (<code>wp_localize_script</code>) from wp-admin. In the main PHP file, you also need to add necessary assets. JS processes received from wp-admin data and contains abstract utilities and  expressions general for the entire project.</p>
+<h3 id="main-js-object-structure-description">Main JS object structure description</h3>
+<pre><code>name : 'Cherry Js Core', // module name
+version : '1.0.0', // module version
+author : 'Cherry Team', // module author
+variable : { // general module variables
+    $document : $( document ), // variable with link on document object, which returned jq-selector
+    $window : $( window ), // variable with link on window object, which returned jq-selector
+    browser : $.browser, // browser data
+    browser_supported : true, // browser support
+    security : cherry_ajax, // unique security key
+    loaded_assets : { // list of loaded assets
+        script : wp_load_script, // scripts list
+        style : wp_load_style // styles list
+    },
+    ui_auto_init: ( 'true' == ui_init_object.auto_init ) ? true : false, //  ui-elements auto initialization
+    ui_auto_target: ui_init_object.targets // target selectors where you need to carry out ui-elements auto-initialization
+},
+status : { // current sessions status
+    on_load : false, // window load status
+    is_ready : false // document readiness status
+}
+</code></pre>
+<h4 id="expressions">Expressions</h4>
+<ul>
+<li><code>ui_init</code> - ui-elements initialization by target-selector. Selectors can be set via <code>cherry_core_js_ui_init_settings</code> filter in the array format. You can also state auto initialization status (default false)</li>
+<li><code>widget_added_ui_init</code> - <em>widget-added</em> event initialization (add widget to the widget area event).  At the moment there is a <em>ui-elements</em> initialization trigger</li>
+<li><code>widget_updated_ui_init</code> - <em>widget-added</em> event initialization (after save widget update event). At the moment there is a <em>ui-elements</em> initialization trigger</li>
+</ul>
+<h4 id="utilities">Utilities</h4>
+<ul>
+<li><code>namespace</code> - utility for creating name space inside the default <code>CherryJsCore</code></li>
+<li><code>get_compress_assets</code></li>
+</ul>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="cherry-template-manager">Cherry Template Manager</h2>
+<h3 id="general-description_2">General Description</h3>
+<p>The module allows to load and process template files (tmpl). In its turn, tmpl files contain html markup and macros which are replaced by content during files parsing. </p>
+<p>tmpl-files load order is the following:</p>
+<ol>
+<li>folder - <em>wp-content</em> / <em>uploads</em> / <em>theme_name (plugin_name)</em> / <em>template-name.tmpl</em></li>
+<li>folder in the theme - <em>wp-content</em> / <em>themes</em> / <em>theme_name</em> / <em>templates</em> / <em>theme_name (plugin_name)</em> / <em>template_name.tmpl</em></li>
+<li>folder in the plugin - <em>wp-content</em> / <em>plugins</em> / <em>plugin_name</em> / <em>templates</em> / <em>theme_name (plugin_name)</em> / <em>template_name.tmpl</em></li>
+</ol>
+<h3 id="files-structure">Files structure</h3>
+<p>tmpl-file can include any HTML markup and macros of two types.</p>
+<p><strong>PHP code in tmpl-files will not work.</strong></p>
+<p>Macros types:</p>
+<ul>
+<li><code>%%MACRO_NAME%%</code> - macro which calls the callback for processing </li>
+<li><code>$$MACRO_NAME$$</code> - macro which receives variable value from variable attribute of the callbacks class.</li>
+</ul>
+<p>Example:</p>
+<pre><code>&lt;button type="submit" class="search-submit btn btn-primary"&gt;
+    %%ICON%%
+    %%SUBMIT_TEXT%%
+&lt;/button&gt;
+
+&lt;span class="screen-reader-text"&gt;$$READER_TEXT$$&lt;/span&gt;
+&lt;input type="search" class="search-field" placeholder="$$PLACEHOLDER$$" value="" name="s"&gt;
+</code></pre>
+<h3 id="module-arguments_2">Module arguments</h3>
+<ul>
+<li><code>template_dir</code> - <em>string</em> - path to template format. By default: <code>templates/%1$s/%2$s.tmpl</code></li>
+<li><code>slug</code> - <em>string</em> - product slug (set automatically). By default: <code>''</code></li>
+<li><code>upload_dir</code> - <em>string</em> - path to directory with uploads (set automatically). By default: <code>''</code></li>
+<li><code>macros_callback</code> - <em>string</em> - regular expression for callback macro which is passed in the callbacks class. By default: <code>/%%.+?%%/</code></li>
+<li><code>macros_variable</code> - <em>string</em> - variable macro regular expression which is passed in the callbacks class. By default: <code>/\$\$.+?\$\$/</code></li>
+</ul>
+<h3 id="module-methods">Module methods</h3>
+<h4 id="parsed_template">parsed_template</h4>
+<p>The method loads tmpl-files and parses callbacks and variables macros, replacing them with their results. The method returns HTML.  </p>
+<ul>
+<li><code>template_name</code> - <em>string</em> - name of the loaded template (without *.tmpl extension). Example: <em>search-form</em>. By default: <strong>false</strong></li>
+<li><code>class</code> - <em>string</em> | <em>stdClass</em> - class name or sample. If class name is passed as string, method parsed_template tries to get its sample. If sample is passed, methods starts to work with it right away. All methods for callback macros should be public. Data for variables macro should be stored as an array inside $variables array of the passed class. The property should also be  public. By default: <strong>false</strong></li>
+<li><code>macros_callback</code> - <em>string</em> - regular expression for callback macro, which is passed in callback class. the given argument is set individually and will be of the top priority, compared to the module <strong>macros_callback</strong> argument. By default: <strong>false</strong></li>
+<li><code>macros_variable</code> - <em>string</em> - regular expression for variable macros, which is passed in callback class. The given argument is set individually  and will be of the top priority, compared to the module  <strong>macros_variable</strong> argument.  By default: <strong>false</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$template_manager = Cherry_Template_Manager::get_instance();
+
+$template_manager-&gt;parser-&gt;parsed_template(
+    'your-template-name',
+    your_callback()
+);
+</code></pre>
+<h5 id="callback-variables-filters">Callback &amp; variables filters</h5>
+<p>You can rewrite or add new Callbacks and variables values. For that you can use 2 filters, one for variables and the second for callbacks.</p>
+<p>They have the following formats:</p>
+<ul>
+<li>Variable - <code>{$product_slug}_set_variable_{$macro_name}</code>. In lower case. Example: <strong>cherry-search_set_variable_placeholder</strong>. The macro in tmpl-file looks like that - <code>$$PLACEHOLDER$$</code></li>
+<li>Callback -  <code>{product_slug}_set_callback_{$macro_name}</code>. In lower case. Example: <strong>cherry-search_set_callback_submit_text</strong>. The macro in tmpl-file looks like that - <code>%%SUBMIT_TEXT%%</code></li>
+</ul>
+<h4 id="get_template_by_name">get_template_by_name</h4>
+<p>The method loads tmpl-file content. Search result is returned with a string. If the template is not found, returns false value.</p>
+<ul>
+<li><code>name</code> - <em>string</em> - name of the loaded template (without *.tmpl extension). Example: <em>search-form-input</em>. By default: <code>false</code></li>
+</ul>
+<p>Example:</p>
+<pre><code>$template_manager = Cherry_Template_Manager::get_instance();
+
+$template_manager-&gt;loader-&gt;get_template_by_name( 'your-template-name' );
+</code></pre>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="cherry-widget-factory">Cherry Widget Factory</h2>
+<h3 id="general-description_3">General Description</h3>
+<p>The module adds Cherry_Abstract_Widget class which allows you to create custom widgets. Besides adding an abstract widget, the base module class passes the current core sample to the widgets built on its base and calls automatic UI elements and widgets initialization.</p>
+<h3 id="cherry_abstract_widget">Cherry_Abstract_Widget</h3>
+<h4 id="__construct">__construct()</h4>
+<p>Creating your widget based on <code>Cherry_Abstract_Widget</code> in constructor, you should claim several compulsory attributes. </p>
+<ul>
+<li><code>$this-&gt;widget_cssclass</code> - CSS class, which wll be added to the widget on the frontend. It is recommended to avoid underscores in titles as they will be cut.  </li>
+<li><code>$this-&gt;widget_description</code> - widget description that will be displayed in the admin panel.</li>
+<li><code>$this-&gt;widget_id</code> - base widget ID</li>
+<li><code>$this-&gt;widget_name</code> - widget name that will be displayed in the admin panel.</li>
+<li><code>$this-&gt;settings</code> - associative array with widget fields.</li>
+</ul>
+<p>Widget fileds example:</p>
+<pre><code>'title'  =&gt; array(
+    'type'  =&gt; 'text', // one of available UI element types
+    'value' =&gt; default value,
+    'label' =&gt; label for the field in the admin panel
+</code></pre>
+<p>Other fields that can be added to the array depend on the type of the element.</p>
+<blockquote>
+<p>If it is necessary to pass a set of dynamically generated data (list of categories, posts, tags, etc.) as an options array for any of the fields, it is better to use an <code>options_callback</code> attribute. In this attribute you need to pass a function that will return a necessary options array. It is done to make the dynamically generated options list work only during widget controlls form generating procedure.</p>
+</blockquote>
+<h4 id="widget_start">widget_start</h4>
+<pre><code>widget_start( $args, $instance );
+</code></pre>
+<p>Method that displays widget header.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>$args</code> - widget common arguments array</li>
+<li><code>$instance</code> - data array for the current widget sample</li>
+</ul>
+<h4 id="widget_end">widget_end</h4>
+<pre><code>widget_end( $args );
+</code></pre>
+<p>Method that displays widget footer.</p>
+<p>Arguments:</p>
+<ul>
+<li><code>$args</code> - array of widget general arguments</li>
+</ul>
+<h4 id="setup_widget_data">setup_widget_data</h4>
+<pre><code>setup_widget_data( $args, $instance );
+</code></pre>
+<p>Method that should be preferably called at the beginning of <code>widget()</code>-method. It sets <code>$this-&gt;args</code> and <code>$this-instance</code> properties for using in any service methods. </p>
+<h4 id="reset_widget_data">reset_widget_data</h4>
+<pre><code>reset_widget_data();
+</code></pre>
+<p>Method which resets <code>$this-&gt;args</code> and <code>$this-instance</code>.</p>
+<h3 id="module-arguments_3">Module arguments</h3>
+<p>The module doesn't take any custom arguments, except for current core sample.</p>
+<h3 id="available-hooks_1">Available Hooks</h3>
+<h4 id="actions_1">Actions</h4>
+<ul>
+<li><code>cherry_widget_after_update</code> - $instance argument - data for the current widget sample. Hook that triggers after update of current widget sample</li>
+<li><code>cherry_widget_factory_control</code> - $args argument - control arguments array. Hook that allows to add custom controls to the widget settings editing form</li>
+<li><code>cherry_widget_reset_data</code> - hook which allows to perform additional operations while removing the current widget data  from the object cash</li>
+</ul>
+<h3 id="filters_1">Filters</h3>
+<p>none</p>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="cherry-toolkit">Cherry Toolkit</h2>
+<p>Cherry Toolkit module is designed for working inside the framework and contains (assistance) functions.</p>
+<blockquote>
+<p>The module should be installed by default</p>
+</blockquote>
+<h3 id="methods">Methods</h3>
+<blockquote>
+<p>This module should include static methods only</p>
+</blockquote>
+<h4 id="get_arg">get_arg</h4>
+<pre><code>get_arg( $field, $arg, $default = '' );
+</code></pre>
+<p>Get argument from the array. In case the argument was not found, the $default parameter argument is used.</p>
+<ul>
+<li><code>$field</code> - <em>array</em> - Arguments array</li>
+<li><code>$arg</code> - <em>string</em> | <em>int</em> | <em>float</em> - Arguments array key</li>
+<li><code>$default</code> - <em>mixed</em> - Returned default argument, if an argument was not found in the array by transferred key <code>$arg</code></li>
+</ul>
+<h4 id="get_class_instance">get_class_instance</h4>
+<pre><code>get_class_instance( $class_name = '', $core, $args );
+</code></pre>
+<p>Get new class entity. <strong>$core</strong> and <strong>$args</strong> are transferred to the class constructor as arguments.</p>
+<ul>
+<li><code>$class_name</code> - <em>string</em> - Class name</li>
+<li><code>$core</code> - <em>Cherry_Core</em> - Cherry_Core entity</li>
+<li><code>$args</code> - <em>array</em> - Additional constructor arguments</li>
+</ul>
+<h4 id="render_view">render_view</h4>
+<pre><code>render_view( $path, array $data = array() );
+</code></pre>
+<p>Data transition to the loaded template file. Execution result - HTML code.</p>
+<ul>
+<li><code>$path</code> - <em>string</em> - Path to the template file</li>
+<li><code>$data</code> - <em>array</em> - Array with variables and their arguments. Variables will be available in the template</li>
+</ul>
+<h4 id="remove_empty">remove_empty</h4>
+<pre><code>remove_empty( $arr );
+</code></pre>
+<p>Empty elements remove.</p>
+<ul>
+<li><code>$arr</code> - <em>array</em> - Elements array</li>
+</ul>
+<h4 id="remove_empty_check">remove_empty_check</h4>
+<pre><code>remove_empty_check( $var );
+</code></pre>
+<p>Function for variable empty value check.</p>
+<ul>
+<li><code>$var</code> -<em>mixed</em> - variable</li>
+</ul>
+<h4 id="join">join</h4>
+<pre><code>join( $arr = array() );
+</code></pre>
+<p>Function which unites array elements into the attributes string.</p>
+<ul>
+<li><code>$arr</code> - <em>array</em> - Elements array</li>
+</ul>
+<h4 id="leave_right_keys-remove_right_keys">leave_right_keys, remove_right_keys</h4>
+<pre><code>leave_right_keys( $right_keys, $array );
+remove_right_keys( $right_keys, $array );
+</code></pre>
+<p>Function for working with arrays. Both functions check if the array elements are on the "blacklist" and delete them.</p>
 </div>
