@@ -48,110 +48,170 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Builder
 
 --------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+@import 'variables-site/variables-site';
+@import 'mixins/mixins-master';
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import "normalize";
+@import 'normalize';
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
+@import 'typography/typography';
 
 /*--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
-@import "grid/grid";
+@import 'grid/grid';
 
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-@import "elements/elements";
+@import 'elements/elements';
 
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-@import "forms/forms";
+@import 'forms/forms';
 
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+@import 'navigation/navigation';
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-@import "modules/accessibility";
+@import 'modules/accessibility';
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-@import "modules/alignments";
+@import 'modules/alignments';
 
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-@import "modules/clearings";
+@import 'modules/clearings';
 
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
-@import "modules/comments";
+@import 'modules/comments';
 
 /*--------------------------------------------------------------
 # Author Bio
 --------------------------------------------------------------*/
-@import "modules/author-bio";
+@import 'modules/author-bio';
 
 /*--------------------------------------------------------------
 # Share Buttons
 --------------------------------------------------------------*/
-@import "modules/share";
+@import 'modules/share';
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "card/card";
+@import 'card/card';
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-@import "site/site";
-@import "pages/pages";
+@import 'site/site';
+@import 'pages/pages';
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-@import "site/secondary/widgets";
-@import "widgets/widgets";
+@import 'site/secondary/widgets';
+@import 'widgets/widgets';
 
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
-@import "media/media";
+@import 'media/media';
 
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
-@import "plugins/projects";
-@import "plugins/plugins-list";
-@import "plugins/testi";
-@import "plugins/team";
-@import "plugins/timeline";
-
+@import 'plugins/projects';
+@import 'plugins/plugins-list';
+@import 'plugins/testi';
+@import 'plugins/team';
+@import 'plugins/timeline';
 
 .docs-wrapper {
-    // position: relative;
-    // padding-left: 25%;
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	&:after {
+		clear: both;
+	}
+}
 
-    .toc {
-        // position: static;
-        width: 25%;
-        display: inline-block;
-        // top: 0;
-        // left: 0;
-    }
+.docs-wrapper .toc {
+	@include media-breakpoint-up(md) {
+		position: static;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		float: left;
+		width: 25%;
+
+		.admin-bar & {
+			top: 32px;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		width: 20%;
+	}
+
+	&.isStuck {
+		position: fixed;
+	}
+}
+
+.docs-wrapper .pseudoStickyBlock {
+	display: none;
+}
+
+/* Fix `position : static` in Firefox */
+.page-template-template-docs .site {
+	overflow: visible;
+}
+
+.docs-wrapper__item {
+	@include media-breakpoint-up(md) {
+		float: right;
+		width: 70%;
+	}
+	@include media-breakpoint-up(lg) {
+		width: 75%;
+	}
+}
+
+.docs-wrapper__item + .docs-wrapper__item {
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: 1px solid #e6e6e6;
+}
+
+.docs-wrapper__item > h2 {
+	position: relative;
+	&:before {
+		font-size: 1em;
+		line-height: inherit;
+		position: absolute;
+		top: 50%;
+		margin-left: -1.5em;
+		content: '\f0c1';
+		transform: translateY(-50%);
+		vertical-align: middle;
+
+		@include font-awesome-icon;
+	}
 }

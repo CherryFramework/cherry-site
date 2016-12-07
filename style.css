@@ -7124,7 +7124,82 @@ object {
           transform: rotate(45deg) translate(7px, -2px);
 }
 
-.docs-wrapper .toc {
-  width: 25%;
+.docs-wrapper:before, .docs-wrapper:after {
+  content: " ";
+  /* 1 */
+  display: table
+  /* 2 */
+}
+.docs-wrapper:after {
+  clear: both;
+}
+
+@media (min-width: 768px) {
+  .docs-wrapper .toc {
+    position: static;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    float: left;
+    width: 25%;
+  }
+  .admin-bar .docs-wrapper .toc {
+    top: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .docs-wrapper .toc {
+    width: 20%;
+  }
+}
+.docs-wrapper .toc.isStuck {
+  position: fixed;
+}
+
+.docs-wrapper .pseudoStickyBlock {
+  display: none;
+}
+
+/* Fix `position : static` in Firefox */
+.page-template-template-docs .site {
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .docs-wrapper__item {
+    float: right;
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .docs-wrapper__item {
+    width: 75%;
+  }
+}
+
+.docs-wrapper__item + .docs-wrapper__item {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.docs-wrapper__item > h2 {
+  position: relative;
+}
+.docs-wrapper__item > h2:before {
+  font-size: 1em;
+  line-height: inherit;
+  position: absolute;
+  top: 50%;
+  margin-left: -1.5em;
+  content: '\f0c1';
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  vertical-align: middle;
   display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

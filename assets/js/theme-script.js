@@ -28,6 +28,7 @@
 			this.main_menu( this, $( '.main-navigation' ) );
 			this.to_top_init( this );
 			this.mobile_menu( this );
+			this.sticky_toc_init( this );
 		},
 
 		window_load_render: function () {
@@ -233,9 +234,9 @@
 
 			$( window ).load( function() {
 
-				var $navbar = $('.header-container');
+				var $navbar = $( '.header-container' );
 
-				if ( ! $.isFunction( jQuery.fn.stickUp ) || ! $navbar.length ) {
+				if ( ! $.isFunction( jQuery.fn.stickUp ) || ! $navbar.length || ! cherry.sticky_header ) {
 					return !1;
 				}
 
@@ -245,8 +246,28 @@
 					pseudo: true,
 					active: true
 				});
-				CherryJsCore.variable.$document.trigger( 'scroll.stickUp' );
 
+				CherryJsCore.variable.$document.trigger( 'scroll.stickUp' );
+			});
+		},
+
+		sticky_toc_init: function() {
+
+			$( window ).load( function() {
+
+				var $toc = $( '.docs-wrapper .toc' );
+
+				if ( ! $.isFunction( jQuery.fn.stickUp ) || ! $toc.length || cherry.sticky_header ) {
+					return !1;
+				}
+
+				$toc.stickUp({
+					correctionSelector: '#wpadminbar',
+					pseudo: true,
+					active: true
+				});
+
+				CherryJsCore.variable.$document.trigger( 'scroll.stickUp' );
 			});
 		},
 

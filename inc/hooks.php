@@ -209,7 +209,9 @@ function cherry_add_image_format_classes( $css_model, $args ) {
 function cherry_enqueue_misc( $depends ) {
 	$header_menu_sticky = get_theme_mod( 'header_menu_sticky', cherry_theme()->customizer->get_default( 'header_menu_sticky' ) );
 
-	if ( $header_menu_sticky && ! wp_is_mobile() ) {
+	if ( ( $header_menu_sticky || is_page_template( 'templates/template-docs.php' ) )
+		&& ! wp_is_mobile()
+	) {
 		$depends[] = 'jquery-stickup';
 	}
 

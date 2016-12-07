@@ -606,6 +606,7 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 				'ajaxurl'             => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'labels'              => $labels,
 				'more_button_options' => $more_button_options,
+				'sticky_header'       => get_theme_mod( 'header_menu_sticky', cherry_theme()->customizer->get_default( 'header_menu_sticky' ) ),
 			) );
 
 			// Threaded Comments.
