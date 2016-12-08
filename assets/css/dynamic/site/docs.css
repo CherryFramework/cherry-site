@@ -1,0 +1,5 @@
+/* #Documentation */
+.docs-wrapper .toc > ul > li:first-child a {
+	background-color: $regular_accent_color_1;
+	color: $invert_link_color;
+}

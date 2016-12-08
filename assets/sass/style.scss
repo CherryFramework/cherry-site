@@ -142,18 +142,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import 'plugins/team';
 @import 'plugins/timeline';
 
-.docs-wrapper {
-	&:before,
-	&:after {
-		content: " "; /* 1 */
-		display: table; /* 2 */
-	}
-	&:after {
-		clear: both;
-	}
-}
-
 .docs-wrapper .toc {
+	background-color: #f9f9f9;
+	margin-bottom: 30px;
+
 	@include media-breakpoint-up(md) {
 		position: static;
 		position: -webkit-sticky;
@@ -161,42 +153,69 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		top: 0;
 		bottom: 0;
 		float: left;
-		width: 25%;
+		overflow-x: hidden;
 		overflow-y: auto;
-
+		width: 300px;
+		margin-bottom: 0;
 		.admin-bar & {
 			top: 32px;
 		}
-	}
-	@include media-breakpoint-up(lg) {
-		width: 20%;
-	}
 
-	&.isStuck {
-		position: fixed;
+		&.isStuck {
+			position: fixed;
+		}
 	}
+	ul {
+		margin: 0;
+		padding: 0;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 20px;
+		list-style: none;
+	}
+	a {
+		display: block;
+		padding: 15px 25px;
+		color: #333;
+		&:hover {
+			background-color: #eee;
+			color: #333;
+		}
+	}
+	ul ul a { padding-left: 45px; }
+	ul ul ul a { padding-left: 65px; }
+	ul ul ul ul a { padding-left: 85px; }
+	ul ul ul ul ul a { padding-left: 105px; }
 }
 
 .docs-wrapper .pseudoStickyBlock {
 	display: none;
 }
 
-/* Fix `position : static` in Firefox */
-.page-template-template-docs .site {
-	overflow: visible;
-}
-
 .docs-wrapper__item {
+	padding-left: 0.9375rem;
+	padding-right: 0.9375rem;
 	@include media-breakpoint-up(md) {
-		float: right;
-		width: 70%;
+		float: left;
+		margin-left: 50px;
+		width: calc( 100% - 350px);
+
+		.isStuck ~ & {
+			margin-left: 350px;
+		}
 	}
+
 	@include media-breakpoint-up(lg) {
-		width: 75%;
+		margin-left: 100px;
+		width: calc( 100% - 500px);
+
+		// .isStuck ~ & {
+		// 	margin-left: 400px;
+		// }
 	}
 }
 
-.docs-wrapper__item + .docs-wrapper__item {
+.docs-wrapper__item + .docs-wrapper__item + .docs-wrapper__item {
 	margin-top: 30px;
 	padding-top: 30px;
 	border-top: 1px solid #e6e6e6;
@@ -207,13 +226,21 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	&:before {
 		font-size: 1em;
 		line-height: inherit;
-		position: absolute;
-		top: 50%;
-		margin-left: -1.5em;
 		content: '\f0c1';
-		transform: translateY(-50%);
 		vertical-align: middle;
+		margin-right: 0.5em;
 
 		@include font-awesome-icon;
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			top: 50%;
+			margin-right: 0;
+			margin-left: -1.5em;
+			transform: translateY(-50%);
+		}
 	}
+}
+
+#documentation {
+	display: none;
 }

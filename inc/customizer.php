@@ -2087,6 +2087,7 @@ function cherry_get_dynamic_css_options() {
 			CHERRY_THEME_DIR . '/assets/css/dynamic/site/footer.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/site/misc.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/site/buttons.css',
+			CHERRY_THEME_DIR . '/assets/css/dynamic/site/docs.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/widgets/widget-default.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/widgets/taxonomy-tiles.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/widgets/image-grid.css',

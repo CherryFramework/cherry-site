@@ -1,5 +1,6 @@
 <div class="toc">
 <ul>
+<li><a href="#documentation">Documentation</a></li>
 <li><a href="#cherry-customizer">Cherry Customizer</a><ul>
 <li><a href="#module-arguments">Module arguments</a></li>
 <li><a href="#panels">Panels</a></li>
@@ -89,6 +90,9 @@
 </ul>
 </li>
 </ul>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="documentation">Documentation</h2>
 </div>
 <div class="docs-wrapper__item">
 <h2 id="cherry-customizer">Cherry Customizer</h2>
