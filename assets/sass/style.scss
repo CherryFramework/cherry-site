@@ -209,9 +209,56 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		margin-left: 100px;
 		width: calc( 100% - 500px);
 
-		// .isStuck ~ & {
-		// 	margin-left: 400px;
-		// }
+		.isStuck ~ & {
+			margin-left: 400px;
+		}
+	}
+}
+
+.docs-wrapper__item {
+	ul {
+		list-style: none;
+	}
+	li {
+		margin-bottom: .25rem;
+	}
+	ul li {
+		position: relative;
+		padding-left: 20px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			left: 2px;
+			width: 4px;
+			height: 4px;
+			border: 1px solid currentColor;
+			border-radius: 50%;
+		}
+	}
+	strong,
+	b {
+		color: #373a3c;
+	}
+	blockquote {
+		padding: 1.25rem;
+		margin-top: 1.25rem;
+		margin-bottom: 1.25rem;
+		font-size: 1rem;
+		border: 1px solid #eee;
+		background-color: transparent;
+		color: currentColor;
+		border-left-width: .25rem;
+		border-radius: .25rem;
+		&:before,
+		&:after {
+			content: '';
+		}
+	}
+	h2, h3, h4, h5, h6 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		padding-top: 1.5rem;
 	}
 }
 
@@ -233,10 +280,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 		@include font-awesome-icon;
 		@include media-breakpoint-up(md) {
 			position: absolute;
-			top: 50%;
 			margin-right: 0;
 			margin-left: -1.5em;
-			transform: translateY(-50%);
 		}
 	}
 }

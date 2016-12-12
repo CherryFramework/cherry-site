@@ -76,6 +76,38 @@
 <li><a href="#filters_1">Filters</a></li>
 </ul>
 </li>
+<li><a href="#cherry-interface-builder">Cherry Interface Builder</a><ul>
+<li><a href="#module-description">Module Description</a></li>
+<li><a href="#module-initialization">Module initialization</a></li>
+<li><a href="#create-interface-builder-elements">Create interface builder elements</a><ul>
+<li><a href="#section-element">Section element</a></li>
+<li><a href="#form-element">Form element</a></li>
+<li><a href="#settings-element">Settings element</a></li>
+<li><a href="#components-element">Components element</a><ul>
+<li><a href="#component-tab-horizontal">component-tab-horizontal</a></li>
+<li><a href="#component-toggle">component-toggle</a></li>
+<li><a href="#component-accordion">component-accordion</a></li>
+</ul>
+</li>
+<li><a href="#control-element">Control element</a></li>
+<li><a href="#html-element">HTML element</a></li>
+</ul>
+</li>
+<li><a href="#render-method">Render method</a></li>
+</ul>
+</li>
+<li><a href="#cherry-utility">Cherry Utility</a><ul>
+<li><a href="#general-description_4">General Description</a></li>
+<li><a href="#module-arguments_4">Module arguments</a></li>
+<li><a href="#sub-modules">Sub-modules</a><ul>
+<li><a href="#herry_attributes_utilit">Сherry_Attributes_Utilit</a><ul>
+<li><a href="#get_title">get_title</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#cherry-toolkit">Cherry Toolkit</a><ul>
 <li><a href="#methods">Methods</a><ul>
 <li><a href="#get_arg">get_arg</a></li>
@@ -107,7 +139,7 @@
 <li><em>theme_mod</em> - settings are available only when the current theme is active (used for theme settings)</li>
 </ul>
 </li>
-<li><strong>options</strong> -  (controls) grouped by panels and/or sections.</li>
+<li><code>options</code> -  (controls) grouped by panels and/or sections.</li>
 </ul>
 <p><em>Initialization example:</em></p>
 <pre><code>your_prefix_get_core()-&gt;init_module( 'cherry-customizer', array(
@@ -646,6 +678,441 @@ $template_manager-&gt;loader-&gt;get_template_by_name( 'your-template-name' );
 </ul>
 <h3 id="filters_1">Filters</h3>
 <p>none</p>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="cherry-interface-builder">Cherry Interface Builder</h2>
+<h3 id="module-description">Module Description</h3>
+<p>The module allows to create page elements like sections, settings, components.</p>
+<p>There are 4 types of components:</p>
+<ul>
+<li>vertical tabulation</li>
+<li>horizontal tabulation</li>
+<li>accordion</li>
+<li>switcher</li>
+</ul>
+<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<h3 id="module-initialization">Module initialization</h3>
+<p>To initiate the module you need to call <code>init_module( $name, $args )</code> core method.</p>
+<p>The method can take the following parameters:</p>
+<ul>
+<li><code>$name</code> - <em>string</em> - module name</li>
+<li><code>$args</code> - <em>array</em> - module arguments<ul>
+<li><code>views</code> - <em>array</em> - the array contains relative path to the templates of all interface builder elements  <ul>
+<li><code>section</code> - <em>string</em> - path to section template. By default: <strong>inc/views/section.php</strong></li>
+<li><code>component-tab-vertical</code> - <em>string</em> - path to the component tab vertical template. By default: <strong>inc/views/component-tab-vertical.php</strong></li>
+<li><code>component-tab-horizontal</code> - <em>string</em> - path to the component tab horizontal template. By default: <strong>inc/views/component-tab-horizontal.php</strong></li>
+<li><code>component-toggle</code> - <em>string</em> - path to the component toggle template. By default: <strong>inc/views/component-toggle.php</strong></li>
+<li><code>component-accordion</code> - <em>string</em> - path to the component accordion template. By default: <strong>inc/views/component-accordion.php</strong></li>
+<li><code>component-repeater</code> - <em>string</em> - path to the component repeater template. By default: <strong>inc/views/component-repeater.php</strong></li>
+<li><code>settings</code> - <em>string</em> - path to the settings template. By default: <strong>inc/views/settings.php</strong></li>
+<li><code>control</code> - <em>string</em> - path to the sections template. By default: <strong>inc/views/control.php</strong></li>
+<li><code>settings-children-title</code> - <em>string</em> - path to the sections template. By default: <strong>inc/views/settings-children-title.php</strong></li>
+<li><code>tab-children-title</code> - <em>string</em> - path to the sections template. By default: <strong>inc/views/tab-children-title.php</strong></li>
+<li><code>toggle-children-title</code> - <em>string</em> - path to the sections template. By default: <strong>inc/views/toggle-children-title.php</strong></li>
+<li><code>html</code> - <em>string</em> - path to the sections template. By default: <strong>inc/views/html.php</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>$this-&gt;core-&gt;init_module( 'cherry-interface-builder', array() );
+</code></pre>
+<p>Save module sample into the variable:</p>
+<pre><code>$builder = $this-&gt;core-&gt;modules['cherry-interface-builder'];
+</code></pre>
+<h3 id="create-interface-builder-elements">Create interface builder elements</h3>
+<h4 id="section-element">Section element</h4>
+<p>Section element allows to create  a wrapper around interface elements. For "section" element registration you need to use <code>register_section( $args = array() )</code> method. Method register_section takes the following parameters:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - array with registrable sections</li>
+<li>Section settings:<ul>
+<li><code>id</code> - <em>string</em> - optional parameter, if <code>$args</code> parameter is passed as a set of elements with keys. If <code>$args</code> is passed as in one dimensional array, this parameter is a must. By default: <strong>""</strong></li>
+<li><code>parent</code> - <em>string</em> - parent element ID. By default: <strong>""</strong></li>
+<li><code>scroll</code> - <em>boolean</em> - limits element height to 750px and adds scrollbar. By default: <strong>false</strong></li>
+<li><code>title</code> - <em>string</em> - element title. By default: <strong>""</strong></li>
+<li><code>description</code> - <em>string</em> - element description. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - element class. By default: <strong>""</strong></li>
+<li><code>view</code> - <em>string</em> - path to new element template. By default: <strong>""</strong></li>
+<li><code>master</code> - <em>string</em> - additional class for master / slave system. By default: <strong>""</strong></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>$builder-&gt;register_section(
+    array(
+        'option_section' =&gt; array(
+        'type'           =&gt; 'section',
+        'scroll'         =&gt; true,
+        'title'          =&gt; esc_html__( 'Title', 'text-domain' ),
+        'description'    =&gt; esc_html__( 'Description', 'text-domain' ),
+    ) )
+);
+</code></pre>
+<h4 id="form-element">Form element</h4>
+<p>Creates wrap around interface element  with the help of form tag.</p>
+<p>For "form" element registration you need to use <code>register_form( $args = array() )</code>-method</p>
+<p>Parameters:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - array with registrable sections</li>
+<li>Sections settings:<ul>
+<li><code>id</code> - <em>string</em> - optional parameter, if parameter  <code>$args</code> is passed as a set of elements with keys. If <code>$args</code>  is passed as in one dimensional array, this parameter is a must. By default: <strong>""</strong></li>
+<li><code>type</code> - <em>string</em> - element type (optional parameter for register_form method). By default: <strong>section</strong></li>
+<li><code>parent</code> - <em>string</em> - parent element ID. By default: <strong>""</strong></li>
+<li><code>view</code> - <em>string</em> - path to new element template. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - element class. By default: <strong>""</strong></li>
+<li><code>accept-charset</code> - <em>string</em> - sets encoding where server can take an process data. By default: <strong>"utf-8"</strong></li>
+<li><code>action</code> - <em>string</em> - address of the program or document which processes form data. By default: <strong>""</strong></li>
+<li><code>autocomplete</code> - <em>string</em> - enables form fields autosuggestion. By default: <strong>"on"</strong></li>
+<li><code>enctype</code> - <em>string</em> - form data encoding method. By default: <strong>"application/x-www-form-urlencoded"</strong></li>
+<li><code>method</code> - <em>string</em> - HTTP-protocol method. By default: <strong>"post"</strong></li>
+<li><code>novalidate</code> - <em>boolean</em> - cancels internal form data input correctness check. By default: <strong>""</strong></li>
+<li><code>target</code> - <em>string</em> - window or frame name, where the developer will upload the returned result. By default: <strong>""</strong></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>$builder-&gt;register_form(
+    array(
+        'option_form' =&gt; array(
+        'type'        =&gt; 'form',
+        'parent'      =&gt; 'option_section',
+        'action'      =&gt; 'my_action.php',
+    ) )
+);
+</code></pre>
+<h4 id="settings-element">Settings element</h4>
+<p>Settings element allows to group interface elements.</p>
+<p>For "settings" element registration you need to use <code>register_settings( $args = array() )</code></p>
+<p>Parameters:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - array with registrable settings</li>
+<li>settings:<ul>
+<li><code>id</code> - <em>string</em> - optional parameter, if parameter  <code>$args</code> is passed as a set of elements with keys. If <code>$args</code> is passed as in one dimensional array, this parameter is a must. By default: <strong>""</strong></li>
+<li><code>type</code> - <em>string</em> - element type (optional parameter for <code>register_settings</code>). By default: <strong>section</strong></li>
+<li><code>parent</code> - <em>string</em> - parent element id. By default: <strong>""</strong></li>
+<li><code>scroll</code> - <em>boolean</em> - limits element height to 750px and adds scrollbar. By default: <strong>false</strong></li>
+<li><code>title</code> - <em>string</em> - element title. By default: <strong>""</strong></li>
+<li><code>description</code> - <em>string</em> - element description. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - element class. By default: <strong>""</strong></li>
+<li><code>view</code> - <em>string</em> - path to new element template. By default: <strong>""</strong></li>
+<li><code>master</code> - <em>string</em> - additional class for master / slave system. By default: <strong>""</strong></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>$builder-&gt;register_settings(
+    array(
+        'ui_elements' =&gt; array(
+            'type'              =&gt; 'settings',
+            'parent'            =&gt; 'option_section',
+            'title'             =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description'       =&gt; esc_html__( 'Description', 'text-domain' ),
+        ),
+        'bi_elements' =&gt; array(
+            'type'              =&gt; 'settings',
+            'parent'            =&gt; 'option_section',
+            'title'             =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description'       =&gt; esc_html__( 'Description', 'text-domain' ),
+        ),
+    )
+);
+</code></pre>
+<h4 id="components-element">Components element</h4>
+<p>Component element allows to add one of the components.</p>
+<p>For "settings" element registration you need to use <code>register_component( $args = array() )</code> method.</p>
+<p>Parameters:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - array with registered component</li>
+<li>settings:<ul>
+<li><code>id</code> - <em>string</em> - optional parameter, if parameter <code>$args</code> is passed as a set of elements with keys. If <code>$args</code>  is passed as in one dimensional array, this parameter is a must. By default: <strong>""</strong></li>
+<li><code>type</code> - <em>string</em> - component type (by default - <code>component-tab-horizontal)</code>:<ul>
+<li><code>component-accordion</code> - <em>string</em> - accordion</li>
+<li><code>component-toggle</code> - <em>string</em> - switcher</li>
+<li><code>component-tab-vertical</code> - <em>string</em> - vertical tab</li>
+<li><code>component-tab-horizontal</code> - <em>string</em> - horizontal tab</li>
+</ul>
+</li>
+<li><code>parent</code> - <em>string</em> - parent element id. By default: <strong>""</strong></li>
+<li><code>scroll</code> - <em>boolean</em> - limits element height to 750px and adds scrollbar. By default: <strong>false</strong></li>
+<li><code>title</code> - <em>string</em> - element title. By default: <strong>""</strong></li>
+<li><code>description</code> - <em>string</em> - element description. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - element class. By default: <strong>""</strong></li>
+<li><code>view</code> - <em>string</em> - path to new element template. By default: <strong>""</strong></li>
+<li><code>view_wrapping</code> - <em>boolean</em> - add view wrapping. By default: <strong>true</strong></li>
+<li><code>master</code> - <em>string</em> - additional class for master / slave system. By default: <strong>""</strong></li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>$builder-&gt;register_component(
+    array(
+        'accordion' =&gt; array(
+            'type'        =&gt; 'component-accordion',
+            'parent'      =&gt; 'bi_elements',
+            'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+        ),
+        'toggle' =&gt; array(
+            'type'        =&gt; 'component-toggle',
+            'parent'      =&gt; 'bi_elements',
+            'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+        ),
+        'tab_vertical' =&gt; array(
+            'type'        =&gt; 'component-tab-vertical',
+            'parent'      =&gt; 'bi_elements',
+            'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+        ),
+        'tab_horizontal' =&gt; array(
+            'type'        =&gt; 'component-tab-horizontal',
+            'parent'      =&gt; 'bi_elements',
+            'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+        ),
+    )
+);
+</code></pre>
+<h5 id="component-tab-horizontal">component-tab-horizontal</h5>
+<p>The component adds horizontal tabulation.
+Find more details in Components elements section.</p>
+<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<h5 id="component-toggle">component-toggle</h5>
+<p>The component adds a toggle that allows to show and hide interface element.
+Find more details in Components elements section.</p>
+<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<h5 id="component-accordion">component-accordion</h5>
+<p>The component adds accordion with show/hide interface elements function
+Find more details in Components elements section.</p>
+<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<h4 id="control-element">Control element</h4>
+<p>Adds interface elements from <strong>Cherry UI-elements</strong> module, but in wrapper.</p>
+<p>For <em>settings</em> element registration you need to use <code>register_control( $args = array() )</code> method <code>register_control</code> method takes the following parameters:</p>
+<ul>
+<li>$args - <em>array</em> - array with interface elements<ul>
+<li>$child_class - <em>string</em> - argument allows to pass CSS class for UI element</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>$builder-&gt;register_control(
+    array(
+        'checkbox' =&gt; array(
+            'type'        =&gt; 'checkbox',
+            'parent'      =&gt; 'ui_elements',
+            'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+            'class'       =&gt; '',
+            'value'       =&gt; array(
+                'checkbox' =&gt; 'true',
+            ),
+            'options' =&gt; array(
+                'checkbox' =&gt; esc_html__( 'Check Me', 'text-domain' ),
+            ),
+        ),
+        'checkbox_multi' =&gt; array(
+            'type'        =&gt; 'checkbox',
+            'parent'      =&gt; 'ui_elements',
+            'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+            'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+            'class'       =&gt; '',
+            'value'       =&gt; array(
+                'checkbox-0' =&gt; 'false',
+                'checkbox-1' =&gt; 'false',
+                'checkbox-2' =&gt; 'false',
+                'checkbox-3' =&gt; 'true',
+                'checkbox-4' =&gt; 'true',
+            ),
+            'options' =&gt; array(
+                'checkbox-0' =&gt; array(
+                    'label' =&gt; esc_html__( 'Check Me #1', 'text-domain' ),
+                ),
+                'checkbox-1' =&gt; esc_html__( 'Check Me #2', 'text-domain' ),
+                'checkbox-2' =&gt; esc_html__( 'Check Me #3', 'text-domain' ),
+                'checkbox-3' =&gt; esc_html__( 'Check Me #4', 'text-domain' ),
+                'checkbox-4' =&gt; esc_html__( 'Check Me #5', 'text-domain' ),
+            ),
+        ),
+....
+</code></pre>
+<h4 id="html-element">HTML element</h4>
+<p><code>register_html</code> method allows to register custom HTML-markup.</p>
+<p>The method takes the following parameters:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - array with registrable custom HTML-markup</li>
+<li>Custom HTML-markup settings:<ul>
+<li><code>id</code> - <em>string</em> - optional parameter, if parameter <code>$args</code> is passed as a set of elements with keys. If <code>$args</code> is passed as in one dimensional array, this parameter is a must. By default: <strong>""</strong></li>
+<li><code>type</code> - <em>string</em> - element type (optional parameter for <code>register_html</code>-method). By default: <strong>html</strong></li>
+<li><code>parent</code> - <em>string</em> - parent element id. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - element class. By default: <strong>""</strong></li>
+<li><code>master</code> - <em>string</em> - additional class for master / slave system. By default: <strong>""</strong></li>
+<li><code>html</code> - <em>string</em> - HTML content displayed on the page. By default: <strong>""</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="render-method">Render method</h3>
+<p>Render method allows to display interface elements on the page in two ways.</p>
+<p><strong>1-st way</strong> - use functions for elements registration like <code>register_section</code>, <code>register_component</code> etc. After that you should call the render method without parameters.</p>
+<p>Render example:</p>
+<pre><code>$this-&gt;builder-&gt;render();
+</code></pre>
+<p><strong>2-nd way</strong> - allows to pass the entire elements structure with the help of an array right to the render method.</p>
+<p>Render example:</p>
+<pre><code>$builder-&gt;render( true, array(
+    'ui_elements' =&gt; array(
+        'type'        =&gt; 'settings',
+        'parent'      =&gt; 'option_section',
+        'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+        'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+    ),
+    'bi_elements' =&gt; array(
+        'type'        =&gt; 'settings',
+        'parent'      =&gt; 'option_section',
+        'title'       =&gt; esc_html__( 'Title', 'text-domain' ),
+        'description' =&gt; esc_html__( 'Description', 'text-domain' ),
+    ),
+....
+</code></pre>
+<p><code>render</code>-method takes the following parameters:</p>
+<ul>
+<li><code>$echo</code> - <em>boolean</em> - data display type via echo function or via return value. By default: <strong>true</strong></li>
+<li><code>$args</code> - <em>array</em> - array with interface elements structure. By default: <strong>array()</strong></li>
+</ul>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="cherry-utility">Cherry Utility</h2>
+<h3 id="general-description_4">General Description</h3>
+<p>The module is used for implementing:</p>
+<ol>
+<li>Posts attributes, tags and categories<ul>
+<li>Title</li>
+<li>Content</li>
+<li>Excerpt</li>
+<li>More button</li>
+<li>Tags and categories description</li>
+</ul>
+</li>
+<li>Posts, categories and tags metadata<ul>
+<li>Post categories</li>
+<li>Post tags</li>
+<li>Post publish date</li>
+<li>Post author</li>
+<li>Post comments number</li>
+<li>Number of posts in category</li>
+<li>Number of posts in a tag</li>
+</ul>
+</li>
+<li>Media elements<ul>
+<li>Image preview</li>
+<li>Video</li>
+</ul>
+</li>
+<li>Additional utilities<ul>
+<li>Post link</li>
+<li>Link on tag or category</li>
+<li>Text cut</li>
+<li>Thumbnail size</li>
+<li>Get tags or categories array</li>
+</ul>
+</li>
+</ol>
+<h3 id="module-arguments_4">Module arguments</h3>
+<p>The module can take arguments array with the following keys:</p>
+<ul>
+<li><code>utility</code> - <em>array</em> - sub modules array<ul>
+<li><code>media</code> - sub-module that works with medial elements like images and videos</li>
+<li><code>attributes</code> - sub-module that works with posts, tags and categories  attributes like: title, content, description, read more button</li>
+<li><code>meta-data</code> - sub-module that works with posts, categories and tags metadata like: post author, publish date, number of comments, etc.</li>
+</ul>
+</li>
+<li><code>meta_key</code> - <em>array</em> - meta keys array<ul>
+<li><code>term_thumb</code> - option where tags and categories thumbnails key should be added. <strong>cherry_thumb</strong> by default. The given key can be used in  <em>cherry-term-meta</em> module. It should be added in arguments in <code>fields</code> option.</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>'cherry-utility' =&gt; array(
+    'autoload'  =&gt; true,
+    'args'      =&gt; array(
+        'utility' =&gt; array(
+            'media',
+            'attributes',
+            'meta-data',
+        ),
+        'meta_key'  =&gt; array(
+            'term_thumb' =&gt; 'cherry_thumb',
+        ),
+    ),
+);
+</code></pre>
+<h3 id="sub-modules">Sub-modules</h3>
+<p>If <code>autoload</code> argument value of the module is <strong>true</strong>, it is enough to get it from the <code>$core-&gt;modules['cherry-utility']</code> to start working with modules.</p>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+</code></pre>
+<p>where <code>$core</code> - Cherry_Core instance.</p>
+<p>In case <code>autoload</code> argument value is <strong>false</strong>, the module should be initialized via <code>init_module()</code> core method. After that you can receive the module from <code>$core-&gt;modules['cherry-utility']</code> core.</p>
+<p>In the theme you can receive the module toolkit through <code>theme_name_utility()</code> function.</p>
+<p>Example:</p>
+<pre><code>$utility = your_prefix_utility();
+</code></pre>
+<h4 id="herry_attributes_utilit">Сherry_Attributes_Utilit</h4>
+<p>path - <code>cherry-framework\modules\cherry-utility\inc\cherry-attributes-utilit.php</code></p>
+<p>The following methods are stored in the class:</p>
+<h5 id="get_title">get_title</h5>
+<p>The method returns post title, tag or category. The method has the following parameters:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - array with arguments for title customization. The array can contain the following keys with values<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide title. The key can take two values true/false. If false returns empty string. By default: <strong>true</strong></li>
+<li><code>length</code> - <em>int</em> - show/hide title. Returned title length. 0 value returns the entire title. By default: <strong>0</strong></li>
+<li><code>trimmed_type</code> - <em>string</em> - title cut method, works with length attribute. Has two values: <code>word</code> - word cut, <code>char</code> - characters cut. By default: <strong>word</strong></li>
+<li><code>ending</code> - <em>string</em> - character that is displayed after title cut. By default: <strong>&hellip;</strong></li>
+<li><code>html</code> - <em>string</em> - returned HTML-format (the string contains special characters %1$s). By default: <strong>&lt;h3 %1$s&gt;&lt;a href="%2$s" %3$s rel="bookmark"&gt;%4$s&lt;/a&gt;&lt;/h3&gt;</strong><ul>
+<li>%1$s - Contains <strong>class</strong> key value, mentioned below. Displayed in - class="class_name" format</li>
+<li>%2$s - Contains post URL</li>
+<li>%3$s - Contains uncut post title, even if length is nonzero. Displayed in - title ="post/ category/ tag title" format</li>
+<li>%4$s - Contains post title</li>
+</ul>
+</li>
+<li><code>class</code> - <em>string</em> - title CSS-class. By default: <strong>""</strong></li>
+<li><code>title</code> - <em>string</em> - HTML-tag title. By default: ""</li>
+<li><code>echo</code> - <em>boolean</em> - title display method true/false. If true displays the result immediately. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$type</code> - <em>string</em> - entity type from which you need to get a title. Has two values post - post and term - categories, tag. By default: <strong>post</strong></li>
+<li><code>$ID</code> - <em>int</em> - ID of any entity, listed in <code>$type</code> attribute. No need to indicate if the function is used inside <a href="https://codex.wordpress.org/The_Loop">posts loop</a>. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// Post title display
+$utility-&gt;attributes-&gt;get_title( array(
+    'visible'       =&gt; true,
+    'length'        =&gt; 0,
+    'trimmed_type'  =&gt; 'word',
+    'ending'        =&gt; '&amp;hellip;',
+    'html'          =&gt; '&lt;h1 %1$s&gt;&lt;a href="%2$s" title="%3$s" rel="bookmark"&gt;%4$s&lt;/a&gt;&lt;/h1&gt;',
+    'class'         =&gt; 'post-title',
+    'echo'          =&gt; true,
+) );
+
+// Category title display
+$utility-&gt;attributes-&gt;get_title(
+    array(
+        'visible'       =&gt; true,
+        'length'        =&gt; 5,
+        'trimmed_type'  =&gt; 'word',
+        'ending'        =&gt; '&amp;hellip;',
+        'html'          =&gt; '&lt;h2 %1$s&gt;&lt;a href="%2$s" title="%3$s" rel="bookmark"&gt;%4$s&lt;/a&gt;&lt;/h2&gt;',
+        'class'         =&gt; 'term-title',
+        'echo'          =&gt; true,
+    ),
+    'term',
+    256
+);
+</code></pre>
 </div>
 <div class="docs-wrapper__item">
 <h2 id="cherry-toolkit">Cherry Toolkit</h2>

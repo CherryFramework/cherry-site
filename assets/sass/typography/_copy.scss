@@ -26,11 +26,8 @@ pre {
 	padding: 1.5em;
 	background: $color__background-pre;
 	border: 1px solid $color__border-pre;
-	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
-
-	@include font-size(1);
 }
 
 code, kbd, tt, var {
@@ -40,12 +37,17 @@ code, kbd, tt, var {
 }
 
 code {
-	padding: 2px 5px;
-	border: 1px solid $color__background-hr;
+	padding: .2rem .4rem;
+	font-size: 90%;
+	border-radius: .25rem;
+	background: $color__background-pre;
+	color: #373a3c;
 
 	pre & {
 		background-color: transparent;
-		border-color: transparent;
+		border: none;
+		padding: 0;
+		font-size: inherit;
 	}
 }
 

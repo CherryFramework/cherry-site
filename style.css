@@ -307,13 +307,10 @@ pre {
   max-width: 100%;
   margin: 0 0 1.5em;
   padding: 1.5em;
-  background: #eee;
-  border: 1px solid #d4d4d4;
-  white-space: pre;
+  background: #f7f7f9;
+  border: 1px solid #f7f7f9;
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-size: 16px;
-  font-size: 1rem;
 }
 
 code, kbd, tt, var {
@@ -323,12 +320,17 @@ code, kbd, tt, var {
 }
 
 code {
-  padding: 2px 5px;
-  border: 1px solid #e0e0e8;
+  padding: .2rem .4rem;
+  font-size: 90%;
+  border-radius: .25rem;
+  background: #f7f7f9;
+  color: #373a3c;
 }
 pre code {
   background-color: transparent;
-  border-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: inherit;
 }
 
 abbr, acronym {
@@ -6259,6 +6261,53 @@ object {
     margin-left: 100px;
     width: calc( 100% - 500px);
   }
+  .isStuck ~ .docs-wrapper__item {
+    margin-left: 400px;
+  }
+}
+
+.docs-wrapper__item ul {
+  list-style: none;
+}
+.docs-wrapper__item li {
+  margin-bottom: .25rem;
+}
+.docs-wrapper__item ul li {
+  position: relative;
+  padding-left: 20px;
+}
+.docs-wrapper__item ul li:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+.docs-wrapper__item strong,
+.docs-wrapper__item b {
+  color: #373a3c;
+}
+.docs-wrapper__item blockquote {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  border: 1px solid #eee;
+  background-color: transparent;
+  color: currentColor;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+}
+.docs-wrapper__item blockquote:before, .docs-wrapper__item blockquote:after {
+  content: '';
+}
+.docs-wrapper__item h2, .docs-wrapper__item h3, .docs-wrapper__item h4, .docs-wrapper__item h5, .docs-wrapper__item h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
 }
 
 .docs-wrapper__item + .docs-wrapper__item + .docs-wrapper__item {
@@ -6285,10 +6334,8 @@ object {
 @media (min-width: 768px) {
   .docs-wrapper__item > h2:before {
     position: absolute;
-    top: 50%;
     margin-right: 0;
     margin-left: -1.5em;
-    transform: translateY(-50%);
   }
 }
 

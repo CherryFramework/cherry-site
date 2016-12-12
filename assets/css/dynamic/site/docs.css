@@ -3,3 +3,7 @@
 	background-color: $regular_accent_color_1;
 	color: $invert_link_color;
 }
+
+.docs-wrapper__item blockquote {
+	border-left-color: $regular_accent_color_1;
+}
