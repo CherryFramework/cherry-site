@@ -38,11 +38,11 @@ function cherry_site_is_dw_qa_page() {
 	$search = isset( $_GET['qs'] ) ? esc_html( $_GET['qs'] ) : false;
 	$author = isset( $_GET['user'] ) ? esc_html( $_GET['user'] ) : false;
 
-	if ( ! is_tax( 'dwqa-question_category' ) ) {
+	if ( is_tax( 'dwqa-question_category' ) ) {
 		return true;
 	}
 
-	if ( ! is_tax( 'dwqa-question_tag' ) ) {
+	if ( is_tax( 'dwqa-question_tag' ) ) {
 		return true;
 	}
 
