@@ -363,12 +363,20 @@ function cherry_get_page_preloader() {
 	if ( $page_preloader ) {
 		echo '<div class="page-preloader-cover">
 			<div class="page-preloader">
+				<div class="page-preloader__part page-preloader-leaf"></div>
+				<div class="page-preloader__part page-preloader-cherry"></div>
+				<div class="page-preloader__part page-preloader-cherry"></div>
+			</div>
+		</div>';
+
+		/*echo '<div class="page-preloader-cover">
+			<div class="page-preloader">
 				<div class="page-preloader__cube page-preloader--cube1"></div>
 				<div class="page-preloader__cube page-preloader--cube2"></div>
 				<div class="page-preloader__cube page-preloader--cube4"></div>
 				<div class="page-preloader__cube page-preloader--cube3"></div>
 			</div>
-		</div>';
+		</div>';*/
 	}
 }
 
