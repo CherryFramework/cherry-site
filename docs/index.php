@@ -84,6 +84,7 @@
 <li><a href="#form-element">Form element</a></li>
 <li><a href="#settings-element">Settings element</a></li>
 <li><a href="#components-element">Components element</a><ul>
+<li><a href="#component-tab-vertical">component-tab-vertical</a></li>
 <li><a href="#component-tab-horizontal">component-tab-horizontal</a></li>
 <li><a href="#component-toggle">component-toggle</a></li>
 <li><a href="#component-accordion">component-accordion</a></li>
@@ -102,10 +103,56 @@
 <li><a href="#sub-modules">Sub-modules</a><ul>
 <li><a href="#herry_attributes_utilit">Сherry_Attributes_Utilit</a><ul>
 <li><a href="#get_title">get_title</a></li>
+<li><a href="#get_content">get_content</a></li>
+<li><a href="#get_button">get_button</a></li>
+</ul>
+</li>
+<li><a href="#cherry_meta_data_utilit">Cherry_Meta_Data_Utilit</a><ul>
+<li><a href="#get_terms">get_terms</a></li>
+<li><a href="#get_author">get_author</a></li>
+<li><a href="#get_comment_count">get_comment_count</a></li>
+<li><a href="#get_date">get_date</a></li>
+<li><a href="#get_post_count_in_term">get_post_count_in_term</a></li>
+</ul>
+</li>
+<li><a href="#cherry_media_utilit">Cherry_Media_Utilit</a><ul>
+<li><a href="#get_image">get_image</a></li>
+<li><a href="#get_video">get_video</a></li>
+</ul>
+</li>
+<li><a href="#cherry_satellite_utilit">Cherry_Satellite_Utilit</a><ul>
+<li><a href="#get_post_object">get_post_object</a></li>
+<li><a href="#get_term_object">get_term_object</a></li>
+<li><a href="#get_post_permalink">get_post_permalink</a></li>
+<li><a href="#get_term_permalink">get_term_permalink</a></li>
+<li><a href="#cut_text">cut_text</a></li>
+<li><a href="#get_thumbnail_size_array">get_thumbnail_size_array</a></li>
+<li><a href="#get_terms_array">get_terms_array</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#cherry-ui-elements">Cherry UI-elements</a><ul>
+<li><a href="#description_1">Description</a></li>
+<li><a href="#arguments">Arguments</a></li>
+<li><a href="#ui-elements-list">UI-elements list</a><ul>
+<li><a href="#ui-text">ui-text</a></li>
+<li><a href="#ui-textarea">ui-textarea</a></li>
+<li><a href="#ui-switcher">ui-switcher</a></li>
+<li><a href="#ui-stepper">ui-stepper</a></li>
+<li><a href="#ui-slider">ui-slider</a></li>
+<li><a href="#ui-select">ui-select</a></li>
+<li><a href="#ui-repeater">ui-repeater</a></li>
+<li><a href="#ui-radio">ui-radio</a></li>
+<li><a href="#ui-media">ui-media</a></li>
+<li><a href="#ui-iconpicker">ui-iconpicker</a></li>
+<li><a href="#ui-colorpicker">ui-colorpicker</a></li>
+<li><a href="#ui-checkbox">ui-checkbox</a></li>
+</ul>
+</li>
+<li><a href="#how-to-implement-master-slave">How to implement "master-slave"</a></li>
 </ul>
 </li>
 <li><a href="#cherry-toolkit">Cherry Toolkit</a><ul>
@@ -406,9 +453,7 @@ $options_ajax_handler = get_core()-&gt;init_module(
 <li><code>message</code> - message text</li>
 </ul>
 <p>Example:</p>
-<!-- ![Example](http://products.git.devoffice.com/cherry/docs-markdown/raw/edd522ef9767b20c12cd06dfe6672a73f632ad42/attachments/13205831.png) -->
-
-
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-handler-01.png" /></p>
 </div>
 <div class="docs-wrapper__item">
 <h2 id="cherry-dynamic-css">Cherry Dynamic CSS</h2>
@@ -690,8 +735,8 @@ $template_manager-&gt;loader-&gt;get_template_by_name( 'your-template-name' );
 <li>accordion</li>
 <li>switcher</li>
 </ul>
-<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
-<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-01.png" /></p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-02.png" /></p>
 <h3 id="module-initialization">Module initialization</h3>
 <p>To initiate the module you need to call <code>init_module( $name, $args )</code> core method.</p>
 <p>The method can take the following parameters:</p>
@@ -875,18 +920,22 @@ $template_manager-&gt;loader-&gt;get_template_by_name( 'your-template-name' );
     )
 );
 </code></pre>
+<h5 id="component-tab-vertical">component-tab-vertical</h5>
+<p>The component adds vertical tabulation.
+Find more details in Components elements section.</p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-03.png" /></p>
 <h5 id="component-tab-horizontal">component-tab-horizontal</h5>
 <p>The component adds horizontal tabulation.
 Find more details in Components elements section.</p>
-<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-04.png" /></p>
 <h5 id="component-toggle">component-toggle</h5>
 <p>The component adds a toggle that allows to show and hide interface element.
 Find more details in Components elements section.</p>
-<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-05.png" /></p>
 <h5 id="component-accordion">component-accordion</h5>
 <p>The component adds accordion with show/hide interface elements function
 Find more details in Components elements section.</p>
-<p><img alt="Example" src="https://www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" /></p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-06.png" /></p>
 <h4 id="control-element">Control element</h4>
 <p>Adds interface elements from <strong>Cherry UI-elements</strong> module, but in wrapper.</p>
 <p>For <em>settings</em> element registration you need to use <code>register_control( $args = array() )</code> method <code>register_control</code> method takes the following parameters:</p>
@@ -1112,6 +1161,814 @@ $utility-&gt;attributes-&gt;get_title(
     'term',
     256
 );
+</code></pre>
+<h5 id="get_content">get_content</h5>
+<p>The method returns post content or excerpt and tag or category description.</p>
+<p>The method has the following parameters <code>get_content( $args = array(), $type = 'post', $ID = 0)</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - content settings arguments array. The array can contain the following keys with values<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide content. The key can take two values true/false. If false returns empty string. By default: <strong>true</strong></li>
+<li><code>content_type</code> - <em>string</em> - displayed content type. By default: <em>post_content</em>. Key has three values:<ul>
+<li><em>post_content</em> - displays post content</li>
+<li><em>post_excerpt</em> - displays post description. If this value is set without description, it displays the content or its part depending on length parameter value</li>
+<li><em>term_description</em> - this value is set automatically if <code>$type</code> is term</li>
+</ul>
+</li>
+<li><code>length</code> - <em>int</em> - returned content length. 0 value returns the entire content. By default: <strong>0</strong></li>
+<li><code>trimmed_type</code> - <em>string</em> - content cut method, works with length attribute. Has two values:<ul>
+<li><em>word</em> - word cut</li>
+<li><em>char</em> - characters cut</li>
+</ul>
+</li>
+<li><code>ending</code> - <em>string</em> - character that is displayed after content cut. By default: <strong>&hellip;</strong></li>
+<li><code>html</code> - <em>string</em> - returned HTML-format (the string contains special characters %1$s). By default: <strong>&lt;p %1$s&gt;%2$s&lt;/p&gt;</strong><ul>
+<li>%1$s - contains <strong>class</strong> key value, mentioned below. Displayed in - class="class_name" format</li>
+<li>%2$s - includes content depending on <code>content_type</code> argument value</li>
+</ul>
+</li>
+<li><code>class</code> - <em>string</em> - content CSS-class. By default: <strong>""</strong></li>
+<li><code>echo</code> - <em>boolean</em> - content display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$type</code> - <em>string</em> - entity type from which you need to get a content. Has two values post - post and term - categories, tag. By default: <strong>post</strong></li>
+<li><code>$ID</code> - <em>int</em> - ID any entity, listed in <code>$type</code> attribute. No need to indicate if the function is used inside <a href="https://codex.wordpress.org/The_Loop">posts loop</a>. If <code>$type</code>is term, <code>$ID</code> attribute is a must. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// Post content display.
+$utility-&gt;attributes-&gt;get_content( array(
+    'visible'      =&gt; true,
+    'content_type' =&gt; 'post_content',
+    'length'       =&gt; 0,
+    'trimmed_type' =&gt; 'word',
+    'ending'       =&gt; '&amp;hellip;',
+    'html'         =&gt; '&lt;p %1$s&gt;%2$s&lt;/p&gt;',
+    'class'        =&gt; 'post-content',
+    'echo'         =&gt; true,
+) );
+
+// Category description display.
+$utility-&gt;attributes-&gt;get_content(
+    array(
+        'visible'      =&gt; true,
+        'length'       =&gt; 55,
+        'trimmed_type' =&gt; 'word',
+        'ending'       =&gt; '&amp;hellip;',
+        'html'         =&gt; '&lt;p %1$s&gt;%2$s&lt;/p&gt;',
+        'class'        =&gt; 'term-description',
+        'echo'         =&gt; true,
+    ),
+    $type = 'term',
+    $ID = 348
+);
+</code></pre>
+<h5 id="get_button">get_button</h5>
+<p>The method returns post button, tag or category.</p>
+<p>The method has the following parameters <code>get_button($args = array(), $type = 'post', $ID = 0)</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - button customization arguments array. The array can contain the following keys with values:<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide button. The key can take two values true/false. If false returns empty string. By default: <strong>true</strong></li>
+<li><code>text</code> - <em>string</em>- button text. If the argument is empty, the button is not displayed and the function returns empty string. By default: <strong>""</strong></li>
+<li><code>icon</code> - <em>string</em> - button icon. By default: <strong>""</strong></li>
+<li><code>html</code> - <em>string</em> - returned HTML-format (the string contains special characters %1$s). By default: &lt;a href="%1$s" %2$s %3$s&gt;&lt;span class="btn__text"&gt;%4$s&lt;/span&gt;%5$s&lt;/a&gt;:<ul>
+<li>%1$s - contains post, category or tag link, depending on the <code>$type</code> attribute value</li>
+<li>%2$s - contains post/category/tag title. Displayed in - title="post/ category/ tag" format</li>
+<li>%3$s - contains class key value, mentioned below. Displayed in - class="class_name" format</li>
+<li>%4$s - contains text attribute value</li>
+<li>%5$s - contains image attribute value</li>
+</ul>
+</li>
+<li><code>class</code> - <em>string</em> - button CSS-class</li>
+<li><code>class</code> - <em>string</em> - button CSS-class. By default: <strong>btn</strong></li>
+<li><code>title</code> - <em>string</em> - HTML-tag title &lt;a&gt;. By default: <strong>"" </strong></li>
+<li><code>echo</code> - <em>boolean</em> - button display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$type</code> - <em>string</em> - entity type from which you need to get a button. Has two values post - post and term - categories, tag. By default: <strong>post</strong></li>
+<li><code>$ID</code> - <em>int</em> - ID of any entity, listed in <code>$type</code> attribute. No need to indicate if the function is used inside posts loop. If <code>$type</code> is term, <code>$ID</code> attribute is a must. By default: <strong>0</strong>clear</li>
+</ul>
+<p>Example:</p>
+<pre><code>// Display post button.
+$utility-&gt;attributes-&gt;get_button( array(
+    'visible' =&gt; true,
+    'text'    =&gt; esc_html__( 'Read More', 'text-domain' ),
+    'icon'    =&gt; '&lt;i class="material-icons"&gt;arrow_forward&lt;/i&gt;',
+    'class'   =&gt; 'btn',
+    'html'    =&gt; '&lt;a href="%1$s" title="%2$s" %3$s&gt;&lt;span class="btn__text"&gt;%4$s&lt;/span&gt;%5$s&lt;/a&gt;',
+    'echo'    =&gt; true,
+) );
+
+// Display category button.
+$utility-&gt;attributes-&gt;get_button(
+    array(
+        'visible' =&gt; true,
+        'text'    =&gt; esc_html__( 'Read More', 'text-domain' ),
+        'icon'    =&gt; '&lt;i class="material-icons"&gt;arrow_forward&lt;/i&gt;',
+        'class'   =&gt; 'btn',
+        'html'    =&gt; '&lt;a href="%1$s" title="%2$s" %3$s&gt;&lt;span class="btn__text"&gt;%4$s&lt;/span&gt;%5$s&lt;/a&gt;',
+        'echo'    =&gt; true,
+    ),
+    $type = 'term',
+    $ID = 129
+);
+</code></pre>
+<h4 id="cherry_meta_data_utilit">Cherry_Meta_Data_Utilit</h4>
+<p>path - <code>cherry-framework\modules\cherry-utility\inc\cherry-meta-data-utilit.php</code></p>
+<p>The following methods are contained in this class:</p>
+<h5 id="get_terms">get_terms</h5>
+<p>The method returns post tags or categories depending on the listed parameters.</p>
+<p>The method has the following parameters <code>get_terms( $args = array() , $ID = 0 )</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - arguments array. The array can contain the following keys with values:<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide. The key can take two values true/false. If <strong>false</strong> returns empty string. By default: <strong>true</strong></li>
+<li><code>type</code> - <em>string</em> - received data type. The key has 2 values (dy default: <strong>category</strong>):<ul>
+<li><em>category</em> - displays category</li>
+<li><em>post_tag</em> - displays tags</li>
+</ul>
+</li>
+<li><code>icon</code> - <em>string</em> - icon. By default: <strong>""</strong></li>
+<li><code>prefix</code> - <em>string</em> - icon/ category list/ tags prefix. By default: <strong>""</strong></li>
+<li><code>delimiter</code> - <em>string</em> - category/tag delimiter. By default: <strong>" "</strong> (space)</li>
+<li><code>before</code> - <em>string</em> - category/tags list HTML-wrapper start. By default: <strong>&lt;div class="post-terms"&gt;</strong></li>
+<li><code>after</code> - <em>string</em> - category/tags list HTML-wrapper end. By default: <strong>&lt;/div&gt;</strong></li>
+<li><code>class</code> - <em>string</em> - CSS-class. By default: <strong>post-term</strong></li>
+<li><code>echo</code> - <em>boolean</em> - display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$ID</code> - <em>int</em> - Post ID. No need to indicate if the function is used inside <a href="https://codex.wordpress.org/The_Loop">posts loop</a>. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// post categories list display
+$utility-&gt;meta_data-&gt;get_terms( array(
+    'visible'   =&gt; 'true',
+    'type'      =&gt; 'category',
+    'icon'      =&gt; '&lt;i class="material-icons"&gt;bookmark&lt;/i&gt;',
+    'delimiter' =&gt; ', ',
+    'echo'      =&gt; false,
+) );
+
+// post tags list display
+$utility-&gt;meta_data-&gt;get_terms( array(
+    'visible'   =&gt; 'true',
+    'type'      =&gt; 'post_tag',
+    'icon'      =&gt; '&lt;i class="material-icons"&gt;bookmark&lt;/i&gt;',
+    'delimiter' =&gt; ', ',
+    'echo'      =&gt; true,
+) );
+</code></pre>
+<h5 id="get_author">get_author</h5>
+<p>The method returns post author.</p>
+<p>The method has the following parameters <code>get_author( $args = array() , $ID = 0 )</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - arguments. The array can contain the following keys with values:<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide. The key can take two values true/false. If <strong>false</strong> returns empty string. By default: <strong>true</strong></li>
+<li><code>icon</code> - <em>string</em> - icon. By default: <strong>""</strong></li>
+<li><code>prefix</code> - <em>string</em> - link prefix. By default: <strong>""</strong></li>
+<li><code>html</code> - <em>string</em> - returned  HTML-format (the string contains special characters %1$s). By default: <strong>%1$s&lt;a href="%2$s" %3$s %4$s rel="author"&gt;%5$s%6$s&lt;/a&gt;</strong><ul>
+<li>%1$s - prefix key value</li>
+<li>%2$s - author's posts page url</li>
+<li>%3$s - &lt;a&gt; tag title. Displayed in - title="text" format. If title key not listed, the title is not displayed</li>
+<li>%4$s - contains class key value. Displayed in - class="class_name" format</li>
+<li>%5$s - includes icon listed in icon key</li>
+<li>%6$s - contains author name</li>
+</ul>
+</li>
+<li><code>title</code> -  <em>string</em> - &lt;a&gt; HTML-tag title. By default: <strong>""</strong></li>
+<li><code>class</code> -  <em>string</em> - CSS-class. By default: <strong>post-author</strong></li>
+<li><code>echo</code> -  <em>boolean</em> - display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$ID</code> - <em>int</em> - Post ID. No need to indicate if the function is used inside <a href="https://codex.wordpress.org/The_Loop">posts loop</a>. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// Display post author
+$utility-&gt;meta_data-&gt;get_author( array(
+    'icon' =&gt; '&lt;i class="material-icons"&gt;person&lt;/i&gt;',
+    'echo' =&gt; true,
+) );
+</code></pre>
+<h5 id="get_comment_count">get_comment_count</h5>
+<p>The method returns post comments number depending on the listed parameters.</p>
+<p>The method has the following parameters <code>get_comment_count( $args = array() , $ID = 0 )</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - arguments. The array can contain the following keys with values<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide. The key can take two values true/false. If <strong>false</strong> returns empty string. By default: <strong>true</strong></li>
+<li><code>icon</code> - <em>string</em> - icon. By default: <strong>""</strong></li>
+<li><code>prefix</code> - <em>string</em> - link prefix. By default: <strong>""</strong></li>
+<li><code>sufix</code> - <em>string / function</em> - displayed after comments number. Processes the special character %s. Example: <code>_n_noop( '%s comment', '%s comments', 'text-domain' )</code>. By default: <strong>%s</strong></li>
+<li><code>html</code> - <em>string</em> - returned HTML-format (the string contains special characters %1$s). By default: <strong>%1$s&lt;a href="%2$s" %3$s %4$s&gt;%5$s%6$s&lt;/a&gt;</strong><ul>
+<li>%1$s - prefix key value</li>
+<li>%2$s - post comments url</li>
+<li>%3$s - &lt;a&gt; tag title. Displayed in - title="text" format. If title key not listed, the title is not displayed</li>
+<li>%4$s - contains class key value. Displayed in - class="class_name" format</li>
+<li>%5$s - includes icon listed in icon key</li>
+<li>%6$s - number of comments in the post</li>
+</ul>
+</li>
+<li><code>title</code> - <em>string</em> - &lt;a&gt; HTML-tag title. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - CSS-class. By default: <strong>post-comments-count</strong></li>
+<li><code>echo</code> - <em>boolean</em> - display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$ID</code> - int - Post ID. No need to indicate if the function is used inside <a href="https://codex.wordpress.org/The_Loop">posts loop</a>. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// Post comments number display
+$utility-&gt;meta_data-&gt;get_comment_count( array(
+    'visible' =&gt; 'true',
+    'icon'    =&gt; '&lt;i class="material-icons"&gt;chat_bubble_outline&lt;/i&gt;',
+    'sufix'   =&gt; array( 'single' =&gt; '%s comment', 'plural' =&gt; '%s comments' ),
+    'echo'    =&gt; true,
+) );
+</code></pre>
+<h5 id="get_date">get_date</h5>
+<p>The method returns post date depending on the listed arguments.</p>
+<p>The method has the following attributes <code>get_date( $args = array() , $ID = 0 )</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - arguments. The array can contain the following keys with values<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide. The key can take two values true/false. If <strong>false</strong> returns empty string. By default: <strong>true</strong></li>
+<li><code>icon</code> - <em>string</em> - icon. By default: <strong>""</strong></li>
+<li><code>prefix</code> - <em>string</em> - link prefix. By default: <strong>""</strong></li>
+<li><code>html</code> - <em>string</em> - returned  HTML-format (the string contains special characters %1$s). By default: <strong>%1$s&lt;a href="%2$s" %3$s %4$s&gt;&lt;time datetime="%5$s"&gt;%6$s%7$s&lt;/time&gt;&lt;/a&gt;</strong>:<ul>
+<li>%1$s - prefix key value</li>
+<li>%2$s - blog page url</li>
+<li>%3$s - &lt;a&gt; tag title. Displayed in - title="text" format. If title key not listed, the title is not displayed</li>
+<li>%4$s - contains class key value. Displayed in - class="class_name" format</li>
+<li>%5$s - publish date format in <code>Y-m-d\TH:i:sP</code> <a href="http://php.net/manual/en/datetime.formats.date.php">date format</a></li>
+<li>%6$s - includes icon listed in icon key</li>
+<li>%7$s - post publish date format. The format is listed in the admin panel <strong>Settings -&gt; General -&gt; Date Format</strong></li>
+</ul>
+</li>
+<li><code>title</code> - <em>string</em> - &lt;a&gt; HTML-tag title. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - CSS-class. By default: <strong>post-date</strong></li>
+<li><code>echo</code> - <em>boolean</em> - display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$ID</code> - <em>int</em> - Post ID. No need to indicate if the function is used inside <a href="https://codex.wordpress.org/The_Loop">posts loop</a>. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// Publish date display.
+$utility-&gt;meta_data-&gt;get_date( array(
+    'icon' =&gt; '&lt;i class="material-icons"&gt;schedule&lt;/i&gt;',
+    'echo' =&gt; true,
+) );
+</code></pre>
+<h5 id="get_post_count_in_term">get_post_count_in_term</h5>
+<p>The method returns category/tag posts number, depending on the listed arguments.</p>
+<p>The method has the following attributes <code>get_post_count_in_term( $args = array() , $ID = 0 )</code>.</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - arguments. The array can contain the following keys with values<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide. The key can take two values true/false. If <strong>false</strong> returns empty string. By default: <strong>true</strong></li>
+<li><code>icon</code> - <em>string</em> - icon. By default: <strong>""</strong></li>
+<li><code>prefix</code> - <em>string</em> - category/tag posts prefix. By default: ""</li>
+<li><code>sufix</code> - <em>string / function</em> - displayed after posts number in category/tag. Processes the special character Example: <code>_n_noop( '%s post', '%s posts', 'text-domain' )</code>. By default: <strong>%s</strong></li>
+<li><code>html</code> - string - returned HTML-format (the string contains special characters %1$s). By default: <strong>%1$s&lt;a href="%2$s" %3$s %4$s rel="bookmark"&gt;%5$s%6$s&lt;/a&gt;</strong>:<ul>
+<li>%1$s - prefix key value</li>
+<li>%2$s - categories/ tags page url</li>
+<li>%3$s - &lt;a&gt; tag title. Displayed in - title="text" format. If title key not listed, the title is not displayed in &lt;a&gt; tag</li>
+<li>%4$s - includes class argument value. Displayed in class="class_name" format</li>
+<li>%5$s - includes icon listed in icon key</li>
+<li>%6$s - contains categories/tags posts count and suffix attribute value</li>
+</ul>
+</li>
+<li><code>title</code> - <em>string</em> - &lt;a&gt; HTML-tag title. By default: <strong>""</strong></li>
+<li><code>class</code> - <em>string</em> - CSS-class. By default: <strong>post-count</strong></li>
+<li><code>echo</code> - <em>boolean</em> - display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$ID</code> - <em>int</em> - category/tag ID. Compulsory attribute. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// posts in category/ tag display.
+$utility-&gt;meta_data-&gt;get_post_count_in_term( array(
+    'icon'  =&gt; '&lt;i class="material-icons"&gt;schedule&lt;/i&gt;',
+    'sufix' =&gt; array(
+        'singular' =&gt; '%s post',
+        'plural'   =&gt; '%s posts',
+        'domain'   =&gt; 'text-domain',
+        'context'  =&gt; false,
+    ),
+    'echo' =&gt; true,
+) );
+</code></pre>
+<h4 id="cherry_media_utilit">Cherry_Media_Utilit</h4>
+<p>path - <code>cherry-framework\modules\cherry-utility\inc\cherry-media-utilit.php</code></p>
+<p>The following methods are contained in this class:</p>
+<h5 id="get_image">get_image</h5>
+<p>The method returns category/tag/ post HTML thumbnails.</p>
+<p>The method has the following attributes <code>get_image( $args = array(), $type = 'post', $ID = 0 )</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - arguments. The array can contain the following keys with values<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide. The key can take two values true/false. If <strong>false</strong> returns empty string. By default: <strong>true</strong></li>
+<li><code>size</code> - <em>string</em> - image size. By default: <code>apply_filters( 'cherry_normal_image_size', 'post-thumbnail' )</code></li>
+<li><code>mobile_size</code> - <em>string</em> - image size on mobile device. By default: <code>apply_filters( 'cherry_mobile_image_size', 'post-thumbnail' )</code></li>
+<li><code>html</code> - <em>string</em> - returned HTML-format (the string contains special characters %1$s). By default: <strong>&lt;a href="%1$s" %2$s&gt;&lt;img src="%3$s" alt="%4$s" %5$s&gt;&lt;/a&gt;</strong>:<ul>
+<li>%1$s - post/category/tag page url</li>
+<li>%2$s - includes class argument value. Displayed in class="class_name" format</li>
+<li>%3$s - image src</li>
+<li>%4$s - post/ category/ tag title</li>
+<li>%5$s - width, height attributes for &lt;img&gt; tag, displayed in format width="" height="". Will not be displayed if is false</li>
+</ul>
+</li>
+<li><code>class</code> - <em>string</em> - CSS-class. By default: <strong>wp-image</strong></li>
+<li><code>placeholder</code> - <em>boolean</em> - show/hide placeholder if thumbnail is absent. By default: <strong>true</strong></li>
+<li><code>placeholder_background</code> - <em>string</em> - placeholder background color. Color value should be set without <code>#</code>. By default: <strong>000</strong></li>
+<li><code>placeholder_foreground</code> - <em>string</em> - placeholder text color. Color value should be set without <code>#</code>. By default: <strong>fff</strong></li>
+<li><code>placeholder_title</code> - <em>string</em> - placeholder title text color. If value is undefined, image size is displayed. By default: <strong>""</strong></li>
+<li><code>html_tag_suze</code> - <em>boolean</em> - show/hide &lt;img&gt; tag. Included in special character %5$s in html key. By default: <strong>true</strong></li>
+<li><code>echo</code> - <em>boolean</em> - display method true/false. If true displays the result immediately. false value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$type</code> - <em>string</em> - entity type from which you need to get a button. Has two values post - post and term - categories, tag. By default: <strong>post</strong></li>
+<li><code>$ID</code> - <em>int</em> - <code>$type</code> attribute entity ID. No need to indicate if the function is used inside posts loop. If <code>$type</code> attribute is term, <code>$ID</code> attribute is compulsory. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// Display number of posts in category/tag.
+$utility-&gt;media-&gt;get_image( array(
+    'html'          =&gt; '&amp;lt;span style="background-image: url(\'%3$s\');"%4$s %2$s&amp;gt;&amp;lt;/span&amp;gt;',
+    'class'         =&gt; 'term-img',
+    'size'          =&gt; 'medium',
+    'mobile_size'   =&gt; 'thumbnail',
+) );
+</code></pre>
+<h5 id="get_video">get_video</h5>
+<p>The method return post video HTML (it also supports other <a href="https://codex.wordpress.org/oEmbed">oembed objects</a>).</p>
+<p>The method has the following attributes <code>get_video( $args = array(), $ID = 0 )</code>:</p>
+<ul>
+<li><code>$args</code> - <em>array</em> - arguments. The array can contain the following keys with values<ul>
+<li><code>visible</code> - <em>boolean</em> - show/hide. The key can take two values true/false. If <strong>false</strong> returns empty string. By default: <strong>true</strong></li>
+<li><code>size</code> - <em>string</em> - oembed object size. By default: <code>apply_filters( 'cherry_normal_video_size', 'post-thumbnail' )</code></li>
+<li><code>mobile_size</code> - <em>string</em> - oembed object size on mobile screen. By default: <code>apply_filters( 'cherry_mobile_video_size', 'post-thumbnail' )</code></li>
+<li><code>class</code> - <em>string</em> - CSS-class. By default: <strong>wp-video</strong></li>
+<li><code>echo</code> - <em>boolean</em> - display method true/false. If <strong>true</strong> displays the result immediately. <strong>false</strong> value allows to save the result in a variable. By default: <strong>false</strong></li>
+</ul>
+</li>
+<li><code>$ID</code> - <em>int</em> - <code>$type</code> attribute entity ID. No need to indicate if the function is used inside posts loop. By default: <strong>0</strong></li>
+</ul>
+<p>Example:</p>
+<pre><code>$utility = $core-&gt;modules['cherry-utility']-&gt;utility;
+
+// Posts number display in category/tag.
+$utility-&gt;media-&gt;get_video( array(
+    'size'        =&gt; 'medium',
+    'mobile_size' =&gt; 'thumbnail',
+) );
+</code></pre>
+<h4 id="cherry_satellite_utilit">Cherry_Satellite_Utilit</h4>
+<p>path - <code>cherry-framework\modules\cherry-utility\inc\cherry-satellite-utilit.php</code></p>
+<p>Class contains the following methods:</p>
+<h5 id="get_post_object">get_post_object</h5>
+<p>The method returns post object.</p>
+<p>The method has the following attributes <code>get_post_object( $ID = 0 )</code>:</p>
+<ul>
+<li><code>$ID</code> - <em>int</em> - post ID</li>
+</ul>
+<h5 id="get_term_object">get_term_object</h5>
+<p>The method returns category/tag object depending on the listed $ID.</p>
+<p>The method has the following attributes <code>get_term_object( $ID = 0 )</code>:</p>
+<ul>
+<li><code>$ID</code> - <em>int</em> - category/tag ID</li>
+</ul>
+<h5 id="get_post_permalink">get_post_permalink</h5>
+<p>The method returns post URL.</p>
+<h5 id="get_term_permalink">get_term_permalink</h5>
+<p>Method url to category/tag depending on the listed $ID.</p>
+<p>The method has the following attributes <code>get_term_permalink( $ID = 0 )</code>:</p>
+<ul>
+<li><code>$ID</code> - <em>int</em> - category/tag ID</li>
+</ul>
+<h5 id="cut_text">cut_text</h5>
+<p>Text cut method.</p>
+<p>The method has the following attributes <code>cut_text( $text, $length, $trimmed_type = 'word' , $after )</code>:</p>
+<ul>
+<li><code>text</code> - <em>string</em> - text to cut. By default: <strong>""</strong></li>
+<li><code>length</code> - <em>int</em> - words/characters length. By default: <strong>null</strong></li>
+<li><code>trimmed_type</code> - <em>string</em> (by default: <strong>word</strong>):<ul>
+<li><em>word</em> - word cut</li>
+<li><em>char</em> - characters cut</li>
+</ul>
+</li>
+<li><code>after</code> - <em>string</em> - character that is displayed after content cut. By default: <strong>""</strong></li>
+</ul>
+<h5 id="get_thumbnail_size_array">get_thumbnail_size_array</h5>
+<p>The method returns an array with image height and width in px.</p>
+<p>The method has the following attributes <code>get_thumbnail_size_array( $size )</code>:</p>
+<ul>
+<li><code>size</code> - <em>string</em> - thumbnail registered size slug. By default: <strong>""</strong></li>
+</ul>
+<h5 id="get_terms_array">get_terms_array</h5>
+<p>The method returns categories/tags array. Array (<code>id =&gt; name</code>) format or in dependency of listed array attributes (<code>slug =&gt; name</code>).</p>
+<p>The method has the following attributes <code>get_terms_array( $tax = 'category', $key = 'slug' )</code>:</p>
+<ul>
+<li><code>tax</code> - <em>string</em> - taxonomy type (by default: <strong>category</strong>). Has three values:<ul>
+<li>category</li>
+<li>post_tag</li>
+<li>post_format</li>
+</ul>
+</li>
+<li><code>key</code> - <em>string</em> - key in array format (by default: <strong>slug</strong>). Has two values:<ul>
+<li>slug</li>
+<li>term_id</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="docs-wrapper__item">
+<h2 id="cherry-ui-elements">Cherry UI-elements</h2>
+<h3 id="description_1">Description</h3>
+<p>UI-elements module is a set of the most widely used editing elements and controls. It consists of the wrapping file for elements list initialization, and elements set respectively.</p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><code>ui_elements</code> - array and slug UI-elements, which should be added (php, css, js). All UI-elements will be added by default, their  assets also will be added. To avoid adding excessive files, control this process by limiting UI-elements which will be used during page rendering.</li>
+</ul>
+<p>Example:</p>
+<pre><code>your_prefix_get_core()-&gt;init_module( 'cherry-ui-elements', array(
+    'ui_elements' =&gt; array(
+        'text',
+        'textarea',
+        'select',
+        'checkbox',
+        'radio',
+        'colorpicker',
+        'media',
+    ),
+) );
+</code></pre>
+<p>Each module initialization call creates its own set of plugged UI-elements. After initialization for building instance UI-elements (samples) use <code>get_ui_element_instance</code>-method, which contains 2 parameters:</p>
+<ul>
+<li><code>$ui_slug</code> - element slug - identifier. For 1.1.3 version, the following UI-elements are available:<ul>
+<li>text</li>
+<li>textarea</li>
+<li>select</li>
+<li>checkbox</li>
+<li>radio</li>
+<li>colorpicker</li>
+<li>media</li>
+<li>stepper</li>
+<li>switcher</li>
+<li>slider</li>
+<li>repeater</li>
+<li>iconpicker</li>
+</ul>
+</li>
+<li><code>$args</code> - UI-elements arguments</li>
+</ul>
+<p>Example:</p>
+<pre><code>$current_element = ui_builder-&gt;get_ui_element_instance(
+    'checkbox',
+    array(
+        'id'    =&gt; 'cherry-ui-checkbox-id',
+        'name'  =&gt; 'cherry-ui-checkbox-name',
+        'value' =&gt; array(
+            'checkbox-1' =&gt; 'true',
+            'checkbox-2' =&gt; 'true',
+            'checkbox-3' =&gt; 'true',
+        ),
+        'options' =&gt; array(
+            'checkbox-1' =&gt; 'checkbox 1',
+            'checkbox-2' =&gt; 'checkbox 2',
+            'checkbox-3' =&gt; 'checkbox 3',
+        ),
+        'label'  =&gt; '',
+        'class'  =&gt; '',
+        'master' =&gt; '',
+    )
+);
+</code></pre>
+<p><code>get_ui_element_instance</code> function controls UI-elements calls. If the element was not passed during cherry-ui-elements module initialization,  "non initialized UI-elements generation failure" service messages will be displayed.</p>
+<h3 id="ui-elements-list">UI-elements list</h3>
+<ul>
+<li>ui-text</li>
+<li>ui-textarea</li>
+<li>ui-switcher</li>
+<li>ui-stepper</li>
+<li>ui-slider</li>
+<li>ui-select</li>
+<li>ui-repeater</li>
+<li>ui-radio</li>
+<li>ui-media</li>
+<li>ui-iconpicker</li>
+<li>ui-colorpicker</li>
+<li>ui-checkbox</li>
+</ul>
+<h4 id="ui-text">ui-text</h4>
+<p>Render text input field (&lt;input type="text"&gt;).</p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-01.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>placeholder</code> - element placeholder attribute</li>
+<li><code>label</code> - label tag text</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> - state dependency identifier from slave</li>
+<li><code>required</code> - required element attribute (false by default)</li>
+</ul>
+<h4 id="ui-textarea">ui-textarea</h4>
+<p>Render textarea field (&lt;textarea&gt;&lt;/textarea&gt;)</p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-02.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>placeholder</code> - placeholder element  attribute</li>
+<li><code>rows</code> - rows element attribute, rows height in text strings</li>
+<li><code>cols</code> - cols element attribute, cols width in characters.</li>
+<li><code>label</code> - label tag text</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<h4 id="ui-switcher">ui-switcher</h4>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-03.png" />
+<img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-04.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>toggle</code> - state settings<ul>
+<li><strong>true_toggle</strong> - text for true state (<strong>On</strong> by default)</li>
+<li><strong>false_toggle</strong> - text for false  state(<strong>Off</strong>  by default)</li>
+<li><strong>true_slave</strong> - true state dependency identifier for master</li>
+<li><strong>false_slave</strong> - false state dependency identifier for master</li>
+</ul>
+</li>
+<li><code>style</code> - style-size for controller (<strong>normal</strong> by default, normal/small)</li>
+<li><code>label</code> - label tag text</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<h4 id="ui-stepper">ui-stepper</h4>
+<p>"Stepper" controller render (&lt;input type="number"&gt;)</p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-05.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>max_value</code> - max value</li>
+<li><code>min_value</code> - min value</li>
+<li><code>step_value</code> - step</li>
+<li><code>placeholder</code> - placeholder element attribute</li>
+<li><code>label</code> - label tag text</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<h4 id="ui-slider">ui-slider</h4>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-06.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>max_value</code> - max value</li>
+<li><code>min_value</code> - min value</li>
+<li><code>step_value</code> - step</li>
+<li><code>placeholder</code> - placeholder element  attribute</li>
+<li><code>label</code> - label tag text</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<p>In essence, ui-slider is an advanced version of ui-stepper.</p>
+<h4 id="ui-select">ui-select</h4>
+<p>Select filtered controller render:</p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-07.png" /></p>
+<p>Select multiselect controller render:</p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-08.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>multiple</code> - multiple element attribute, tag for  multiselect render (<strong>false</strong> by default)</li>
+<li><code>filter</code> - tag for select filtered render (<strong>false</strong> by default)</li>
+<li><code>size</code> - size element attribute, number of displayed select options</li>
+<li><code>inline_style</code> - inline-style, which will be added to select</li>
+<li><code>value</code> - value</li>
+<li><code>options</code> - options array for select, where array key is option value and select option label is key value</li>
+<li><code>placeholder</code> - placeholder element  attribute</li>
+<li><code>label</code> - label tag text</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<p>You can also form group options and name them.</p>
+<p>Example:</p>
+<pre><code>array(
+    'id'           =&gt; 'cherry-ui-select-id',
+    'name'         =&gt; 'cherry-ui-select-name',
+    'multiple'     =&gt; false,
+    'filter'       =&gt; false,
+    'size'         =&gt; 1,
+    'inline_style' =&gt; 'width: 100%',
+    'value'        =&gt; 'select-8',
+    'options'      =&gt; array(
+        'select-1'   =&gt; 'select 1',
+        'select-2'   =&gt; 'select 2',
+        'select-3'   =&gt; 'select 3',
+        'select-4'   =&gt; 'select 4',
+        'select-5'   =&gt; 'select 5',
+        'optgroup-1' =&gt; array(
+            'label'         =&gt; 'Group 1',
+            'group_options' =&gt; array(
+                'select-6' =&gt; 'select 6',
+                'select-7' =&gt; 'select 7',
+                'select-8' =&gt; 'select 8',
+            ),
+        ),
+        'optgroup-2' =&gt; array(
+            'label'         =&gt; 'Group 2',
+            'group_options' =&gt; array(
+                'select-9'  =&gt; 'select 9',
+                'select-10' =&gt; 'select 10',
+                'select-11' =&gt; 'select 11',
+            ),
+        ),
+    ),
+    'placeholder' =&gt; 'Select',
+    'label'       =&gt; '',
+    'class'       =&gt; '',
+    'master'      =&gt; '',
+);
+</code></pre>
+<h4 id="ui-repeater">ui-repeater</h4>
+<p>Controller render, which is used for duplicating a certain controllers set.</p>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-09.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>fields</code> - arguments array for controller set</li>
+<li><code>value</code> - value</li>
+<li><code>label</code> - controller label</li>
+<li><code>add_label</code> - text for adding new set</li>
+<li><code>label</code> - label tag text</li>
+<li><code>class</code> - custom class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+<li><code>title_field</code> - identifier from fields set, value of which will be passed as a title for set</li>
+</ul>
+<h4 id="ui-radio">ui-radio</h4>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-10.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>options</code> - option array for radio, where option value stands for an array key and settings array stands for key value<ul>
+<li><code>label</code> - label for variant</li>
+<li><code>img_src</code> - variant image link</li>
+<li><code>slave</code> -  dependency identifier for master</li>
+</ul>
+</li>
+<li><code>label</code> - controller</li>
+<li><code>class</code> - custom class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<p>Example:</p>
+<p>'options' =&gt; array(
+    'radio-1' =&gt; array(
+        'label'   =&gt; 'Radio 1',
+        'img_src' =&gt; '',
+        'slave'   =&gt; '',
+    ),
+    'radio-2' =&gt; array(
+        'label'   =&gt; 'Radio 2',
+        'img_src' =&gt; '',
+        'slave'   =&gt; '',
+    ),
+    'radio-3' =&gt; array(
+        'label'   =&gt; 'Radio 3',
+        'img_src' =&gt; '',
+        'slave'   =&gt; '',
+    ),
+);</p>
+<h4 id="ui-media">ui-media</h4>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-11.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>multi_upload</code> - multi upload mode</li>
+<li><code>library_type</code> - filter by a certain type (all types by default, filter by image, video, audio)</li>
+<li><code>upload_button_text</code> - upload button text</li>
+<li><code>label</code> - controller label</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<h4 id="ui-iconpicker">ui-iconpicker</h4>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-12.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>icon_data</code> - icons array</li>
+<li><code>auto_parse</code> - css with icons parse (if possible)</li>
+<li><code>label</code> - controller label</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<h4 id="ui-colorpicker">ui-colorpicker</h4>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-13.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value</li>
+<li><code>label</code> - controller label</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<h4 id="ui-checkbox">ui-checkbox</h4>
+<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-14.png" /></p>
+<p>Arguments:</p>
+<ul>
+<li><code>id</code> - element attribute id</li>
+<li><code>name</code> - element name attribute</li>
+<li><code>value</code> - value (passed in array format)</li>
+<li><code>label</code> - controller label</li>
+<li><code>class</code> - custom CSS-class</li>
+<li><code>master</code> -  state dependency identifier from slave</li>
+</ul>
+<p>Example:</p>
+<pre><code>array(
+    'id'    =&gt; 'cherry-ui-checkbox-id',
+    'name'  =&gt; 'cherry-ui-checkbox-name',
+    'value' =&gt; array(
+        'checkbox-1' =&gt; 'true',
+        'checkbox-2' =&gt; 'true',
+        'checkbox-3' =&gt; 'true',
+    ),
+    'options' =&gt; array(
+        'checkbox-1' =&gt; 'checkbox 1',
+        'checkbox-2' =&gt; 'checkbox 2',
+        'checkbox-3' =&gt; 'checkbox 3',
+    ),
+    'label'  =&gt; '',
+    'class'  =&gt; '',
+    'master' =&gt; '',
+);
+</code></pre>
+<h3 id="how-to-implement-master-slave">How to implement "master-slave"</h3>
+<p>To implement the function, you need to use slave and master settings attributes. The algorithm is the following:
+<em>  add unique id to the slave state
+</em>  add this id to master controller argument and its container</p>
+<p>Slave states are available in ui-switcher, ui-checkbox, ui-radio.</p>
+<p>Example:</p>
+<pre><code>'listing-layout' =&gt; array(
+    'type'          =&gt; 'radio',
+    'title'         =&gt; esc_html__( 'Projects listing layout', 'cherry-projects' ),
+    'description'   =&gt; esc_html__( 'Choose projects listing view layout.', 'cherry-projects' ),
+    'value'         =&gt; 'grid-layout',
+    'options'       =&gt; array(
+        'grid-layout' =&gt; array(
+            'label'   =&gt; esc_html__( 'Grid', 'cherry-projects' ),
+            'img_src' =&gt; CHERRY_PROJECTS_URI . 'public/assets/images/svg/list-layout-grid.svg',
+            'slave'   =&gt; 'projects-listing-layout-grid-layout',
+        ),
+        'masonry-layout' =&gt; array(
+            'label'   =&gt; esc_html__( 'Masonry', 'cherry-projects' ),
+            'img_src' =&gt; CHERRY_PROJECTS_URI . 'public/assets/images/svg/list-layout-masonry.svg',
+            'slave'   =&gt; 'projects-listing-layout-masonry-layout',
+        ),
+        'justified-layout' =&gt; array(
+            'label'   =&gt; esc_html__( 'Justified', 'cherry-projects' ),
+            'img_src' =&gt; CHERRY_PROJECTS_URI . 'public/assets/images/svg/list-layout-justified.svg',
+            'slave'   =&gt; 'projects-listing-layout-justified-layout',
+        ),
+        'cascading-grid-layout' =&gt; array(
+            'label'   =&gt; esc_html__( 'Cascading grid', 'cherry-projects' ),
+            'img_src' =&gt; CHERRY_PROJECTS_URI . 'public/assets/images/svg/list-layout-cascading-grid.svg',
+            'slave'   =&gt; 'projects-listing-layout-cascading-grid-layout',
+        ),
+        'list-layout' =&gt; array(
+            'label'   =&gt; esc_html__( 'List', 'cherry-projects' ),
+            'img_src' =&gt; CHERRY_PROJECTS_URI . 'public/assets/images/svg/list-layout-listing.svg',
+            'slave'   =&gt; 'projects-listing-layout-list-layout',
+        ),
+    ),
+),
+'grid-template' =&gt; array(
+    'type'        =&gt; 'text',
+    'title'       =&gt; esc_html__( 'Grid template', 'cherry-projects' ),
+    'description' =&gt; esc_html__( 'Grid content template', 'cherry-projects' ),
+    'value'       =&gt; 'grid-default.tmpl',
+    'master'      =&gt; 'projects-listing-layout-grid-layout',
+),
 </code></pre>
 </div>
 <div class="docs-wrapper__item">
