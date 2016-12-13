@@ -215,6 +215,10 @@ function cherry_enqueue_misc( $depends ) {
 		$depends[] = 'jquery-stickup';
 	}
 
+	if ( is_page_template( 'templates/template-docs.php' ) ) {
+		$depends[] = 'scrollspy';
+	}
+
 	$totop_visibility = get_theme_mod( 'totop_visibility', cherry_theme()->customizer->get_default( 'totop_visibility' ) );
 
 	if ( $totop_visibility ) {

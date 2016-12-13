@@ -1086,6 +1086,10 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
+body {
+  position: relative;
+}
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -3462,6 +3466,7 @@ html.mobile-menu-active {
 
 .docs-wrapper .toc {
   background-color: #f9f9f9;
+<<<<<<< HEAD
   margin-bottom: 30px; }
   @media (min-width: 768px) {
     .docs-wrapper .toc {
@@ -3501,6 +3506,73 @@ html.mobile-menu-active {
     padding-left: 85px; }
   .docs-wrapper .toc ul ul ul ul ul a {
     padding-left: 105px; }
+=======
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .docs-wrapper .toc {
+    position: static;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 300px;
+    height: 2500px;
+    margin-bottom: 0;
+  }
+  .admin-bar .docs-wrapper .toc {
+    top: 32px;
+  }
+  .docs-wrapper .toc.isStuck {
+    position: fixed;
+    height: auto;
+  }
+}
+.docs-wrapper .toc ul {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .docs-wrapper .toc > ul ul {
+    display: none;
+  }
+}
+.docs-wrapper .toc a {
+  display: block;
+  padding: 15px 25px;
+  color: #333;
+}
+.docs-wrapper .toc a:hover {
+  background-color: #eee;
+  color: #333;
+}
+.docs-wrapper .toc .active ul {
+  display: block;
+}
+.docs-wrapper .toc .active > a {
+  background-color: #eee;
+  color: #333;
+}
+.docs-wrapper .toc ul ul a {
+  padding-left: 45px;
+}
+.docs-wrapper .toc ul ul ul a {
+  padding-left: 65px;
+}
+.docs-wrapper .toc ul ul ul ul a {
+  padding-left: 85px;
+}
+.docs-wrapper .toc ul ul ul ul ul a {
+  padding-left: 105px;
+}
+>>>>>>> f499bdb5ca8dc3a818087ba56b7853440f703c85
 
 .docs-wrapper .pseudoStickyBlock {
   display: none; }
