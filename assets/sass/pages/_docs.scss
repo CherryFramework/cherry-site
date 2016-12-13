@@ -12,6 +12,7 @@
 		overflow-x: hidden;
 		overflow-y: auto;
 		width: 300px;
+		height: 2500px;
 		margin-bottom: 0;
 		.admin-bar & {
 			top: 32px;
@@ -19,6 +20,7 @@
 
 		&.isStuck {
 			position: fixed;
+			height: auto;
 		}
 	}
 	ul {
@@ -29,6 +31,11 @@
 		line-height: 20px;
 		list-style: none;
 	}
+	@include media-breakpoint-up(md) {
+		> ul ul {
+			display: none;
+		}
+	}
 	a {
 		display: block;
 		padding: 15px 25px;
@@ -37,6 +44,13 @@
 			background-color: #eee;
 			color: #333;
 		}
+	}
+	.active ul {
+		display: block;
+	}
+	.active > a {
+		background-color: #eee;
+		color: #333;
 	}
 	ul ul a { padding-left: 45px; }
 	ul ul ul a { padding-left: 65px; }

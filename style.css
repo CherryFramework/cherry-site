@@ -1959,6 +1959,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  position: relative;
+}
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -5326,6 +5330,7 @@ html.mobile-menu-active .admin-bar .mobile-menu {
     overflow-x: hidden;
     overflow-y: auto;
     width: 300px;
+    height: 2500px;
     margin-bottom: 0;
   }
   .admin-bar .docs-wrapper .toc {
@@ -5333,6 +5338,7 @@ html.mobile-menu-active .admin-bar .mobile-menu {
   }
   .docs-wrapper .toc.isStuck {
     position: fixed;
+    height: auto;
   }
 }
 .docs-wrapper .toc ul {
@@ -5343,12 +5349,24 @@ html.mobile-menu-active .admin-bar .mobile-menu {
   line-height: 20px;
   list-style: none;
 }
+@media (min-width: 768px) {
+  .docs-wrapper .toc > ul ul {
+    display: none;
+  }
+}
 .docs-wrapper .toc a {
   display: block;
   padding: 15px 25px;
   color: #333;
 }
 .docs-wrapper .toc a:hover {
+  background-color: #eee;
+  color: #333;
+}
+.docs-wrapper .toc .active ul {
+  display: block;
+}
+.docs-wrapper .toc .active > a {
   background-color: #eee;
   color: #333;
 }

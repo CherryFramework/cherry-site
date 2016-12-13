@@ -29,6 +29,7 @@
 			this.to_top_init( this );
 			this.mobile_menu( this );
 			this.sticky_toc_init( this );
+			this.scrollspy_init( this );
 		},
 
 		window_load_render: function () {
@@ -269,6 +270,16 @@
 
 				CherryJsCore.variable.$document.trigger( 'scroll.stickUp' );
 			});
+		},
+
+		scrollspy_init: function() {
+			var $toc = $( '.docs-wrapper .toc' );
+
+			if ( ! $.isFunction( jQuery.fn.scrollspy ) || ! $toc.length ) {
+				return !1;
+			}
+
+			$( 'body' ).scrollspy({ target: '.toc' })
 		},
 
 		subscribe_init: function( self ) {
