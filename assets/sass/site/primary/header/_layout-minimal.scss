@@ -25,13 +25,15 @@
 		order: 2;
 		flex: 0 1 100%;
 		align-self: flex-end;
+			.menu {
+				@include media-breakpoint-up(lg) {
+					justify-content: flex-end;
+				}
+			}
+	}
+	.header-container__flex {
 		@include media-breakpoint-up(md) {
-			order: 1;
-			flex: 0 1 50%;
-		}
-		@include media-breakpoint-only(md) {
-			order: 3;
-			flex: 0 1 100%;
+			justify-content: center;
 		}
 	}
 }

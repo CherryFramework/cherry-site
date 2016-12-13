@@ -64,6 +64,7 @@
 .dwqa-single-question {
 	.dwqa-question-item {
 		border: none;
+		margin-bottom: 1.5em;
 	}
 	.dwqa-question-status{
 		display: flex;
@@ -102,4 +103,8 @@
 				}
 			}
 	}
+}
+
+input.dwqa-btn {
+	border: none;
 }

@@ -27,6 +27,5 @@ input.dwqa-question-submit:hover {
 
 input.dwqa-btn {
 	color: $regular_accent_color_3;
-	border-color: $regular_accent_color_1;
 	background-color: $regular_accent_color_1;
 }

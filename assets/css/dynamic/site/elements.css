@@ -39,3 +39,7 @@ code {
 	background: @alpha( $regular_accent_color_2, 75 );
 	background: linear-gradient(to bottom, @alpha( $regular_accent_color_2, 75 ) 0%, @alpha( $regular_accent_color_2, 20 ) 100%);
 }
+
+.cherry-divider .cherry-divider__item {
+	border-color: $regular_accent_color_3;
+}

@@ -142,20 +142,6 @@
 					content: '\f107';
 				}
 			}
-			&.super-guacamole__menu-with-image {
-				a,
-				img {
-					display: inline-block;
-					box-sizing: border-box;
-					border: 1px solid transparent;
-				}
-
-				img {
-					max-width: 1.6em;
-					transform: translateY(0.4em);
-					margin-top: -100%;
-				}
-			}
 			&:last-child {
 				> a,
 				> .menu-link-wrapper > a {
@@ -261,7 +247,6 @@
 			}
 
 			&.animate {
-				transition: transform .2s linear;
 			}
 
 			&.show {
@@ -345,8 +330,8 @@ html.mobile-menu-active {
 
 	.menu-toggle[aria-controls="main-menu"] {
 		position: fixed;
-		top: 0;
-		left: 0;
+		top: 18px;
+		right: 15px;
 	}
 
 	.admin-bar {

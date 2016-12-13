@@ -1,16 +1,16 @@
 .site-header.transparent {
-
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
 	@include media-breakpoint-up(lg) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1000;
+
 	}
 	.site-branding {
 		padding: 12px 0;
 		order: 1;
-		flex: 0 1 100%;
+		flex: 0 1 auto;
 		text-align: center;
 		@include media-breakpoint-up(md) {
 			order: 0;
@@ -20,7 +20,6 @@
 	}
 	.social-list {
 		padding: 0 0 15px;
-
 		order: 0;
 		flex: 0 1 100%;
 		text-align: center;
@@ -32,16 +31,25 @@
 	}
 	.main-navigation {
 		order: 2;
-		flex: 0 1 100%;
+		flex: 0 1 auto;
 		align-self: flex-end;
+
 		@include media-breakpoint-up(md) {
 			order: 1;
-			flex: 0 1 50%;
 		}
 		@include media-breakpoint-only(md) {
 			order: 3;
-			flex: 0 1 100%;
 		}
+
+		.menu {
+			@include media-breakpoint-up(lg) {
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	.menu-toggle {
+		margin: 20px 0;
 	}
 
 	.header-container {
@@ -55,12 +63,16 @@
 			align-content: stretch;
 			-ms-flex-align: start;
 			align-items: flex-start;
+			@include media-breakpoint-up(md) {
+				justify-content: center;
+			}
 			@include media-breakpoint-up(lg) {
 				flex-wrap: nowrap;
 			}
 		}
 	}
 }
+
 .header-layout-transparent {
 	.site{
 		position: relative;

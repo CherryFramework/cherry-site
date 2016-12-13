@@ -576,7 +576,7 @@ if ( ! class_exists( 'Cherry_Smart_Slider_Widget' ) ) {
 						'class'       => 'sp-image',
 						'html'        => '<img %2$s src="%3$s" alt="%4$s" %5$s>',
 					) );
-					$html .= '<div class="sp-icon sp-layer"' . $icon_attr . '><div class="icon"></div></div>';
+					//$html .= '<div class="sp-icon sp-layer"' . $icon_attr . '><div class="icon"></div></div>';
 					$html .= '<h2 class="sp-title sp-layer"' . $title_attr . '>' . $title . '</h2>';
 					$html .= '<div class="sp-content sp-layer"' . $content_attr . '>' . $content . '</div>';
 					$html .= '<div class="sp-more sp-layer"' . $more_attr . '>' . $button . '</div>';
