@@ -28,22 +28,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Elements
 # Forms
 # Navigation
-	## Links
-	## Menus
-	## Social List
+    ## Links
+    ## Menus
+    ## Social List
 # Accessibility
 # Alignments
 # Clearings
 # Grid
 # Widgets
 # Content
-	## Posts and pages
-	## Asides
-	## Comments
+    ## Posts and pages
+    ## Asides
+    ## Comments
 # Infinite scroll
 # Media
-	## Captions
-	## Galleries
+    ## Captions
+    ## Galleries
 # Builder
 
 --------------------------------------------------------------*/
@@ -260,13 +260,10 @@ pre {
   max-width: 100%;
   margin: 0 0 1.5em;
   padding: 1.5em;
-  background: #eee;
-  border: 1px solid #d5d5d5;
-  white-space: pre;
+  background: #f7f7f9;
+  border: 1px solid #f7f7f9;
   white-space: pre-wrap;
-  word-wrap: break-word;
-  font-size: 16px;
-  font-size: 1rem; }
+  word-wrap: break-word; }
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
@@ -274,8 +271,16 @@ code, kbd, tt, var {
   font-size: 0.9375rem; }
 
 code {
-  padding: 2px 5px;
-  border: 1px solid #e0e0e8; }
+  padding: .2rem .4rem;
+  font-size: 90%;
+  border-radius: .25rem;
+  background: #f7f7f9;
+  color: #373a3c; }
+  pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: inherit; }
 
 abbr, acronym {
   cursor: help;
@@ -1081,6 +1086,9 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
+body {
+  position: relative; }
+
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -1308,10 +1316,10 @@ table {
   position: relative;
   top: 50%;
   left: 50%;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
   transform: rotateZ(45deg); }
   .page-preloader-cover {
     position: fixed;
@@ -1322,48 +1330,87 @@ table {
     width: 100%;
     height: 100%;
     background-color: #fff; }
-  .page-preloader__cube {
+  .page-preloader__part {
     position: relative;
-    float: left;
-    width: 50%;
-    height: 50%;
-    transform: scale(1.1); }
-    .page-preloader__cube::before {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-block;
+    float: left; }
+  .page-preloader-leaf {
+    background-color: #b8d878;
+    animation: leafAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+    transform-style: preserve-3d; }
+    .page-preloader-leaf:before {
+      transform: perspective(1000px) rotate3d(-45, -45, 0, 90deg);
+      display: inline-block;
       position: absolute;
+      width: 40px;
+      height: 40px;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-      transform-origin: 100% 100%;
-      animation: tmFoldCubeAngle 2.4s infinite linear both;
-      background-color: #333; }
-  .page-preloader--cube2 {
-    transform: scale(1.1) rotateZ(90deg); }
-    .page-preloader--cube2::before {
-      animation-delay: 0.3s; }
-  .page-preloader--cube3 {
-    transform: scale(1.1) rotateZ(180deg); }
-    .page-preloader--cube3::before {
-      animation-delay: 0.6s; }
-  .page-preloader--cube4 {
-    transform: scale(1.1) rotateZ(270deg); }
-    .page-preloader--cube4::before {
-      animation-delay: 0.9s; }
+      background-color: #86c763;
+      content: ''; }
+  .page-preloader-cherry {
+    background-color: #f05b5a; }
+    .page-preloader-cherry:before {
+      display: inline-block;
+      position: absolute;
+      perspective: 1000px;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 20px;
+      border-style: solid;
+      border-width: 20px 20px 20px 0;
+      border-color: transparent #ca424d transparent transparent;
+      content: ''; }
 
 @keyframes tmFoldCubeAngle {
   0%, 10% {
-    -webkit-transform: perspective(140px) rotateX(-180deg);
     transform: perspective(140px) rotateX(-180deg);
     opacity: 0; }
   25%, 75% {
-    -webkit-transform: perspective(140px) rotateX(0deg);
     transform: perspective(140px) rotateX(0deg);
     opacity: 1; }
   90%, 100% {
-    -webkit-transform: perspective(140px) rotateY(180deg);
     transform: perspective(140px) rotateY(180deg);
     opacity: 0; } }
+
+@keyframes leafAnimation {
+  0% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, 180deg); }
+  50% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, 0deg); }
+  100% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, -180deg); } }
+
+@keyframes leafBeforeAnimation {
+  0% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, 180deg); }
+  50% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, 0deg); }
+  100% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, 180deg); } }
+
+@keyframes cherryBeforeAnimation {
+  0% {
+    transform: rotate3d(-45, -45, 0, 0deg);
+    transform-origin: 0 50%; }
+  25% {
+    transform: rotate3d(-45, -45, 0, 180deg);
+    transform-origin: 0 50%; }
+  50% {
+    transform: rotate3d(-45, -45, 0, 180deg);
+    transform-origin: 0 50%; }
+  75% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, 0deg); }
+  100% {
+    transform: perspective(140px) rotate3d(-45, -45, 0, 180deg); } }
 
 /*--------------------------------------------------------------
 ## ToTop button
@@ -2300,7 +2347,9 @@ html.mobile-menu-active {
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after,
+.docs-wrapper:before,
+.docs-wrapper:after {
   content: "";
   display: table;
   table-layout: fixed; }
@@ -2312,7 +2361,8 @@ html.mobile-menu-active {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after,
+.docs-wrapper:after {
   clear: both; }
 
 .hidden {
@@ -3419,6 +3469,146 @@ html.mobile-menu-active {
     margin: 25px 0; }
   .not-found h4 {
     margin: 0 0 25px; }
+
+.docs-wrapper .toc {
+  background-color: #f9f9f9;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .docs-wrapper .toc {
+      position: static;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      bottom: 0;
+      float: left;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 300px;
+      height: 2500px;
+      margin-bottom: 0; }
+      .admin-bar .docs-wrapper .toc {
+        top: 32px; }
+      .docs-wrapper .toc.isStuck {
+        position: fixed;
+        height: auto; } }
+  .docs-wrapper .toc ul {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    list-style: none; }
+  @media (min-width: 768px) {
+    .docs-wrapper .toc > ul ul {
+      display: none; } }
+  .docs-wrapper .toc a {
+    display: block;
+    padding: 15px 25px;
+    color: #333; }
+    .docs-wrapper .toc a:hover {
+      background-color: #eee;
+      color: #333; }
+  .docs-wrapper .toc .active ul {
+    display: block; }
+  .docs-wrapper .toc .active > a {
+    background-color: #eee;
+    color: #333; }
+  .docs-wrapper .toc ul ul a {
+    padding-left: 45px; }
+  .docs-wrapper .toc ul ul ul a {
+    padding-left: 65px; }
+  .docs-wrapper .toc ul ul ul ul a {
+    padding-left: 85px; }
+  .docs-wrapper .toc ul ul ul ul ul a {
+    padding-left: 105px; }
+
+.docs-wrapper .pseudoStickyBlock {
+  display: none; }
+
+.docs-wrapper__item {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem; }
+  @media (min-width: 768px) {
+    .docs-wrapper__item {
+      float: left;
+      margin-left: 50px;
+      width: calc( 100% - 350px); }
+      .isStuck ~ .docs-wrapper__item {
+        margin-left: 350px; } }
+  @media (min-width: 992px) {
+    .docs-wrapper__item {
+      margin-left: 100px;
+      width: calc( 100% - 500px); }
+      .isStuck ~ .docs-wrapper__item {
+        margin-left: 400px; } }
+
+.docs-wrapper__item ul {
+  list-style: none; }
+
+.docs-wrapper__item li {
+  margin-bottom: .25rem; }
+
+.docs-wrapper__item ul li {
+  position: relative;
+  padding-left: 20px; }
+  .docs-wrapper__item ul li:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    width: 4px;
+    height: 4px;
+    border: 1px solid currentColor;
+    border-radius: 50%; }
+
+.docs-wrapper__item strong,
+.docs-wrapper__item b {
+  color: #373a3c; }
+
+.docs-wrapper__item blockquote {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  border: 1px solid #eee;
+  background-color: transparent;
+  color: currentColor;
+  border-left-width: .25rem;
+  border-radius: .25rem; }
+  .docs-wrapper__item blockquote:before, .docs-wrapper__item blockquote:after {
+    content: ''; }
+
+.docs-wrapper__item h2, .docs-wrapper__item h3, .docs-wrapper__item h4, .docs-wrapper__item h5, .docs-wrapper__item h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem; }
+
+.docs-wrapper__item + .docs-wrapper__item + .docs-wrapper__item {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e6e6e6; }
+
+.docs-wrapper__item > h2 {
+  position: relative; }
+  .docs-wrapper__item > h2:before {
+    font-size: 1em;
+    line-height: inherit;
+    content: '\f0c1';
+    vertical-align: middle;
+    margin-right: 0.5em;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    @media (min-width: 768px) {
+      .docs-wrapper__item > h2:before {
+        position: absolute;
+        margin-right: 0;
+        margin-left: -1.5em; } }
+
+#documentation {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Widgets

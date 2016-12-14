@@ -2,10 +2,10 @@
 	position: relative;
 	top: 50%;
 	left: 50%;
-	width: 60px;
-	height: 60px;
-	margin-top: -30px;
-	margin-left: -30px;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	margin-top: -50px;
 	transform: rotateZ(45deg);
 	&-cover {
 		position: fixed;
@@ -17,58 +17,111 @@
 		height: 100%;
 		background-color: #fff;
 	}
-	&__cube {
+	&__part {
 		position: relative;
+		width: 40px;
+		height: 40px;
+		margin: 5px;
+		display: inline-block;
 		float: left;
-		width: 50%;
-		height: 50%;
-		transform: scale(1.1);
-		&::before {
+			&:before {
+
+			}
+	}
+	&-leaf {
+		background-color: #b8d878;
+		animation: leafAnimation;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		transform-style: preserve-3d;
+		&:before {
+			transform: perspective(1000px) rotate3d(-45, -45, 0, 90deg);
+			display: inline-block;
 			position: absolute;
+			width: 40px;
+			height: 40px;
 			top: 0;
 			left: 0;
-			width: 100%;
-			height: 100%;
+			background-color: #86c763;
 			content: '';
-			transform-origin: 100% 100%;
-			animation: tmFoldCubeAngle 2.4s infinite linear both;
-			background-color: #333;
 		}
 	}
-	&--cube2 {
-		transform: scale(1.1) rotateZ(90deg);
-		&::before {
-			animation-delay: 0.3s;
-		}
-	}
-	&--cube3 {
-		transform: scale(1.1) rotateZ(180deg);
-		&::before {
-			animation-delay: 0.6s;
-		}
-	}
-	&--cube4 {
-		transform: scale(1.1) rotateZ(270deg);
-		&::before {
-			animation-delay: 0.9s;
+	&-cherry {
+		background-color: #f05b5a;
+		&:before {
+			display: inline-block;
+			position: absolute;
+			perspective: 1000px;
+			width: 0;
+			height: 0;
+			top: 0;
+			left: 20px;
+			border-style: solid;
+			border-width: 20px 20px 20px 0;
+			border-color: transparent #ca424d transparent transparent;
+			content: '';
 		}
 	}
 }
 
 @keyframes tmFoldCubeAngle {
 	0%, 10% {
-		-webkit-transform: perspective(140px) rotateX(-180deg);
 		transform: perspective(140px) rotateX(-180deg);
 		opacity: 0;
 	}
 	25%, 75% {
-		-webkit-transform: perspective(140px) rotateX(0deg);
 		transform: perspective(140px) rotateX(0deg);
 		opacity: 1;
 	}
 	90%, 100% {
-		-webkit-transform: perspective(140px) rotateY(180deg);
 		transform: perspective(140px) rotateY(180deg);
 		opacity: 0;
+	}
+}
+
+@keyframes leafAnimation {
+	0% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, 180deg);
+	}
+	50% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, 0deg);
+	}
+	100% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, -180deg);
+	}
+}
+
+@keyframes leafBeforeAnimation {
+	0% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, 180deg);
+	}
+	50% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, 0deg);
+	}
+	100% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, 180deg);
+	}
+}
+
+@keyframes cherryBeforeAnimation {
+	0% {
+		transform: rotate3d(-45, -45, 0, 0deg);
+		transform-origin: 0 50%;
+	}
+	25% {
+		transform: rotate3d(-45, -45, 0, 180deg);
+		transform-origin: 0 50%;
+	}
+	50% {
+		transform: rotate3d(-45, -45, 0, 180deg);
+		transform-origin: 0 50%;
+	}
+	75% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, 0deg);
+	}
+	100% {
+		transform: perspective(140px) rotate3d(-45, -45, 0, 180deg);
 	}
 }

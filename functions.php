@@ -582,6 +582,7 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 			wp_register_script( 'jquery-stickup', CHERRY_THEME_JS . '/min/jquery.stickup.min.js', array( 'jquery' ), '1.0.0', true );
 			wp_register_script( 'jquery-totop', CHERRY_THEME_JS . '/min/jquery.ui.totop.min.js', array( 'jquery' ), '1.2.0', true );
 			wp_register_script( 'super-guacamole', CHERRY_THEME_JS . '/min/super-guacamole.min.js', array( 'jquery' ), '1.1.9', true );
+			wp_register_script( 'scrollspy', CHERRY_THEME_JS . '/min/scrollspy.min.js', array( 'jquery' ), '3.3.7', true );
 
 			wp_register_style( 'jquery-slider-pro', CHERRY_THEME_CSS . '/slider-pro.min.css', array(), '1.2.4' );
 			wp_register_style( 'jquery-swiper', CHERRY_THEME_CSS . '/swiper.min.css', array(), '3.3.0' );
@@ -629,8 +630,9 @@ if ( ! class_exists( 'Cherry_Theme_Setup' ) ) {
 			) );
 
 			wp_localize_script( 'cherry-theme-script', 'cherry', array(
-				'ajaxurl' => esc_url( admin_url( 'admin-ajax.php' ) ),
-				'labels'  => $labels,
+				'ajaxurl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
+				'labels'        => $labels,
+				'sticky_header' => get_theme_mod( 'header_menu_sticky', cherry_theme()->customizer->get_default( 'header_menu_sticky' ) ),
 			) );
 
 			// Threaded Comments.

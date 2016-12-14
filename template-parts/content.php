@@ -60,7 +60,7 @@
 						$utility->meta_data->get_date( array(
 							'visible' => $date_visible,
 							'class'   => 'post__date-link',
-							'icon'    => '<i class="material-icons">date_range</i>',
+							'icon'    => '',
 							'echo'    => true,
 						) );
 					?>
