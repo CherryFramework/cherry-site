@@ -33,6 +33,7 @@
 		},
 
 		window_load_render: function () {
+
 			this.page_preloader_init( this );
 		},
 
