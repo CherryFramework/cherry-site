@@ -23,8 +23,8 @@
 	}
 	.main-navigation {
 		order: 2;
-		flex: 0 1 100%;
-		align-self: flex-end;
+		flex: 0 1 auto;
+		width: auto;
 			.menu {
 				@include media-breakpoint-up(lg) {
 					justify-content: flex-end;
@@ -34,6 +34,9 @@
 	.header-container__flex {
 		@include media-breakpoint-up(md) {
 			justify-content: center;
+		}
+		@include media-breakpoint-up(lg) {
+			justify-content: space-between;
 		}
 	}
 }

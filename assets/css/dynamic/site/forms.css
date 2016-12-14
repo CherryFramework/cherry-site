@@ -32,6 +32,15 @@
 	box-shadow: 0 0 10px $regular_accent_color_1;
 }
 
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	color: $invert_link_color;
+	background-color: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
 /* #Input Placeholders */
 ::-webkit-input-placeholder { color: $regular_text_color; }
 ::-moz-placeholder          { color: $regular_text_color; }

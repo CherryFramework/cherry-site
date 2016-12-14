@@ -2667,8 +2667,8 @@ html.mobile-menu-active {
 
 .site-header.minimal .main-navigation {
   order: 2;
-  flex: 0 1 100%;
-  align-self: flex-end; }
+  flex: 0 1 auto;
+  width: auto; }
   @media (min-width: 992px) {
     .site-header.minimal .main-navigation .menu {
       justify-content: flex-end; } }
@@ -2676,6 +2676,10 @@ html.mobile-menu-active {
 @media (min-width: 768px) {
   .site-header.minimal .header-container__flex {
     justify-content: center; } }
+
+@media (min-width: 992px) {
+  .site-header.minimal .header-container__flex {
+    justify-content: space-between; } }
 
 .header-container__flex {
   display: flex;
@@ -2746,6 +2750,7 @@ html.mobile-menu-active {
         justify-content: center; } }
     @media (min-width: 992px) {
       .site-header.transparent .header-container__flex {
+        justify-content: space-between;
         flex-wrap: nowrap; } }
 
 .header-layout-transparent .site {
@@ -2880,9 +2885,11 @@ html.mobile-menu-active {
     .site-logo__link .site-link__img {
       flex: 0 1 auto;
       margin-right: 10px;
-      max-width: 55px; }
+      width: 60px;
+      height: 60px; }
     .site-logo__link span {
-      flex: 0 1 auto; }
+      flex: 0 1 auto;
+      white-space: nowrap; }
 
 /*--------------------------------------------------------------
 ## Posts and pages

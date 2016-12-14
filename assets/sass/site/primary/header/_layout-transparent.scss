@@ -67,6 +67,7 @@
 				justify-content: center;
 			}
 			@include media-breakpoint-up(lg) {
+				justify-content: space-between;
 				flex-wrap: nowrap;
 			}
 		}
