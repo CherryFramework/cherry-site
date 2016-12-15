@@ -14,7 +14,10 @@ do_action( 'cherry_site_plugins_before_item', 'list-item' );
 			echo $this->plugin_thumb( $plugin, 'icon-256x256', 'plugins-list-item__thumb-image' );
 		?></div>
 		<div class="plugins-list-item__info">
-			<h5 class="plugins-list-item__title"><?php echo $plugin->name; ?></h5>
+			<?php
+				$plugin_link = esc_url( 'https://wordpress.org/plugins/' . $plugin->slug );
+			?>
+			<h5 class="plugins-list-item__title"><a href="<?php echo $plugin_link;?>"><?php echo $plugin->name; ?></a></h5>
 			<div class="plugins-list-item__ver">
 			<?php
 				echo sprintf( '%1$s: <span>%2$s</span>', esc_html__( 'Version', 'cherry' ), $plugin->version );

@@ -2,6 +2,7 @@
 
 	<?php do_action( 'cherry_render_widget_area', 'full-width-header-area' ); ?>
 
+
 	<div <?php echo cherry_get_container_classes( array( 'site-content_wrap' ), 'content' ); ?>>
 
 		<?php do_action( 'cherry_render_widget_area', 'before-content-area' ); ?>
