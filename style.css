@@ -1752,7 +1752,7 @@ a {
       left: 0;
       opacity: 0;
       visibility: hidden;
-      transition: top .2s linear .1s, opacity .2s linear .1s, visibility .1s linear .2s;
+      transition: top .2s linear .1s, opacity .2s linear .1s, visibility .1s linear .2s;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
       .main-navigation .sub-menu ul {
         top: 20%;
@@ -2957,12 +2957,13 @@ html.mobile-menu-active {
 --------------------------------------------------------------*/
 .hentry {
   position: relative;
+  margin-top: 3em;
   border-radius: 6px; }
   .posts-list .hentry {
     padding-top: 3em;
     border-top: 1px solid; }
   .posts-list .hentry:first-child {
-    margin-top: 3em;
+    margin-top: 0;
     padding-top: 0;
     border: none; }
   .posts-list .hentry:last-child {
