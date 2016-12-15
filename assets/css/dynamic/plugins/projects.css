@@ -22,31 +22,35 @@ ul.order-filters > li ul{
 	background-color: $regular_accent_color_1;
 }
 
-.projects-item-instance .hover-content{
+.projects-item-instance .hover-content {
 	background-color: @alpha( $regular_accent_color_1, 80 );
 }
 
-.projects-item-instance div.hover-content h3 a{
+.projects-item-instance div.hover-content h3 a {
 	color: #fff;
 }
 
-.projects-item-instance a.simple-button:hover{
+.projects-item-instance a.simple-button:hover {
 	color: $regular_accent_color_1;
 	background-color: #fff;
 }
 
-.projects-item-instance a.simple-button:hover{
+.projects-item-instance a.simple-button:hover {
 	background-color: #fff;
 }
 
-.projects-item-instance div.hover-content h3 a:hover{
+.projects-item-instance div.hover-content h3 a:hover {
 	color: $regular_accent_color_2;
 }
 
-.cherry-projects-single-post .featured-image a .cover, .cherry-projects-single-post .additional-image a .cover{
+.cherry-projects-single-post .featured-image a .cover, .cherry-projects-single-post .additional-image a .cover {
 	box-shadow: inset 0px 0px 30px @alpha( $regular_accent_color_1, 60 );
 }
 
-.projects-filters{
+.projects-filters {
 	padding: 0 1em;
+}
+
+.cherry-projects-ajax-loader {
+	background-color: @alpha( $regular_accent_color_3, 50 );
 }
