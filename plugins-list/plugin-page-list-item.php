@@ -20,8 +20,12 @@ do_action( 'cherry_site_plugins_before_item', 'list-item' );
 				echo $this->plugin_thumb( $plugin, 'banner-772x250', 'plugins-list-item__thumb-image' );
 			?></div>
 			<div class="plugins-list-item__info">
+				<?php
+					$plugin_link = esc_url( 'https://wordpress.org/plugins/' . $plugin->slug );
+				?>
 				<div class="plugins-list-item__content"><?php echo $plugin->short_description; ?></div>
 				<div class="plugins-list-item__rating" data-rating="<?php echo $plugin->rating; ?>"></div>
+				<a href="<?php echo $plugin_link;?>"><?php echo esc_html__( 'wordpress.org', 'cherry' ); ?></a>
 				<div class="plugins-list-item__download_block">
 					<div class="plugins-list-item__downloads">
 					<?php

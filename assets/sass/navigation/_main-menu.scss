@@ -87,7 +87,6 @@
 			}
 			> li {
 				display: flex;
-
 				align-items: flex-start;
 				.default & {
 					display: inline-block;
@@ -223,7 +222,7 @@
 				&::after {
 					/* Marker position (level 1) */
 					top: 1.5em;
-					right: 0;
+					right: 0.4em;
 				}
 			}
 		}

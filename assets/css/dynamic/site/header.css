@@ -20,6 +20,10 @@
 	color: $regular_accent_color_3;
 }
 
+.site-header.transparent .main-navigation li::after {
+	color: $regular_accent_color_3;
+}
+
 /* ##Logo */
 .site-logo {
 	font-style: $header_logo_font_style;

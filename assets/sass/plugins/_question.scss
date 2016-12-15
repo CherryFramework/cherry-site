@@ -65,6 +65,9 @@
 	.dwqa-question-item {
 		border: none;
 		margin-bottom: 1.5em;
+		a {
+			outline: none;
+		}
 	}
 	.dwqa-question-status{
 		display: flex;
