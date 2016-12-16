@@ -277,10 +277,12 @@
 
 	@include media-breakpoint-down(sm) {
 		display: inline-block;
-		position: relative;
+		position: fixed;
 		z-index: 998;
 		order: 2;
 		margin: 0;
+		top: 15px;
+		right: 15px;
 		border-width: 0;
 		border-radius: 4px;
 	}
@@ -329,7 +331,7 @@ html.mobile-menu-active {
 
 	.menu-toggle[aria-controls="main-menu"] {
 		position: fixed;
-		top: 18px;
+		top: 15px;
 		right: 15px;
 	}
 
@@ -355,7 +357,7 @@ html.mobile-menu-active {
 	right: 0;
 	z-index: 995;
 	width: 4rem;
-	height: calc( 4em - 6px );
+	height: calc( 4em - 4px );
 	border-bottom: 1px solid #ddd;
 }
 .mobile-menu {

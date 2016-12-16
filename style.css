@@ -1086,9 +1086,6 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
-body {
-  position: relative; }
-
 img {
   height: auto;
   /* Make sure images are scaled correctly. */
@@ -1153,6 +1150,10 @@ hr {
     .cherry-section {
       padding-top: 25px;
       padding-bottom: 25px; } }
+  @media (max-width: 767px) {
+    .cherry-section .cherry-button {
+      display: block;
+      margin: 1em 0; } }
   @media (min-width: 768px) {
     .cherry-section {
       padding-top: 35px;
@@ -1229,21 +1230,20 @@ hr {
     display: block;
     content: ''; }
 
-.home-col-7 {
+.home-col-7, .features-col-1 {
   display: flex;
   align-items: center;
-  justify-content: flex-end; }
-  .home-col-7 > * {
-    flex: 0 1 auto;
-    margin: 10px; }
-
-.features-col-1 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; }
-  .features-col-1 > * {
-    flex: 0 1 auto;
-    margin: 10px; }
+  justify-content: center;
+  flex-flow: row wrap; }
+  .home-col-7 > .cherry-button, .features-col-1 > .cherry-button {
+    flex: 0 1 100%;
+    margin: 10px 0;
+    min-width: 100%; }
+    @media (min-width: 768px) {
+      .home-col-7 > .cherry-button, .features-col-1 > .cherry-button {
+        flex: 0 1 auto;
+        min-width: auto;
+        margin: 10px; } }
 
 .feature-col-1 {
   display: flex;
@@ -1882,10 +1882,12 @@ a {
   @media (max-width: 767px) {
     .menu-toggle[aria-controls="main-menu"] {
       display: inline-block;
-      position: relative;
+      position: fixed;
       z-index: 998;
       order: 2;
       margin: 0;
+      top: 15px;
+      right: 15px;
       border-width: 0;
       border-radius: 4px; } }
   .menu-toggle[aria-controls="main-menu"] .menu-toggle__icon {
@@ -1913,7 +1915,7 @@ html.mobile-menu-active {
     display: none; }
   html.mobile-menu-active .menu-toggle[aria-controls="main-menu"] {
     position: fixed;
-    top: 18px;
+    top: 15px;
     right: 15px; }
   @media (max-width: 767px) {
     html.mobile-menu-active .admin-bar .menu-toggle[aria-controls="main-menu"] {
@@ -1929,7 +1931,7 @@ html.mobile-menu-active {
   right: 0;
   z-index: 995;
   width: 4rem;
-  height: calc( 4em - 6px);
+  height: calc( 4em - 4px);
   border-bottom: 1px solid #ddd; }
 
 .mobile-menu .sub-menu-toggle {
@@ -2784,8 +2786,6 @@ html.mobile-menu-active {
     @media (min-width: 992px) {
       .site-header.transparent .main-navigation .menu {
         justify-content: flex-end; } }
-  .site-header.transparent .menu-toggle {
-    margin: 20px 0; }
   .site-header.transparent .header-container__flex {
     display: flex;
     flex-direction: row;

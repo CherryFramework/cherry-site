@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	position: relative;
+	//position: relative;
 }
 
 img {
@@ -71,6 +71,12 @@ hr {
 		@include media-breakpoint-up(sm) {
 			padding-top: 25px;
 			padding-bottom: 25px;
+		}
+		@include media-breakpoint-down(sm) {
+			.cherry-button {
+				display: block;
+				margin: 1em 0;
+			}
 		}
 		@include media-breakpoint-up(md) {
 			padding-top: 35px;
@@ -169,23 +175,20 @@ hr {
 	}
 }
 
-.home-col-7 {
+.home-col-7, .features-col-1 {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	> * {
-		flex: 0 1 auto;
-		margin: 10px;
-	}
-}
-
-.features-col-1 {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	> * {
-		flex: 0 1 auto;
-		margin: 10px;
+	justify-content: center;
+	flex-flow: row wrap;
+	> .cherry-button {
+		flex: 0 1 100%;
+		margin: 10px 0;
+		min-width: 100%;
+			@include media-breakpoint-up(md) {
+				flex: 0 1 auto;
+				min-width: auto;
+				margin: 10px;
+			}
 	}
 }
 

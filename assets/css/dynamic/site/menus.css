@@ -95,5 +95,5 @@
 }
 
 .menu-toggle[aria-controls="main-menu"] {
-	background: $regular_accent_color_3;
+	background: $regular_accent_color_1;
 }

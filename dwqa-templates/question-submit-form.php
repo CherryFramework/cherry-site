@@ -14,23 +14,6 @@
 			<?php $title = isset( $_POST['question-title'] ) ? sanitize_title( $_POST['question-title'] ) : ''; ?>
 			<input type="text" data-nonce="<?php echo wp_create_nonce( '_dwqa_filter_nonce' ) ?>" id="question-title" name="question-title" value="<?php echo $title ?>" tabindex="1">
 		</p>
-		<?php $content = isset( $_POST['question-content'] ) ? sanitize_text_field( $_POST['question-content'] ) : ''; ?>
-		<p>
-			<h4><?php echo esc_html__( 'Question Description', 'cherry' ); ?></h4>
-			<?php dwqa_init_tinymce_editor( array( 'content' => $content, 'textarea_name' => 'question-content', 'id' => 'question-content' ) ) ?>
-		</p>
-		<?php global $dwqa_general_settings; ?>
-		<?php if ( isset( $dwqa_general_settings['enable-private-question'] ) && $dwqa_general_settings['enable-private-question'] ) : ?>
-		<p>
-			<label for="question-status"><?php _e( 'Status', 'dwqa' ) ?></label>
-			<select class="dwqa-select" id="question-status" name="question-status">
-				<optgroup label="<?php _e( 'Who can see this?', 'dwqa' ) ?>">
-					<option value="publish"><?php _e( 'Public', 'dwqa' ) ?></option>
-					<option value="private"><?php _e( 'Only Me &amp; Admin', 'dwqa' ) ?></option>
-				</optgroup>
-			</select>
-		</p>
-		<?php endif; ?>
 		<div class="row">
 			<div class="col-xs-6">
 				<p>
@@ -56,6 +39,7 @@
 				</p>
 			</div>
 		</div>
+
 		<?php if ( dwqa_current_user_can( 'post_question' ) && !is_user_logged_in() ) : ?>
 		<div class="row">
 			<div class="col-xs-6">
@@ -73,6 +57,24 @@
 				</p>
 			</div>
 		</div>
+		<?php endif; ?>
+
+		<?php $content = isset( $_POST['question-content'] ) ? sanitize_text_field( $_POST['question-content'] ) : ''; ?>
+		<p>
+			<h4><?php echo esc_html__( 'Question Description', 'cherry' ); ?></h4>
+			<?php dwqa_init_tinymce_editor( array( 'content' => $content, 'textarea_name' => 'question-content', 'id' => 'question-content' ) ) ?>
+		</p>
+		<?php global $dwqa_general_settings; ?>
+		<?php if ( isset( $dwqa_general_settings['enable-private-question'] ) && $dwqa_general_settings['enable-private-question'] ) : ?>
+		<p>
+			<label for="question-status"><?php _e( 'Status', 'dwqa' ) ?></label>
+			<select class="dwqa-select" id="question-status" name="question-status">
+				<optgroup label="<?php _e( 'Who can see this?', 'dwqa' ) ?>">
+					<option value="publish"><?php _e( 'Public', 'dwqa' ) ?></option>
+					<option value="private"><?php _e( 'Only Me &amp; Admin', 'dwqa' ) ?></option>
+				</optgroup>
+			</select>
+		</p>
 		<?php endif; ?>
 		<?php wp_nonce_field( '_dwqa_submit_question' ) ?>
 		<?php dwqa_load_template( 'captcha', 'form' ); ?>
