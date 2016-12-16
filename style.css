@@ -3946,6 +3946,7 @@ html.mobile-menu-active .admin-bar .mobile-menu {
 }
 .site-logo__link {
   display: flex;
+  flex-flow: column nowrap;
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
@@ -3962,6 +3963,11 @@ html.mobile-menu-active .admin-bar .mobile-menu {
 .site-logo__link span {
   flex: 0 1 auto;
   white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .site-logo__link {
+    flex-flow: row nowrap;
+  }
 }
 
 /*--------------------------------------------------------------
