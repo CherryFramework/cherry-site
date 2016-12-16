@@ -1886,8 +1886,8 @@ a {
       z-index: 998;
       order: 2;
       margin: 0;
-      top: 10px;
-      right: 10px;
+      top: 15px;
+      right: 15px;
       border-width: 0;
       border-radius: 4px; } }
   .menu-toggle[aria-controls="main-menu"] .menu-toggle__icon {
@@ -1915,8 +1915,8 @@ html.mobile-menu-active {
     display: none; }
   html.mobile-menu-active .menu-toggle[aria-controls="main-menu"] {
     position: fixed;
-    top: 10px;
-    right: 10px; }
+    top: 15px;
+    right: 15px; }
   @media (max-width: 767px) {
     html.mobile-menu-active .admin-bar .menu-toggle[aria-controls="main-menu"] {
       top: 46px; } }
@@ -2937,6 +2937,7 @@ html.mobile-menu-active {
   margin: 0; }
   .site-logo__link {
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease; }
@@ -2950,6 +2951,9 @@ html.mobile-menu-active {
     .site-logo__link span {
       flex: 0 1 auto;
       white-space: nowrap; }
+    @media (min-width: 768px) {
+      .site-logo__link {
+        flex-flow: row nowrap; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages

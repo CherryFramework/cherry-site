@@ -2,9 +2,10 @@
 	margin: 0;
 	&__link {
 		display: flex;
+		flex-flow: column nowrap;
 		align-items: center;
 		text-decoration: none;
-		@include transition( all 0.4s ease );
+		transition: all 0.4s ease;
 		&:focus {
 			outline: none;
 		}
@@ -17,6 +18,9 @@
 		span{
 			flex: 0 1 auto;
 			white-space: nowrap;
+		}
+		@include media-breakpoint-up(md) {
+			flex-flow: row nowrap;
 		}
 	}
 }
