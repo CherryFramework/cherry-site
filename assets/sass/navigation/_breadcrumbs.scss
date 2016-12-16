@@ -2,20 +2,32 @@
 	position: relative;
 	padding: 1.6em;
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	.container{
 		display: inherit;
 		justify-content: inherit;
 		width: 100%;
+		flex-flow: row wrap;
 	}
 	&__title {
 		flex: 0 1 auto;
+		min-width: 100%;
+		@include media-breakpoint-up(md) {
+			flex: 0 1 auto;
+			min-width: auto;
+		}
 		.page-title {
 			margin: 0;
 		}
 	}
 	&__items {
 		flex: 0 1 auto;
+		min-width: 100%;
+		@include media-breakpoint-up(md) {
+			flex: 0 1 auto;
+			min-width: auto;
+		}
 	}
 	&__browse {
 		float: left;
