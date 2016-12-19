@@ -1171,6 +1171,9 @@ hr {
     .cherry-section.home-section-2-1 p {
       margin-left: 25px;
       margin-right: 25px; }
+  @media (max-width: 767px) {
+    .cherry-section.home-section-4 {
+      background-image: none !important; } }
   .cherry-section.home-section-6 {
     padding: 100px 0;
     position: relative;
@@ -4218,6 +4221,8 @@ html.mobile-menu-active {
       .smart-slider__instance .sp-content p {
         font-size: 20px;
         margin: 0 0 2.5em; } }
+  .smart-slider__instance .sp-content .cherry-button {
+    white-space: normal; }
   .smart-slider__instance .sp-slide {
     text-align: center; }
     .smart-slider__instance .sp-slide.text-wrapped h2.sp-title {
@@ -4974,8 +4979,10 @@ object {
   .dwqa-questions-list .dwqa-question-item .dwqa-question-stats span {
     border-radius: 6px; }
 
-.dwqa-container input, .dwqa-container select {
-  border-radius: 6px; }
+.dwqa-container {
+  margin-bottom: 3em; }
+  .dwqa-container input, .dwqa-container select {
+    border-radius: 6px; }
 
 .dwqa-question-filter {
   display: flex;

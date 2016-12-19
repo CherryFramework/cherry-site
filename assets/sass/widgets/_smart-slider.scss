@@ -136,8 +136,8 @@
 				font-size: 50px;
 			}
 		}
-		.sp-content{
-			p{
+		.sp-content {
+			p {
 				font-size: 12px;
 				@include media-breakpoint-up(sm) {
 					font-size: 14px;
@@ -155,6 +155,9 @@
 					font-size: 20px;
 					margin: 0 0 2.5em;
 				}
+			}
+			.cherry-button {
+				white-space: normal;
 			}
 		}
 		.sp-slide {
