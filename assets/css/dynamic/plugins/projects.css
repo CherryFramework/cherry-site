@@ -23,24 +23,28 @@ ul.order-filters > li ul{
 }
 
 .projects-item-instance .hover-content {
-	background-color: @alpha( $regular_accent_color_1, 80 );
+	background-color: @alpha( $regular_accent_color_4, 80 );
 }
 
 .projects-item-instance div.hover-content h3 a {
 	color: #fff;
 }
 
-.projects-item-instance a.simple-button:hover {
-	color: $regular_accent_color_1;
-	background-color: #fff;
-}
-
-.projects-item-instance a.simple-button:hover {
-	background-color: #fff;
-}
-
 .projects-item-instance div.hover-content h3 a:hover {
-	color: $regular_accent_color_2;
+	color: $regular_accent_color_5;
+}
+
+.projects-item-instance div.hover-content .post-terms a:hover {
+	color: $regular_accent_color_5;
+}
+
+.projects-item-instance a.simple-button:hover {
+	color: $regular_accent_color_5;
+	background-color: #fff;
+}
+
+.projects-item-instance a.simple-button:hover {
+	background-color: #fff;
 }
 
 .cherry-projects-single-post .featured-image a .cover, .cherry-projects-single-post .additional-image a .cover {
