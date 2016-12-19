@@ -17,7 +17,6 @@
 }
 
 input.dwqa-question-submit {
-	border-color: $regular_accent_color_1;
 	background-color: $regular_accent_color_1;
 }
 
@@ -28,4 +27,12 @@ input.dwqa-question-submit:hover {
 input.dwqa-btn {
 	color: $regular_accent_color_3;
 	background-color: $regular_accent_color_1;
+}
+
+.dwqa-questions-footer .dwqa-ask-question a {
+	border-color: $regular_accent_color_1;
+}
+
+.dwqa-questions-footer .dwqa-ask-question a:hover {
+	border-color: @darken( $regular_accent_color_1, 10% );
 }
