@@ -99,11 +99,16 @@ hr {
 			}
 		}
 
+		&.home-section-4 {
+			@include media-breakpoint-down(sm) {
+				background-image: none !important;
+			}
+		}
+
 		&.home-section-6 {
 			padding: 100px 0;
 			position: relative;
 			background-position: 0% 50%;
-
 		}
 
 		&.plugins-section-1 {

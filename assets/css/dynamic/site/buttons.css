@@ -24,6 +24,7 @@
 }
 .btn-primary:hover {
 	background-color: @darken( $regular_accent_color_1, 10% );
+	border-color: @darken( $regular_accent_color_1, 10% );
 }
 .btn-primary:focus {
 	box-shadow: 0 0 10px $regular_accent_color_1;
@@ -45,7 +46,6 @@
 	border-color: $invert_link_color;
 }
 .invert .btn-default:hover {
-	color: $regular_link_color;
 	background-color: $invert_link_hover_color;
 	border-color: $invert_link_hover_color;
 }
@@ -71,16 +71,14 @@
 	border-color: @darken( $invert_accent_color_2, 10% );
 }
 .invert .btn-secondary:hover {
-	color: $regular_link_color;
 	background-color: @darken( $invert_accent_color_2, 30% );
-	border-color: @darken( $invert_accent_color_2, 10% );
+	border-color: @darken( $invert_accent_color_2, 30% );
 }
 .invert .btn-secondary:focus {
 	box-shadow: 0 0 10px $invert_accent_color_2;
 }
-
 .invert a.btn-slider{
-	color: #fff;
+	color: $invert_text_color;
 	background-color: $regular_accent_color_1;
 	border-color: $regular_accent_color_1;
 }

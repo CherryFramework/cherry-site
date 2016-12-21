@@ -13,7 +13,6 @@
 --------------------------------------------------------------*/
 .hentry {
 	position: relative;
-	margin-top: 3em;
 	@include card;
 	.posts-list & {
 		padding-top: 3em;
