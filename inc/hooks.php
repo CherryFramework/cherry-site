@@ -62,6 +62,9 @@ add_filter( 'cherry_team_templates_list', 'cherry_add_team_template' );
 // Trimmed a post content in `[tm-timeline]` shortcode.
 add_filter( 'tm_timeline_format_content', 'cherry_timeline_format_content' );
 
+// Google analytics include
+add_action( 'wp_footer', 'cherry_include_google_analytics' );
+
 /**
  * Append description into nav items
  *
@@ -393,7 +396,6 @@ function cherry_projects_permalink_button_text( $text ) {
 
 function cherry_site_shortcodes_avaliable_styles( $styles ) {
 	unset( $styles['grid'] );
-	//unset( $styles['element'] );
 
 	return $styles;
 }
@@ -431,4 +433,8 @@ function cherry_timeline_format_content( $content ) {
 	$content = wp_trim_words( $content, 20, '&hellip;' );
 
 	return $content;
+}
+
+function cherry_include_google_analytics() {
+	require_once trailingslashit( CHERRY_THEME_DIR ) . 'inc/extensions/analyticstracking.php';
 }
