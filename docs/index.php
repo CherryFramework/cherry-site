@@ -453,7 +453,7 @@ $options_ajax_handler = get_core()-&gt;init_module(
 <li><code>message</code> - message text</li>
 </ul>
 <p>Example:</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-handler-01.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-handler-01.png" /></p>
 </div>
 <div class="docs-wrapper__item">
 <h2 id="cherry-dynamic-css">Cherry Dynamic CSS</h2>
@@ -735,8 +735,8 @@ $template_manager-&gt;loader-&gt;get_template_by_name( 'your-template-name' );
 <li>accordion</li>
 <li>switcher</li>
 </ul>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-01.png" /></p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-02.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-interface-builder-01.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-interface-builder-02.png" /></p>
 <h3 id="module-initialization">Module initialization</h3>
 <p>To initiate the module you need to call <code>init_module( $name, $args )</code> core method.</p>
 <p>The method can take the following parameters:</p>
@@ -923,19 +923,19 @@ $template_manager-&gt;loader-&gt;get_template_by_name( 'your-template-name' );
 <h5 id="component-tab-vertical">component-tab-vertical</h5>
 <p>The component adds vertical tabulation.
 Find more details in Components elements section.</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-03.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-interface-builder-03.png" /></p>
 <h5 id="component-tab-horizontal">component-tab-horizontal</h5>
 <p>The component adds horizontal tabulation.
 Find more details in Components elements section.</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-04.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-interface-builder-04.png" /></p>
 <h5 id="component-toggle">component-toggle</h5>
 <p>The component adds a toggle that allows to show and hide interface element.
 Find more details in Components elements section.</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-05.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-interface-builder-05.png" /></p>
 <h5 id="component-accordion">component-accordion</h5>
 <p>The component adds accordion with show/hide interface elements function
 Find more details in Components elements section.</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-interface-builder-06.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-interface-builder-06.png" /></p>
 <h4 id="control-element">Control element</h4>
 <p>Adds interface elements from <strong>Cherry UI-elements</strong> module, but in wrapper.</p>
 <p>For <em>settings</em> element registration you need to use <code>register_control( $args = array() )</code> method <code>register_control</code> method takes the following parameters:</p>
@@ -1666,7 +1666,7 @@ $utility-&gt;media-&gt;get_video( array(
 </ul>
 <h4 id="ui-text">ui-text</h4>
 <p>Render text input field (&lt;input type="text"&gt;).</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-01.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-01.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1680,7 +1680,7 @@ $utility-&gt;media-&gt;get_video( array(
 </ul>
 <h4 id="ui-textarea">ui-textarea</h4>
 <p>Render textarea field (&lt;textarea&gt;&lt;/textarea&gt;)</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-02.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-02.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1694,8 +1694,8 @@ $utility-&gt;media-&gt;get_video( array(
 <li><code>master</code> -  state dependency identifier from slave</li>
 </ul>
 <h4 id="ui-switcher">ui-switcher</h4>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-03.png" />
-<img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-04.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-03.png" />
+<img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-04.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1715,7 +1715,7 @@ $utility-&gt;media-&gt;get_video( array(
 </ul>
 <h4 id="ui-stepper">ui-stepper</h4>
 <p>"Stepper" controller render (&lt;input type="number"&gt;)</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-05.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-05.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1730,7 +1730,7 @@ $utility-&gt;media-&gt;get_video( array(
 <li><code>master</code> -  state dependency identifier from slave</li>
 </ul>
 <h4 id="ui-slider">ui-slider</h4>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-06.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-06.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1747,9 +1747,9 @@ $utility-&gt;media-&gt;get_video( array(
 <p>In essence, ui-slider is an advanced version of ui-stepper.</p>
 <h4 id="ui-select">ui-select</h4>
 <p>Select filtered controller render:</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-07.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-07.png" /></p>
 <p>Select multiselect controller render:</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-08.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-08.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1806,7 +1806,7 @@ $utility-&gt;media-&gt;get_video( array(
 </code></pre>
 <h4 id="ui-repeater">ui-repeater</h4>
 <p>Controller render, which is used for duplicating a certain controllers set.</p>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-09.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-09.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1821,7 +1821,7 @@ $utility-&gt;media-&gt;get_video( array(
 <li><code>title_field</code> - identifier from fields set, value of which will be passed as a title for set</li>
 </ul>
 <h4 id="ui-radio">ui-radio</h4>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-10.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-10.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1856,7 +1856,7 @@ $utility-&gt;media-&gt;get_video( array(
     ),
 );</p>
 <h4 id="ui-media">ui-media</h4>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-11.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-11.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1870,7 +1870,7 @@ $utility-&gt;media-&gt;get_video( array(
 <li><code>master</code> -  state dependency identifier from slave</li>
 </ul>
 <h4 id="ui-iconpicker">ui-iconpicker</h4>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-12.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-12.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1883,7 +1883,7 @@ $utility-&gt;media-&gt;get_video( array(
 <li><code>master</code> -  state dependency identifier from slave</li>
 </ul>
 <h4 id="ui-colorpicker">ui-colorpicker</h4>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-13.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-13.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
@@ -1894,7 +1894,7 @@ $utility-&gt;media-&gt;get_video( array(
 <li><code>master</code> -  state dependency identifier from slave</li>
 </ul>
 <h4 id="ui-checkbox">ui-checkbox</h4>
-<p><img alt="Example" src="http://products.git.devoffice.com/cherry/docs-markdown/raw/master/attachments/cherry-ui-elements-14.png" /></p>
+<p><img alt="Example" src="https://raw.githubusercontent.com/CherryFramework/cherry-framework-docs/master/attachments/cherry-ui-elements-14.png" /></p>
 <p>Arguments:</p>
 <ul>
 <li><code>id</code> - element attribute id</li>
