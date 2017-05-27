@@ -30,6 +30,7 @@
 			this.mobile_menu( this );
 			this.sticky_toc_init( this );
 			this.scrollspy_init( this );
+			this.order_poup_init( this );
 		},
 
 		window_load_render: function () {
@@ -280,7 +281,7 @@
 				return !1;
 			}
 
-			$( 'body' ).scrollspy({ target: '.toc' })
+			$( 'body' ).scrollspy({ target: '.toc' });
 		},
 
 		subscribe_init: function( self ) {
@@ -614,7 +615,49 @@
 					scrollSpeed: 600
 				});
 			}
+		},
+
+		order_poup_init: function( self ) {
+			var $open   = $( '.order-btn' ),
+				$close  = $( '#cherry-orderpopup-close' ),
+				$popup  = $( '#cherry-orderpopup' ),
+				$body   = $( '.cherry-order-popup__overlay' ),
+				timeout = null;
+
+			if ( ! $popup.length ) {
+				return !1;
+			}
+
+			if ( $open.length ) {
+				$open.on( 'click', openPopupHandler );
+			}
+
+			if ( $close ) {
+				$close.on( 'click', closePopupHandler );
+			}
+
+			if ( $body ) {
+				$body.on( 'click', closePopupHandler );
+			}
+
+			function openPopupHandler( event ) {
+				event.preventDefault();
+
+				$popup.addClass( 'show-animation' );
+			}
+
+			function closePopupHandler( event ) {
+				event.preventDefault();
+
+				$popup.toggleClass( 'hide-animation show-animation' );
+
+				clearTimeout( timeout );
+				timeout = setTimeout( function() {
+					$popup.removeClass( 'hide-animation' );
+				}, 500 );
+			}
 		}
+
 	}
 	CherryJsCore.theme_script.init();
 }(jQuery));

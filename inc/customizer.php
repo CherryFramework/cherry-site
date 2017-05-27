@@ -2073,6 +2073,7 @@ function cherry_get_dynamic_css_options() {
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/timeline.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/team.css',
 			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/question.css',
+			CHERRY_THEME_DIR . '/assets/css/dynamic/plugins/price-tables.css',
 		),
 		'options' => array(
 			'header_logo_font_style',

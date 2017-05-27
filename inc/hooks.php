@@ -65,6 +65,9 @@ add_filter( 'tm_timeline_format_content', 'cherry_timeline_format_content' );
 // Google analytics include
 add_action( 'wp_footer', 'cherry_include_google_analytics' );
 
+// Order Form for price tables.
+add_action( 'wp_footer', 'cherry_order_form_render' );
+
 /**
  * Append description into nav items
  *
@@ -437,4 +440,13 @@ function cherry_timeline_format_content( $content ) {
 
 function cherry_include_google_analytics() {
 	require_once trailingslashit( CHERRY_THEME_DIR ) . 'inc/extensions/analyticstracking.php';
+}
+
+function cherry_order_form_render() {
+
+	if ( ! did_action( 'cherry_services_before' ) ) {
+		return;
+	}
+
+	get_template_part( 'template-parts/order-form' );
 }

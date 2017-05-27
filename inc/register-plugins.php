@@ -59,14 +59,14 @@ function cherry_register_required_plugins() {
 			'source'   => CHERRY_THEME_DIR . '/assets/plugins/cherry-site-shortcodes.zip',
 		),
 		array(
-			'name' => esc_html__( 'Cherry site plugins list', 'cherry' ),
-			'slug' => 'cherry-site-plugins-list',
-			'source'   => CHERRY_THEME_DIR . '/assets/plugins/cherry-site-plugins-list.zip',
+			'name'   => esc_html__( 'Cherry site plugins list', 'cherry' ),
+			'slug'   => 'cherry-site-plugins-list',
+			'source' => CHERRY_THEME_DIR . '/assets/plugins/cherry-site-plugins-list.zip',
 		),
 		array(
-			'name' => esc_html__( 'Cherry Get Cherry', 'cherry' ),
-			'slug' => 'cherry-get-cherry',
-			'source'   => CHERRY_THEME_DIR . '/assets/plugins/cherry-get-cherry.zip',
+			'name'   => esc_html__( 'Cherry Get Cherry', 'cherry' ),
+			'slug'   => 'cherry-get-cherry',
+			'source' => CHERRY_THEME_DIR . '/assets/plugins/cherry-get-cherry.zip',
 		),
 	);
 

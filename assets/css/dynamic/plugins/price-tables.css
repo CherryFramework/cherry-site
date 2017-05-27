@@ -1,0 +1,5 @@
+/* #Price Tables */
+.pricing-table-layout .cherry-services_title,
+.pricing-table-layout .cherry-services_icon {
+	background-color: $regular_accent_color_1;
+}
