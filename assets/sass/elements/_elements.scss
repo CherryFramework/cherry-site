@@ -176,10 +176,12 @@ hr {
 			@include media-breakpoint-up(md) {
 				text-align: center;
 				padding: 100px 0;
+				font-size: 16px;
 			}
 			@include media-breakpoint-up(lg) {
 				text-align: left;
 				padding: 150px 0;
+				font-size: 18px;
 			}
 		}
 
