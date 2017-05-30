@@ -1,15 +1,19 @@
 .cherry-services{
 	&.boxed-layout {
-		.cherry-services_item{
 
+		.cherry-services_item{
+			margin-bottom: 35px;
 		}
 
 		.cherry-services__header{
-			order: 0;
-			flex: 0 1 auto;
-			align-self: auto;
+
 			text-align: center;
-			font-size: 2.5em;
+			margin-bottom: 15px;
+
+			.cherry-services_icon {
+				float: none;
+				margin: 0 0 20px 0;
+			}
 
 			& .cherry-services_icon i {
 				color: #fff;
@@ -25,7 +29,7 @@
 		}
 
 		.cherry-services_feauters{
-			padding-top: 5px;
+			text-align: center;
 		}
 	}
 }

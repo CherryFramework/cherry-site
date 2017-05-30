@@ -18,9 +18,9 @@
 			max-width: calc(25% - 10px);
 		}
 	}
-	.cherry-services_icon {
+	div.cherry-services_icon {
 		color: #fff;
-		padding-bottom: 0;
+		padding: 20px;
 	}
 	h5.cherry-services_title {
 		color: #fff;
@@ -28,5 +28,8 @@
 		padding-top: 0;
 		padding-right: 14px;
 		padding-left: 14px;
+	}
+	.cherry-services_actions {
+		padding: 10px 20px 50px;
 	}
 }
