@@ -4,7 +4,7 @@ Theme URI: http://www.templatemonster.com/wordpress-themes.php
 Author: Template Monster
 Author URI: http://www.templatemonster.com/
 Description: Your theme description.
-Version: 1.0.2
+Version: 1.0.3
 Blank Version: 1.3.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -1863,9 +1863,7 @@ a {
       left: 0;
       opacity: 0;
       visibility: hidden;
-      transition: top .2s linear .1s,
- opacity .2s linear .1s,
- visibility .1s linear .2s;
+      transition: top .2s linear .1s, opacity .2s linear .1s, visibility .1s linear .2s;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
       .main-navigation .sub-menu ul {
         top: 20%;
@@ -5157,17 +5155,18 @@ div.wpcf7 .ajax-loader {
     margin-right: -5px;
     margin-left: -5px; } }
 
-@media (min-width: 544px) {
-  .pricing-table-layout .cherry-services_item {
-    margin-right: 5px;
-    margin-left: 5px;
-    flex: 0 0 calc(50% - 10px);
-    max-width: calc(50% - 10px); } }
-
-@media (min-width: 992px) {
-  .pricing-table-layout .cherry-services_item {
-    flex: 0 0 calc(25% - 10px);
-    max-width: calc(25% - 10px); } }
+.pricing-table-layout .cherry-services_item {
+  margin-bottom: 10px; }
+  @media (min-width: 544px) {
+    .pricing-table-layout .cherry-services_item {
+      margin-right: 5px;
+      margin-left: 5px;
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px); } }
+  @media (min-width: 992px) {
+    .pricing-table-layout .cherry-services_item {
+      flex: 0 0 calc(25% - 10px);
+      max-width: calc(25% - 10px); } }
 
 .pricing-table-layout .cherry-services_icon {
   color: #fff;
@@ -5190,7 +5189,7 @@ div.wpcf7 .ajax-loader {
       justify-content: flex-start;
       align-content: stretch;
       align-items: flex-start;
-      margin: 50px 0; } }
+      margin: 40px 0; } }
   .cherry-services.services-list-layout .cherry-services_item:first-child {
     margin-top: 15px; }
   @media (min-width: 768px) {
@@ -5218,7 +5217,7 @@ div.wpcf7 .ajax-loader {
   @media (min-width: 768px) {
     .cherry-services__header {
       min-width: 30%;
-      padding: 50px 0; } }
+      padding: 40px 0; } }
   .cherry-services__header .cherry-services_icon i {
     color: #fff;
     width: 90px;
@@ -5227,14 +5226,14 @@ div.wpcf7 .ajax-loader {
     background-color: #f62e46;
     text-align: center;
     box-sizing: border-box;
-    padding: 10px 10px;
+    padding: 22px 10px;
     font-size: 45px; }
 
 .cherry-services_feauters {
   padding-top: 5px; }
   @media (min-width: 768px) {
     .cherry-services_feauters {
-      padding: 50px 0;
+      padding: 40px 0;
       order: 0;
       flex: 1 1 auto;
       align-self: auto; } }
