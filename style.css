@@ -4,7 +4,7 @@ Theme URI: http://www.templatemonster.com/wordpress-themes.php
 Author: Template Monster
 Author URI: http://www.templatemonster.com/
 Description: Your theme description.
-Version: 1.0.4
+Version: 1.0.5
 Blank Version: 1.3.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -5227,17 +5227,17 @@ div.wpcf7 .ajax-loader {
     .cherry-services.services-list-layout .cherry-services_item:after {
       display: none !important; } }
 
-.cherry-services__header {
+.cherry-services.services-list-layout .cherry-services__header {
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
   text-align: center;
   font-size: 2.5em; }
   @media (min-width: 768px) {
-    .cherry-services__header {
+    .cherry-services.services-list-layout .cherry-services__header {
       min-width: 30%;
       padding: 40px 0; } }
-  .cherry-services__header .cherry-services_icon i {
+  .cherry-services.services-list-layout .cherry-services__header .cherry-services_icon i {
     color: #fff;
     width: 90px;
     height: 90px;
@@ -5248,10 +5248,10 @@ div.wpcf7 .ajax-loader {
     padding: 22px 10px;
     font-size: 45px; }
 
-.cherry-services_feauters {
+.cherry-services.services-list-layout .cherry-services_feauters {
   padding-top: 5px; }
   @media (min-width: 768px) {
-    .cherry-services_feauters {
+    .cherry-services.services-list-layout .cherry-services_feauters {
       font-size: 18px;
       text-align: justify;
       padding: 40px 0;
