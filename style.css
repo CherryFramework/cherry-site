@@ -1221,9 +1221,9 @@ hr {
       .cherry-section.about-section-1, .cherry-section.services-section-1 {
         text-align: left;
         padding: 150px 0; } }
-  .cherry-section.services-section-1, .cherry-section.services-section-3 {
+  .cherry-section.services-section-1 {
     text-align: center; }
-    .cherry-section.services-section-1:before, .cherry-section.services-section-3:before {
+    .cherry-section.services-section-1:before {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -1232,14 +1232,31 @@ hr {
       display: block;
       content: ''; }
     @media (min-width: 768px) {
-      .cherry-section.services-section-1, .cherry-section.services-section-3 {
+      .cherry-section.services-section-1 {
         text-align: center;
-        padding: 100px 0;
-        font-size: 18px; } }
+        padding: 100px 0; } }
     @media (min-width: 992px) {
-      .cherry-section.services-section-1, .cherry-section.services-section-3 {
+      .cherry-section.services-section-1 {
         text-align: left;
         padding: 150px 0; } }
+  .cherry-section.services-section-3 {
+    text-align: center; }
+    .cherry-section.services-section-3:before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+      content: ''; }
+    @media (min-width: 768px) {
+      .cherry-section.services-section-3 {
+        text-align: center;
+        padding: 40px 0; } }
+    @media (min-width: 992px) {
+      .cherry-section.services-section-3 {
+        text-align: left;
+        padding: 80px 0; } }
 
 .section-overlay {
   position: relative; }
@@ -1882,7 +1899,7 @@ a {
       left: 0;
       opacity: 0;
       visibility: hidden;
-      transition: top .2s linear .1s, opacity .2s linear .1s, visibility .1s linear .2s;
+      transition: top .2s linear .1s, opacity .2s linear .1s, visibility .1s linear .2s;
       box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
       .main-navigation .sub-menu ul {
         top: 20%;
