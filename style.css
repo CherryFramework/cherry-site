@@ -1221,6 +1221,25 @@ hr {
       .cherry-section.about-section-1, .cherry-section.services-section-1 {
         text-align: left;
         padding: 150px 0; } }
+  .cherry-section.services-section-1, .cherry-section.services-section-3 {
+    text-align: center; }
+    .cherry-section.services-section-1:before, .cherry-section.services-section-3:before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: block;
+      content: ''; }
+    @media (min-width: 768px) {
+      .cherry-section.services-section-1, .cherry-section.services-section-3 {
+        text-align: center;
+        padding: 100px 0;
+        font-size: 18px; } }
+    @media (min-width: 992px) {
+      .cherry-section.services-section-1, .cherry-section.services-section-3 {
+        text-align: left;
+        padding: 150px 0; } }
 
 .section-overlay {
   position: relative; }
@@ -5233,6 +5252,8 @@ div.wpcf7 .ajax-loader {
   padding-top: 5px; }
   @media (min-width: 768px) {
     .cherry-services_feauters {
+      font-size: 18px;
+      text-align: justify;
       padding: 40px 0;
       order: 0;
       flex: 1 1 auto;

@@ -68,6 +68,8 @@
 	&_feauters{
 		padding-top: 5px;
 		@media ( min-width: 768px ) {
+			font-size: 18px;
+			text-align: justify;
 			padding: 40px 0;
 			order: 0;
 			flex: 1 1 auto;
